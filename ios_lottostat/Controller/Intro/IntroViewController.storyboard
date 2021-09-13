@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="IntroViewController" customModule="ios_lottostat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gHl-z1-Fg3" customClass="LTHorizontalLoadingView" customModule="ios_lottostat" customModuleProvider="target">
+                                <rect key="frame" x="32" y="76" width="350" height="3"/>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.63137254901960782" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="zEy-fV-p9h"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.88627450980392153" green="0.98431372549019602" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="0.0" green="0.41176470588235292" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8L-pe-Oki">
+                                <rect key="frame" x="0.0" y="343.5" width="414" height="209"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_intro" translatesAutoresizingMaskIntoConstraints="NO" id="G8D-f2-LfP">
+                                        <rect key="frame" x="24" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="3ZV-uS-M6g"/>
+                                            <constraint firstAttribute="height" constant="80" id="wsp-Tq-3e0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="번호 분석 &amp; 추천" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwZ-8N-GTk">
+                                        <rect key="frame" x="24" y="80" width="248" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로또 번호를 분석하고 추천해줍니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orT-mr-vmd">
+                                        <rect key="frame" x="24" y="146" width="261" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.88627450980392153" green="0.98431372549019602" blue="0.98039215686274506" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HwZ-8N-GTk" firstAttribute="top" secondItem="G8D-f2-LfP" secondAttribute="bottom" id="8m7-A8-oiQ"/>
+                                    <constraint firstItem="G8D-f2-LfP" firstAttribute="top" secondItem="A8L-pe-Oki" secondAttribute="top" id="Aqm-H4-kXW"/>
+                                    <constraint firstItem="orT-mr-vmd" firstAttribute="leading" secondItem="G8D-f2-LfP" secondAttribute="leading" id="Pqu-iZ-S3d"/>
+                                    <constraint firstAttribute="height" constant="209" id="UQ3-RJ-Yf1"/>
+                                    <constraint firstItem="HwZ-8N-GTk" firstAttribute="leading" secondItem="G8D-f2-LfP" secondAttribute="leading" id="d1b-OP-VHG"/>
+                                    <constraint firstItem="orT-mr-vmd" firstAttribute="top" secondItem="HwZ-8N-GTk" secondAttribute="bottom" constant="20" id="mAb-JE-kjg"/>
+                                    <constraint firstItem="G8D-f2-LfP" firstAttribute="leading" secondItem="A8L-pe-Oki" secondAttribute="leading" constant="24" id="zEW-za-G4d"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로또 당첨번호를 가져옵니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azb-3N-IlA">
+                                <rect key="frame" x="130.5" y="809" width="153" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.88627450980392153" green="0.98431372549019602" blue="0.98039215686274506" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.63137254901960782" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="A8L-pe-Oki" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3zG-vx-h62"/>
+                            <constraint firstItem="A8L-pe-Oki" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="DZB-kS-UaX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="azb-3N-IlA" secondAttribute="bottom" constant="36" id="GSS-rE-aSv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gHl-z1-Fg3" secondAttribute="trailing" constant="32" id="JeG-SJ-Hmm"/>
+                            <constraint firstItem="gHl-z1-Fg3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="KOg-if-6y0"/>
+                            <constraint firstItem="azb-3N-IlA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Rno-9f-o3H"/>
+                            <constraint firstItem="gHl-z1-Fg3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="iHU-2h-hDI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A8L-pe-Oki" secondAttribute="trailing" id="sY0-iz-uqy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingBar" destination="gHl-z1-Fg3" id="D1o-w2-HUg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_intro" width="120" height="120"/>
+    </resources>
+</document>
