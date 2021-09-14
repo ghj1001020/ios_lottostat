@@ -80,6 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lbMessage" destination="azb-3N-IlA" id="NKJ-up-rB8"/>
                         <outlet property="loadingBar" destination="gHl-z1-Fg3" id="D1o-w2-HUg"/>
                     </connections>
                 </viewController>

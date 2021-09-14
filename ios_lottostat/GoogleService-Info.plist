@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>690423038718-uogls2ih6t6bjq8tr40ac4rqpf5n3bhk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.690423038718-uogls2ih6t6bjq8tr40ac4rqpf5n3bhk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBkThRpcIYxkhZr4roS7DB1ZAlsbgQr4Lw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>690423038718</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ghj.lottostat</string>
+	<key>PROJECT_ID</key>
+	<string>lottostat-4c9f1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lottostat-4c9f1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:690423038718:ios:adc7c062186ec146b5dbaf</string>
+</dict>
+</plist>
