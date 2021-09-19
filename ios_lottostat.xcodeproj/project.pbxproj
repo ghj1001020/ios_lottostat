@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62145EB5AD7168B12004CDBA /* Pods_ios_lottostat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B895798E597A85AB71147EF /* Pods_ios_lottostat.framework */; };
 		C23EC0B026E8D22800828BAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0AF26E8D22800828BAB /* AppDelegate.swift */; };
 		C23EC0B426E8D22800828BAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0B326E8D22800828BAB /* ViewController.swift */; };
 		C23EC0B926E8D22A00828BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23EC0B826E8D22A00828BAB /* Assets.xcassets */; };
@@ -16,9 +17,19 @@
 		C23EC0CB26EC61C500828BAB /* LTHorizontalLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0CA26EC61C500828BAB /* LTHorizontalLoadingView.swift */; };
 		C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0CD26EFF42000828BAB /* DateUtil.swift */; };
 		C23EC0DA26F14AA400828BAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C23EC0D926F14AA400828BAB /* GoogleService-Info.plist */; };
+		C23EC0DC26F366B400828BAB /* LogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0DB26F366B400828BAB /* LogUtil.swift */; };
+		C2AE21DB26F580D700002D61 /* CommonDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AE21DA26F580D700002D61 /* CommonDialog.xib */; };
+		C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21DC26F615F500002D61 /* CommonDialog.swift */; };
+		C2AE21DF26F648F100002D61 /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21DE26F648F100002D61 /* AlertUtil.swift */; };
+		C2AE21E126F6DC8600002D61 /* BaseDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E026F6DC8600002D61 /* BaseDialog.swift */; };
+		C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE59D726F37081000BB226 /* AppConfig.swift */; };
+		C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE59D926F3723B000BB226 /* StringUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B895798E597A85AB71147EF /* Pods_ios_lottostat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_lottostat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		599B98456BF2D4AC8872DAFF /* Pods-ios_lottostat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_lottostat.release.xcconfig"; path = "Target Support Files/Pods-ios_lottostat/Pods-ios_lottostat.release.xcconfig"; sourceTree = "<group>"; };
+		6D7BD88C7F7669BA32C853CE /* Pods-ios_lottostat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_lottostat.debug.xcconfig"; path = "Target Support Files/Pods-ios_lottostat/Pods-ios_lottostat.debug.xcconfig"; sourceTree = "<group>"; };
 		C23EC0AC26E8D22800828BAB /* ios_lottostat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_lottostat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C23EC0AF26E8D22800828BAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C23EC0B326E8D22800828BAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +41,13 @@
 		C23EC0CA26EC61C500828BAB /* LTHorizontalLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHorizontalLoadingView.swift; sourceTree = "<group>"; };
 		C23EC0CD26EFF42000828BAB /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		C23EC0D926F14AA400828BAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C23EC0DB26F366B400828BAB /* LogUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
+		C2AE21DA26F580D700002D61 /* CommonDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonDialog.xib; sourceTree = "<group>"; };
+		C2AE21DC26F615F500002D61 /* CommonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDialog.swift; sourceTree = "<group>"; };
+		C2AE21DE26F648F100002D61 /* AlertUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
+		C2AE21E026F6DC8600002D61 /* BaseDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDialog.swift; sourceTree = "<group>"; };
+		C2BE59D726F37081000BB226 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		C2BE59D926F3723B000BB226 /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62145EB5AD7168B12004CDBA /* Pods_ios_lottostat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94B7737167C2B6D41F562663 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D7BD88C7F7669BA32C853CE /* Pods-ios_lottostat.debug.xcconfig */,
+				599B98456BF2D4AC8872DAFF /* Pods-ios_lottostat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C23EC0A326E8D22800828BAB = {
 			isa = PBXGroup;
 			children = (
 				C23EC0AE26E8D22800828BAB /* ios_lottostat */,
 				C23EC0AD26E8D22800828BAB /* Products */,
+				94B7737167C2B6D41F562663 /* Pods */,
+				E4A822EE9F396B4ABDCCFEFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +92,7 @@
 		C23EC0AE26E8D22800828BAB /* ios_lottostat */ = {
 			isa = PBXGroup;
 			children = (
+				C2AE21D926F57D4A00002D61 /* Dialog */,
 				C23EC0CC26EFF40B00828BAB /* _util */,
 				C23EC0C926EC5F6500828BAB /* _ui */,
 				C23EC0C326EA231800828BAB /* Controller */,
@@ -71,6 +102,7 @@
 				C23EC0BA26E8D22A00828BAB /* LaunchScreen.storyboard */,
 				C23EC0BD26E8D22A00828BAB /* Info.plist */,
 				C23EC0D926F14AA400828BAB /* GoogleService-Info.plist */,
+				C2BE59D726F37081000BB226 /* AppConfig.swift */,
 			);
 			path = ios_lottostat;
 			sourceTree = "<group>";
@@ -104,8 +136,29 @@
 			isa = PBXGroup;
 			children = (
 				C23EC0CD26EFF42000828BAB /* DateUtil.swift */,
+				C23EC0DB26F366B400828BAB /* LogUtil.swift */,
+				C2BE59D926F3723B000BB226 /* StringUtil.swift */,
+				C2AE21DE26F648F100002D61 /* AlertUtil.swift */,
 			);
 			path = _util;
+			sourceTree = "<group>";
+		};
+		C2AE21D926F57D4A00002D61 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				C2AE21DA26F580D700002D61 /* CommonDialog.xib */,
+				C2AE21DC26F615F500002D61 /* CommonDialog.swift */,
+				C2AE21E026F6DC8600002D61 /* BaseDialog.swift */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		E4A822EE9F396B4ABDCCFEFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B895798E597A85AB71147EF /* Pods_ios_lottostat.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C23EC0C026E8D22A00828BAB /* Build configuration list for PBXNativeTarget "ios_lottostat" */;
 			buildPhases = (
+				584180CF4243D78C6B4D2789 /* [CP] Check Pods Manifest.lock */,
 				C23EC0A826E8D22800828BAB /* Sources */,
 				C23EC0A926E8D22800828BAB /* Frameworks */,
 				C23EC0AA26E8D22800828BAB /* Resources */,
+				BA4046F7C119D50E3A87E78B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C23EC0C626EBAE6100828BAB /* IntroViewController.storyboard in Resources */,
+				C2AE21DB26F580D700002D61 /* CommonDialog.xib in Resources */,
 				C23EC0DA26F14AA400828BAB /* GoogleService-Info.plist in Resources */,
 				C23EC0BC26E8D22A00828BAB /* LaunchScreen.storyboard in Resources */,
 				C23EC0B926E8D22A00828BAB /* Assets.xcassets in Resources */,
@@ -174,15 +230,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		584180CF4243D78C6B4D2789 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios_lottostat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA4046F7C119D50E3A87E78B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios_lottostat/Pods-ios_lottostat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios_lottostat/Pods-ios_lottostat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios_lottostat/Pods-ios_lottostat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C23EC0A826E8D22800828BAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */,
 				C23EC0B426E8D22800828BAB /* ViewController.swift in Sources */,
 				C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */,
 				C23EC0B026E8D22800828BAB /* AppDelegate.swift in Sources */,
+				C2AE21E126F6DC8600002D61 /* BaseDialog.swift in Sources */,
+				C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */,
 				C23EC0C826EBAF4B00828BAB /* IntroViewController.swift in Sources */,
+				C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */,
+				C23EC0DC26F366B400828BAB /* LogUtil.swift in Sources */,
+				C2AE21DF26F648F100002D61 /* AlertUtil.swift in Sources */,
 				C23EC0CB26EC61C500828BAB /* LTHorizontalLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +423,7 @@
 		};
 		C23EC0C126E8D22A00828BAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D7BD88C7F7669BA32C853CE /* Pods-ios_lottostat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -341,6 +446,7 @@
 		};
 		C23EC0C226E8D22A00828BAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 599B98456BF2D4AC8872DAFF /* Pods-ios_lottostat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
