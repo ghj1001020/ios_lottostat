@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommonDialog" customModule="ios_lottostat" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CommonDialog" customModule="ios_lottostat" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -20,22 +20,22 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1N-Oq-Dn9">
-                    <rect key="frame" x="20" y="354.66666666666669" width="374" height="186.66666666666669"/>
+                    <rect key="frame" x="20" y="368" width="374" height="160.33333333333337"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App 업데이트 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tu-8q-KJg">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App 업데이트 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tu-8q-KJg">
                             <rect key="frame" x="24" y="30" width="326" height="21.333333333333329"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고객등급 하향 시 직전 고객등급을 3개월간 유지시켜 드리는 내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24f-iM-xOd">
-                            <rect key="frame" x="24" y="56.333333333333314" width="326" height="38.333333333333343"/>
+                            <rect key="frame" x="24" y="30.000000000000004" width="326" height="38.333333333333343"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If1-bl-Jt0">
-                            <rect key="frame" x="276" y="134.66666666666663" width="98" height="52"/>
+                            <rect key="frame" x="276" y="108.33333333333331" width="98" height="52"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="98" id="Jfv-M2-7ex"/>
                                 <constraint firstAttribute="height" constant="52" id="beW-Je-IdP"/>
@@ -44,19 +44,35 @@
                             <state key="normal" title="확인">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="onPositiveListener:" destination="iN0-l3-epB" eventType="touchUpInside" id="NKr-8j-AeN"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6h-mX-bcv">
+                            <rect key="frame" x="178" y="108.33333333333331" width="98" height="52"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="98" id="CbP-Ge-bXR"/>
+                                <constraint firstAttribute="height" constant="52" id="cUr-Mp-sex"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <state key="normal" title="취소">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="d6h-mX-bcv" secondAttribute="bottom" id="2Se-9z-115"/>
                         <constraint firstAttribute="trailing" secondItem="24f-iM-xOd" secondAttribute="trailing" constant="24" id="5aQ-gy-4C9"/>
                         <constraint firstItem="If1-bl-Jt0" firstAttribute="top" secondItem="24f-iM-xOd" secondAttribute="bottom" constant="40" id="Aek-kG-hIn"/>
-                        <constraint firstAttribute="bottom" secondItem="If1-bl-Jt0" secondAttribute="bottom" id="Ei0-s5-6H4"/>
+                        <constraint firstAttribute="trailing" secondItem="If1-bl-Jt0" secondAttribute="trailing" id="H0P-lW-JhK"/>
+                        <constraint firstItem="If1-bl-Jt0" firstAttribute="leading" secondItem="d6h-mX-bcv" secondAttribute="trailing" id="HXp-YT-n5S"/>
+                        <constraint firstAttribute="bottom" secondItem="If1-bl-Jt0" secondAttribute="bottom" id="LZN-a1-oGJ"/>
                         <constraint firstItem="9tu-8q-KJg" firstAttribute="leading" secondItem="G1N-Oq-Dn9" secondAttribute="leading" constant="24" id="P9y-gq-1tE"/>
                         <constraint firstAttribute="trailing" secondItem="9tu-8q-KJg" secondAttribute="trailing" constant="24" id="V4j-aO-biJ"/>
                         <constraint firstItem="9tu-8q-KJg" firstAttribute="top" secondItem="G1N-Oq-Dn9" secondAttribute="top" constant="30" id="obc-DC-Mug"/>
                         <constraint firstItem="24f-iM-xOd" firstAttribute="leading" secondItem="G1N-Oq-Dn9" secondAttribute="leading" constant="24" id="qFg-qx-z2B"/>
-                        <constraint firstAttribute="trailing" secondItem="If1-bl-Jt0" secondAttribute="trailing" id="sPC-Xh-wtf"/>
-                        <constraint firstItem="24f-iM-xOd" firstAttribute="top" secondItem="9tu-8q-KJg" secondAttribute="bottom" constant="5" id="tCk-Cl-nqH"/>
+                        <constraint firstItem="24f-iM-xOd" firstAttribute="top" secondItem="G1N-Oq-Dn9" secondAttribute="top" constant="30" id="tCk-Cl-nqH"/>
                     </constraints>
                 </view>
             </subviews>
@@ -73,6 +89,11 @@
                 <constraint firstItem="4tQ-oz-v0d" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="w83-vp-D9N"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="crMessageTop" destination="tCk-Cl-nqH" id="vgR-p0-fxD"/>
+                <outlet property="lbMessage" destination="24f-iM-xOd" id="j5C-vu-tua"/>
+                <outlet property="lbTitle" destination="9tu-8q-KJg" id="W2D-Bl-p61"/>
+            </connections>
             <point key="canvasLocation" x="132" y="76"/>
         </view>
     </objects>

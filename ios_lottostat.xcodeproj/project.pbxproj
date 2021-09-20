@@ -20,8 +20,8 @@
 		C23EC0DC26F366B400828BAB /* LogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0DB26F366B400828BAB /* LogUtil.swift */; };
 		C2AE21DB26F580D700002D61 /* CommonDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AE21DA26F580D700002D61 /* CommonDialog.xib */; };
 		C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21DC26F615F500002D61 /* CommonDialog.swift */; };
-		C2AE21DF26F648F100002D61 /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21DE26F648F100002D61 /* AlertUtil.swift */; };
-		C2AE21E126F6DC8600002D61 /* BaseDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E026F6DC8600002D61 /* BaseDialog.swift */; };
+		C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E226F764ED00002D61 /* LTCardView.swift */; };
+		C2AE21E526F8169B00002D61 /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E426F8169B00002D61 /* AppUtil.swift */; };
 		C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE59D726F37081000BB226 /* AppConfig.swift */; };
 		C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE59D926F3723B000BB226 /* StringUtil.swift */; };
 /* End PBXBuildFile section */
@@ -44,8 +44,8 @@
 		C23EC0DB26F366B400828BAB /* LogUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
 		C2AE21DA26F580D700002D61 /* CommonDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonDialog.xib; sourceTree = "<group>"; };
 		C2AE21DC26F615F500002D61 /* CommonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDialog.swift; sourceTree = "<group>"; };
-		C2AE21DE26F648F100002D61 /* AlertUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
-		C2AE21E026F6DC8600002D61 /* BaseDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDialog.swift; sourceTree = "<group>"; };
+		C2AE21E226F764ED00002D61 /* LTCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCardView.swift; sourceTree = "<group>"; };
+		C2AE21E426F8169B00002D61 /* AppUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtil.swift; sourceTree = "<group>"; };
 		C2BE59D726F37081000BB226 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		C2BE59D926F3723B000BB226 /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				C23EC0CA26EC61C500828BAB /* LTHorizontalLoadingView.swift */,
+				C2AE21E226F764ED00002D61 /* LTCardView.swift */,
 			);
 			path = _ui;
 			sourceTree = "<group>";
@@ -138,7 +139,7 @@
 				C23EC0CD26EFF42000828BAB /* DateUtil.swift */,
 				C23EC0DB26F366B400828BAB /* LogUtil.swift */,
 				C2BE59D926F3723B000BB226 /* StringUtil.swift */,
-				C2AE21DE26F648F100002D61 /* AlertUtil.swift */,
+				C2AE21E426F8169B00002D61 /* AppUtil.swift */,
 			);
 			path = _util;
 			sourceTree = "<group>";
@@ -148,7 +149,6 @@
 			children = (
 				C2AE21DA26F580D700002D61 /* CommonDialog.xib */,
 				C2AE21DC26F615F500002D61 /* CommonDialog.swift */,
-				C2AE21E026F6DC8600002D61 /* BaseDialog.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -281,12 +281,12 @@
 				C23EC0B426E8D22800828BAB /* ViewController.swift in Sources */,
 				C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */,
 				C23EC0B026E8D22800828BAB /* AppDelegate.swift in Sources */,
-				C2AE21E126F6DC8600002D61 /* BaseDialog.swift in Sources */,
 				C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */,
+				C2AE21E526F8169B00002D61 /* AppUtil.swift in Sources */,
 				C23EC0C826EBAF4B00828BAB /* IntroViewController.swift in Sources */,
 				C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */,
 				C23EC0DC26F366B400828BAB /* LogUtil.swift in Sources */,
-				C2AE21DF26F648F100002D61 /* AlertUtil.swift in Sources */,
+				C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */,
 				C23EC0CB26EC61C500828BAB /* LTHorizontalLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
