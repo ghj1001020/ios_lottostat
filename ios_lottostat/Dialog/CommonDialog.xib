@@ -19,7 +19,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1N-Oq-Dn9">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1N-Oq-Dn9" customClass="LTCardView" customModule="ios_lottostat" customModuleProvider="target">
                     <rect key="frame" x="20" y="368" width="374" height="160.33333333333337"/>
                     <subviews>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App 업데이트 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tu-8q-KJg">
@@ -74,6 +74,12 @@
                         <constraint firstItem="24f-iM-xOd" firstAttribute="leading" secondItem="G1N-Oq-Dn9" secondAttribute="leading" constant="24" id="qFg-qx-z2B"/>
                         <constraint firstItem="24f-iM-xOd" firstAttribute="top" secondItem="G1N-Oq-Dn9" secondAttribute="top" constant="30" id="tCk-Cl-nqH"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="corners" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

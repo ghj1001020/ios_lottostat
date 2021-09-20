@@ -35,25 +35,23 @@ class IntroViewController: UIViewController {
             if let querySnapshot = querySnapshot {
                 if( querySnapshot.get("version") is String ) {
                     let version = querySnapshot.get("version") as! String
-                    LogUtil.p(version)
-                    
-                    guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
+                    if( !AppUtil.checkAppVersion(serverVer: version) ) {
+                        // 낮은버전이면 업데이트 팝업 노출
+                        CommonDialog.instance()
+                            .setTitle(title: "App 업데이트 안내")
+                            .setMessage(message: "최신버전으로 업데이트 해주세요.")
+                            .setDelegate(delegate: { (action: Int) in
+                                // 앱종료
+                                if( action == CommonDialog.PositiveAction ) {
+                                    UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+                                    exit(0)
+                                }
+                            })
+                            .show(self.view)
                         return
                     }
-                    
-                    
-                    // 낮은버전이면 업데이트 팝업 노출
-                    CommonDialog.instance()
-                        .setTitle(title: "App 업데이트 안내")
-                        .setMessage(message: "최신버전으로 업데이트 해주세요.")
-                        .setDelegate(delegate: { (action: Int) in
-                            // 앱종료
-                            if( action == CommonDialog.PositiveAction ) {
-                                UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
-                                exit(0)
-                            }
-                        })
-                        .show(self.view)
+                    // 정상버전이면 로또번호 가져오기
+                    self.getLottoNumber()
                 }
             }
             // 버전요청 실패
@@ -70,5 +68,10 @@ class IntroViewController: UIViewController {
                     .show(self.view)
             }
         }
+    }
+    
+    // SQLite에서 데이터 읽기
+    func getLottoNumber() {
+        
     }
 }

@@ -22,6 +22,7 @@
 		C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21DC26F615F500002D61 /* CommonDialog.swift */; };
 		C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E226F764ED00002D61 /* LTCardView.swift */; };
 		C2AE21E526F8169B00002D61 /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E426F8169B00002D61 /* AppUtil.swift */; };
+		C2AE21E726F8BD7A00002D61 /* PrefUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E626F8BD7A00002D61 /* PrefUtil.swift */; };
 		C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE59D726F37081000BB226 /* AppConfig.swift */; };
 		C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE59D926F3723B000BB226 /* StringUtil.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		C2AE21DC26F615F500002D61 /* CommonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDialog.swift; sourceTree = "<group>"; };
 		C2AE21E226F764ED00002D61 /* LTCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCardView.swift; sourceTree = "<group>"; };
 		C2AE21E426F8169B00002D61 /* AppUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtil.swift; sourceTree = "<group>"; };
+		C2AE21E626F8BD7A00002D61 /* PrefUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefUtil.swift; sourceTree = "<group>"; };
 		C2BE59D726F37081000BB226 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		C2BE59D926F3723B000BB226 /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +142,7 @@
 				C23EC0DB26F366B400828BAB /* LogUtil.swift */,
 				C2BE59D926F3723B000BB226 /* StringUtil.swift */,
 				C2AE21E426F8169B00002D61 /* AppUtil.swift */,
+				C2AE21E626F8BD7A00002D61 /* PrefUtil.swift */,
 			);
 			path = _util;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2AE21E726F8BD7A00002D61 /* PrefUtil.swift in Sources */,
 				C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */,
 				C23EC0B426E8D22800828BAB /* ViewController.swift in Sources */,
 				C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */,
