@@ -30,6 +30,8 @@
 		C2AE21F426FAB42600002D61 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21F326FAB42600002D61 /* FileUtil.swift */; };
 		C2AE21F626FAEE7800002D61 /* SQLiteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21F526FAEE7800002D61 /* SQLiteService.swift */; };
 		C2AE21FA26FAF1FA00002D61 /* LottoWinNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21F926FAF1FA00002D61 /* LottoWinNumber.swift */; };
+		C2AE21FD26FB6ABD00002D61 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2AE21FC26FB6ABD00002D61 /* MainViewController.storyboard */; };
+		C2AE21FF26FB6AD700002D61 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21FE26FB6AD700002D61 /* MainViewController.swift */; };
 		C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE59D726F37081000BB226 /* AppConfig.swift */; };
 		C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE59D926F3723B000BB226 /* StringUtil.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		C2AE21F326FAB42600002D61 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		C2AE21F526FAEE7800002D61 /* SQLiteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteService.swift; sourceTree = "<group>"; };
 		C2AE21F926FAF1FA00002D61 /* LottoWinNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoWinNumber.swift; sourceTree = "<group>"; };
+		C2AE21FC26FB6ABD00002D61 /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
+		C2AE21FE26FB6AD700002D61 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C2BE59D726F37081000BB226 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		C2BE59D926F3723B000BB226 /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +133,7 @@
 		C23EC0C326EA231800828BAB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2AE21FB26FB6AAB00002D61 /* Main */,
 				C23EC0C426EA232700828BAB /* Intro */,
 			);
 			path = Controller;
@@ -199,6 +204,15 @@
 				C2AE21F926FAF1FA00002D61 /* LottoWinNumber.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		C2AE21FB26FB6AAB00002D61 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C2AE21FC26FB6ABD00002D61 /* MainViewController.storyboard */,
+				C2AE21FE26FB6AD700002D61 /* MainViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		E4A822EE9F396B4ABDCCFEFA /* Frameworks */ = {
@@ -274,6 +288,7 @@
 				C23EC0DA26F14AA400828BAB /* GoogleService-Info.plist in Resources */,
 				C23EC0BC26E8D22A00828BAB /* LaunchScreen.storyboard in Resources */,
 				C23EC0B926E8D22A00828BAB /* Assets.xcassets in Resources */,
+				C2AE21FD26FB6ABD00002D61 /* MainViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +346,7 @@
 				C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */,
 				C23EC0B426E8D22800828BAB /* ViewController.swift in Sources */,
 				C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */,
+				C2AE21FF26FB6AD700002D61 /* MainViewController.swift in Sources */,
 				C23EC0B026E8D22800828BAB /* AppDelegate.swift in Sources */,
 				C2AE21EA26F8C5E000002D61 /* DefineDefaults.swift in Sources */,
 				C2AE21F426FAB42600002D61 /* FileUtil.swift in Sources */,

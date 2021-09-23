@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    public func setRootViewController( root: UIViewController) {
+        window?.rootViewController = root
+    }
     
 
     // MARK: UISceneSession Lifecycle
