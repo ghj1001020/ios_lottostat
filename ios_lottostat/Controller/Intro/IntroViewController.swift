@@ -155,10 +155,6 @@ class IntroViewController: UIViewController {
             }
             controller.modalPresentationStyle = .fullScreen
             self.present(controller, animated: true, completion: nil)
-            
-//            self.dismiss(animated: true) {
-//                self.present(controller, animated: true, completion: nil)
-//            }
         }
     }
 }
