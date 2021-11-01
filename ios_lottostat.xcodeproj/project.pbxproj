@@ -10,6 +10,9 @@
 		62145EB5AD7168B12004CDBA /* Pods_ios_lottostat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B895798E597A85AB71147EF /* Pods_ios_lottostat.framework */; };
 		C20F0DB62701F2FD009D18FB /* RecommendViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20F0DB52701F2FD009D18FB /* RecommendViewController.storyboard */; };
 		C20F0DB82701F311009D18FB /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20F0DB72701F311009D18FB /* RecommendViewController.swift */; };
+		C20F0DBB270340AF009D18FB /* LTAppBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20F0DBA270340AF009D18FB /* LTAppBar.xib */; };
+		C20F0DBD270340CA009D18FB /* LTAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20F0DBC270340CA009D18FB /* LTAppBar.swift */; };
+		C20F0DBF270BA8F4009D18FB /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20F0DBE270BA8F4009D18FB /* BaseController.swift */; };
 		C23EC0B026E8D22800828BAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0AF26E8D22800828BAB /* AppDelegate.swift */; };
 		C23EC0B426E8D22800828BAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0B326E8D22800828BAB /* ViewController.swift */; };
 		C23EC0B926E8D22A00828BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23EC0B826E8D22A00828BAB /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 		6D7BD88C7F7669BA32C853CE /* Pods-ios_lottostat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_lottostat.debug.xcconfig"; path = "Target Support Files/Pods-ios_lottostat/Pods-ios_lottostat.debug.xcconfig"; sourceTree = "<group>"; };
 		C20F0DB52701F2FD009D18FB /* RecommendViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecommendViewController.storyboard; sourceTree = "<group>"; };
 		C20F0DB72701F311009D18FB /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		C20F0DBA270340AF009D18FB /* LTAppBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LTAppBar.xib; sourceTree = "<group>"; };
+		C20F0DBC270340CA009D18FB /* LTAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTAppBar.swift; sourceTree = "<group>"; };
+		C20F0DBE270BA8F4009D18FB /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		C23EC0AC26E8D22800828BAB /* ios_lottostat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_lottostat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C23EC0AF26E8D22800828BAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C23EC0B326E8D22800828BAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +110,15 @@
 			path = Recommend;
 			sourceTree = "<group>";
 		};
+		C20F0DB927034052009D18FB /* LTAppBar */ = {
+			isa = PBXGroup;
+			children = (
+				C20F0DBA270340AF009D18FB /* LTAppBar.xib */,
+				C20F0DBC270340CA009D18FB /* LTAppBar.swift */,
+			);
+			path = LTAppBar;
+			sourceTree = "<group>";
+		};
 		C23EC0A326E8D22800828BAB = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +164,7 @@
 				C20F0DB42701F2AB009D18FB /* Recommend */,
 				C2AE21FB26FB6AAB00002D61 /* Main */,
 				C23EC0C426EA232700828BAB /* Intro */,
+				C20F0DBE270BA8F4009D18FB /* BaseController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,6 +181,7 @@
 		C23EC0C926EC5F6500828BAB /* _ui */ = {
 			isa = PBXGroup;
 			children = (
+				C20F0DB927034052009D18FB /* LTAppBar */,
 				C23EC0CA26EC61C500828BAB /* LTHorizontalLoadingView.swift */,
 				C2AE21E226F764ED00002D61 /* LTCardView.swift */,
 			);
@@ -303,6 +320,7 @@
 				C23EC0DA26F14AA400828BAB /* GoogleService-Info.plist in Resources */,
 				C23EC0BC26E8D22A00828BAB /* LaunchScreen.storyboard in Resources */,
 				C23EC0B926E8D22A00828BAB /* Assets.xcassets in Resources */,
+				C20F0DBB270340AF009D18FB /* LTAppBar.xib in Resources */,
 				C2AE21FD26FB6ABD00002D61 /* MainViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +379,7 @@
 				C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */,
 				C23EC0B426E8D22800828BAB /* ViewController.swift in Sources */,
 				C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */,
+				C20F0DBD270340CA009D18FB /* LTAppBar.swift in Sources */,
 				C2AE21FF26FB6AD700002D61 /* MainViewController.swift in Sources */,
 				C23EC0B026E8D22800828BAB /* AppDelegate.swift in Sources */,
 				C2AE21EA26F8C5E000002D61 /* DefineDefaults.swift in Sources */,
@@ -375,6 +394,7 @@
 				C23EC0DC26F366B400828BAB /* LogUtil.swift in Sources */,
 				C2AE21F026F97D2300002D61 /* DefineQuery.swift in Sources */,
 				C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */,
+				C20F0DBF270BA8F4009D18FB /* BaseController.swift in Sources */,
 				C23EC0CB26EC61C500828BAB /* LTHorizontalLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

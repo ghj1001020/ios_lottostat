@@ -10,4 +10,7 @@ target 'ios_lottostat' do
   pod 'Firebase/AnalyticsWithoutAdIdSupport'
   pod 'Firebase/Firestore'
 
+  # KWDrawerController
+  pod 'KWDrawerController', '~>4.2'
+
 end

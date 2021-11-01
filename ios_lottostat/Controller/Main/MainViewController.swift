@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KWDrawerController
 
 class MainViewController: UIViewController {
 
@@ -17,12 +18,12 @@ class MainViewController: UIViewController {
     // 로또번호 추천화면으로 이동
     @IBAction func moveToRecommend(_ sender: UIButton) {
         let storyboard : UIStoryboard = UIStoryboard(name: "RecommendViewController", bundle: nil)
-        var controller : MainViewController? = nil
+        var controller : DrawerController? = nil
         if #available(iOS 13.0, *) {
-            controller = storyboard.instantiateViewController(identifier: "recommend") as? MainViewController
+            controller = storyboard.instantiateViewController(identifier: "drawer") as? DrawerController
         }
         else {
-            controller = storyboard.instantiateViewController(withIdentifier: "recommend") as? MainViewController
+            controller = storyboard.instantiateViewController(withIdentifier: "drawer") as? DrawerController
         }
         
         if let controller = controller {

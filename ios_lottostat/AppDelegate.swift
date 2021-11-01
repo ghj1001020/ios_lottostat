@@ -8,7 +8,6 @@
 import UIKit
 import Firebase
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // 파이어베이스 초기화
         FirebaseApp.configure()
-        
+                
         return true
     }
     

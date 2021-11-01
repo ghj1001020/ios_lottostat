@@ -441,6 +441,9 @@ PODS:
     - BoringSSL-GRPC (= 0.0.7)
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
+  - KWDrawerController (4.2):
+    - KWDrawerController/Core (= 4.2)
+  - KWDrawerController/Core (4.2)
   - leveldb-library (1.22.1)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
@@ -452,6 +455,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/AnalyticsWithoutAdIdSupport
   - Firebase/Firestore
+  - KWDrawerController (~> 4.2)
 
 SPEC REPOS:
   trunk:
@@ -468,6 +472,7 @@ SPEC REPOS:
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
+    - KWDrawerController
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -486,10 +491,11 @@ SPEC CHECKSUMS:
   GoogleUtilities: 8de2a97a17e15b6b98e38e8770e2d129a57c0040
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
+  KWDrawerController: 244ecb42378bd13a56826458647b76758db5cb67
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: 96a2b434705a14fb8794bbbc7f21d6675fda9714
+PODFILE CHECKSUM: 562b3f76275c722a7759eadac3282205185d154b
 
 COCOAPODS: 1.10.1

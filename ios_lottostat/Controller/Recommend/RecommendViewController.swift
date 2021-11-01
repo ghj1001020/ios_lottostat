@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import KWDrawerController
 
-class RecommendViewController: UIViewController {
+class RecommendViewController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setAppBarTitle("번호추천")
     }
-
+    
+    // 필터버튼 클릭
+    @IBAction func onFilter(_ sender: UIButton) {
+    }
 }
