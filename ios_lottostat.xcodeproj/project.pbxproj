@@ -39,6 +39,9 @@
 		C2AE21FF26FB6AD700002D61 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21FE26FB6AD700002D61 /* MainViewController.swift */; };
 		C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE59D726F37081000BB226 /* AppConfig.swift */; };
 		C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE59D926F3723B000BB226 /* StringUtil.swift */; };
+		C2EFE7FA27310B6800C6FB7E /* LTGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7F927310B6800C6FB7E /* LTGradientButton.swift */; };
+		C2EFE7FC2733355300C6FB7E /* HJDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7FB2733355300C6FB7E /* HJDivider.swift */; };
+		C2EFE7FE2734007300C6FB7E /* FilterDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,9 @@
 		C2AE21FE26FB6AD700002D61 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C2BE59D726F37081000BB226 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		C2BE59D926F3723B000BB226 /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
+		C2EFE7F927310B6800C6FB7E /* LTGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientButton.swift; sourceTree = "<group>"; };
+		C2EFE7FB2733355300C6FB7E /* HJDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJDivider.swift; sourceTree = "<group>"; };
+		C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDialogController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 			children = (
 				C20F0DB52701F2FD009D18FB /* RecommendViewController.storyboard */,
 				C20F0DB72701F311009D18FB /* RecommendViewController.swift */,
+				C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -184,6 +191,8 @@
 				C20F0DB927034052009D18FB /* LTAppBar */,
 				C23EC0CA26EC61C500828BAB /* LTHorizontalLoadingView.swift */,
 				C2AE21E226F764ED00002D61 /* LTCardView.swift */,
+				C2EFE7F927310B6800C6FB7E /* LTGradientButton.swift */,
+				C2EFE7FB2733355300C6FB7E /* HJDivider.swift */,
 			);
 			path = _ui;
 			sourceTree = "<group>";
@@ -385,9 +394,11 @@
 				C2AE21EA26F8C5E000002D61 /* DefineDefaults.swift in Sources */,
 				C2AE21F426FAB42600002D61 /* FileUtil.swift in Sources */,
 				C20F0DB82701F311009D18FB /* RecommendViewController.swift in Sources */,
+				C2EFE7FC2733355300C6FB7E /* HJDivider.swift in Sources */,
 				C2AE21FA26FAF1FA00002D61 /* LottoWinNumber.swift in Sources */,
 				C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */,
 				C2AE21E526F8169B00002D61 /* AppUtil.swift in Sources */,
+				C2EFE7FE2734007300C6FB7E /* FilterDialogController.swift in Sources */,
 				C23EC0C826EBAF4B00828BAB /* IntroViewController.swift in Sources */,
 				C2AE21F626FAEE7800002D61 /* SQLiteService.swift in Sources */,
 				C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */,
@@ -395,6 +406,7 @@
 				C2AE21F026F97D2300002D61 /* DefineQuery.swift in Sources */,
 				C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */,
 				C20F0DBF270BA8F4009D18FB /* BaseController.swift in Sources */,
+				C2EFE7FA27310B6800C6FB7E /* LTGradientButton.swift in Sources */,
 				C23EC0CB26EC61C500828BAB /* LTHorizontalLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

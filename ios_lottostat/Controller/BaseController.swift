@@ -37,10 +37,11 @@ class BaseController : UIViewController {
 }
 
 extension BaseController : LTAppBarPortocol {
+    func onBackButtonClick() {
+        dismiss(animated: true, completion: nil)
+    }
     
-    // 왼쪽 버튼 클릭
-    @objc func onLeftButtonClick() {
-//        dismiss(animated: true, completion: nil)
+    func onMoreButtonClick() {
         drawerController?.openSide(.left)
     }
     

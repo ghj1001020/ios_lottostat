@@ -10,7 +10,8 @@ import UIKit
 
 
 protocol LTAppBarPortocol {
-    func onLeftButtonClick()
+    func onBackButtonClick()
+    func onMoreButtonClick()
 }
 
 
@@ -47,7 +48,13 @@ class LTAppBar : UIView {
         lbTitle.text = title
     }
 
-    @IBAction func onLeftButton(_ sender: UIButton) {
-        self.delegate?.onLeftButtonClick()
+    // 뒤로가기
+    @IBAction func onBackButton(_ sender: UIButton) {
+        self.delegate?.onBackButtonClick()
+    }
+    
+    // 사이드메뉴
+    @IBAction func onMoreButton(_ sender: UIButton) {
+        self.delegate?.onMoreButtonClick()
     }
 }

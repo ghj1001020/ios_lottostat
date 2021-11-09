@@ -46,8 +46,8 @@
             filePath = "ios_lottostat/_ui/LTAppBar/LTAppBar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "init(frame:)"
             landmarkType = "7">
          </BreakpointContent>
