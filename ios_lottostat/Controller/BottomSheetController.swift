@@ -8,12 +8,26 @@
 import UIKit
 
 class BottomSheetController: UIViewController {
+
+    private let contentController : UIViewController
     
+    init(contentController: UIViewController) {
+        self.contentController = contentController
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        self.contentController = UIViewController()
+        super.init(coder: coder)
+    }
+    
+
     // 바텀시트의 상태
     enum BottomSheetState {
         case expanded
         case normal
     }
+
     
     // 바텀시트와 Safe Area Top 사이의 최소 간격
     let bottomSheetPanMinTopConstant : CGFloat = 56.0
@@ -123,6 +137,18 @@ class BottomSheetController: UIViewController {
             indicator.bottomAnchor.constraint(equalTo: self.bottomSheet.topAnchor, constant: -6)
         ])
     
+        // 컨텐츠
+        self.addChild(contentController)
+        bottomSheet.addSubview(contentController.view)
+        contentController.didMove(toParent: self)
+        bottomSheet.clipsToBounds = true
+        contentController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            contentController.view.topAnchor.constraint(equalTo: bottomSheet.topAnchor) ,
+            contentController.view.bottomAnchor.constraint(equalTo: bottomSheet.bottomAnchor) ,
+            contentController.view.leadingAnchor.constraint(equalTo: bottomSheet.leadingAnchor) ,
+            contentController.view.trailingAnchor.constraint(equalTo: bottomSheet.trailingAnchor)
+        ])
     }
     
     // 바텀시트 열기 애니메이션

@@ -42,8 +42,10 @@
 		C2EFE7FA27310B6800C6FB7E /* LTGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7F927310B6800C6FB7E /* LTGradientButton.swift */; };
 		C2EFE7FC2733355300C6FB7E /* HJDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7FB2733355300C6FB7E /* HJDivider.swift */; };
 		C2EFE7FE2734007300C6FB7E /* FilterDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */; };
-		C2FDCE8C2740AA0C00C60E13 /* FilterDialogController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FDCE8B2740AA0C00C60E13 /* FilterDialogController.xib */; };
 		C2FDCE902740CD4500C60E13 /* BottomSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FDCE8F2740CD4500C60E13 /* BottomSheetController.swift */; };
+		C2FDCE922740D0DA00C60E13 /* FilterDialogController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FDCE912740D0DA00C60E13 /* FilterDialogController.storyboard */; };
+		C2FDCE962740D65900C60E13 /* FilterDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FDCE952740D65900C60E13 /* FilterDialog.xib */; };
+		C2FDCE982740D6EA00C60E13 /* FilterDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FDCE972740D6EA00C60E13 /* FilterDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,8 +88,10 @@
 		C2EFE7F927310B6800C6FB7E /* LTGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientButton.swift; sourceTree = "<group>"; };
 		C2EFE7FB2733355300C6FB7E /* HJDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJDivider.swift; sourceTree = "<group>"; };
 		C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDialogController.swift; sourceTree = "<group>"; };
-		C2FDCE8B2740AA0C00C60E13 /* FilterDialogController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterDialogController.xib; sourceTree = "<group>"; };
 		C2FDCE8F2740CD4500C60E13 /* BottomSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetController.swift; sourceTree = "<group>"; };
+		C2FDCE912740D0DA00C60E13 /* FilterDialogController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterDialogController.storyboard; sourceTree = "<group>"; };
+		C2FDCE952740D65900C60E13 /* FilterDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterDialog.xib; sourceTree = "<group>"; };
+		C2FDCE972740D6EA00C60E13 /* FilterDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +121,9 @@
 				C20F0DB52701F2FD009D18FB /* RecommendViewController.storyboard */,
 				C20F0DB72701F311009D18FB /* RecommendViewController.swift */,
 				C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */,
-				C2FDCE8B2740AA0C00C60E13 /* FilterDialogController.xib */,
+				C2FDCE912740D0DA00C60E13 /* FilterDialogController.storyboard */,
+				C2FDCE952740D65900C60E13 /* FilterDialog.xib */,
+				C2FDCE972740D6EA00C60E13 /* FilterDialog.swift */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -332,12 +338,13 @@
 				C23EC0C626EBAE6100828BAB /* IntroViewController.storyboard in Resources */,
 				C20F0DB62701F2FD009D18FB /* RecommendViewController.storyboard in Resources */,
 				C2AE21DB26F580D700002D61 /* CommonDialog.xib in Resources */,
+				C2FDCE922740D0DA00C60E13 /* FilterDialogController.storyboard in Resources */,
+				C2FDCE962740D65900C60E13 /* FilterDialog.xib in Resources */,
 				C23EC0DA26F14AA400828BAB /* GoogleService-Info.plist in Resources */,
 				C23EC0BC26E8D22A00828BAB /* LaunchScreen.storyboard in Resources */,
 				C23EC0B926E8D22A00828BAB /* Assets.xcassets in Resources */,
 				C20F0DBB270340AF009D18FB /* LTAppBar.xib in Resources */,
 				C2AE21FD26FB6ABD00002D61 /* MainViewController.storyboard in Resources */,
-				C2FDCE8C2740AA0C00C60E13 /* FilterDialogController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +421,7 @@
 				C2AE21F026F97D2300002D61 /* DefineQuery.swift in Sources */,
 				C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */,
 				C20F0DBF270BA8F4009D18FB /* BaseController.swift in Sources */,
+				C2FDCE982740D6EA00C60E13 /* FilterDialog.swift in Sources */,
 				C2EFE7FA27310B6800C6FB7E /* LTGradientButton.swift in Sources */,
 				C23EC0CB26EC61C500828BAB /* LTHorizontalLoadingView.swift in Sources */,
 			);

@@ -8,5 +8,11 @@
 import UIKit
 
 class FilterDialogController: UIViewController {
-    
+ 
+    override func viewDidLoad() {
+        LogUtil.p("FilterDialogController")
+        
+        
+
+    }
 }
