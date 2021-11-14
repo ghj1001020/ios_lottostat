@@ -43,7 +43,7 @@
 		C2EFE7FC2733355300C6FB7E /* HJDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7FB2733355300C6FB7E /* HJDivider.swift */; };
 		C2EFE7FE2734007300C6FB7E /* FilterDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */; };
 		C2FDCE8C2740AA0C00C60E13 /* FilterDialogController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FDCE8B2740AA0C00C60E13 /* FilterDialogController.xib */; };
-		C2FDCE8E2740CCB800C60E13 /* BaseDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FDCE8D2740CCB800C60E13 /* BaseDialogController.swift */; };
+		C2FDCE902740CD4500C60E13 /* BottomSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FDCE8F2740CD4500C60E13 /* BottomSheetController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,7 +87,7 @@
 		C2EFE7FB2733355300C6FB7E /* HJDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJDivider.swift; sourceTree = "<group>"; };
 		C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDialogController.swift; sourceTree = "<group>"; };
 		C2FDCE8B2740AA0C00C60E13 /* FilterDialogController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterDialogController.xib; sourceTree = "<group>"; };
-		C2FDCE8D2740CCB800C60E13 /* BaseDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDialogController.swift; sourceTree = "<group>"; };
+		C2FDCE8F2740CD4500C60E13 /* BottomSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +177,7 @@
 				C2AE21FB26FB6AAB00002D61 /* Main */,
 				C23EC0C426EA232700828BAB /* Intro */,
 				C20F0DBE270BA8F4009D18FB /* BaseController.swift */,
-				C2FDCE8D2740CCB800C60E13 /* BaseDialogController.swift */,
+				C2FDCE8F2740CD4500C60E13 /* BottomSheetController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -392,6 +392,7 @@
 			files = (
 				C2AE21E726F8BD7A00002D61 /* DefaultsUtil.swift in Sources */,
 				C2AE21ED26F8D1F600002D61 /* SQLite.swift in Sources */,
+				C2FDCE902740CD4500C60E13 /* BottomSheetController.swift in Sources */,
 				C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */,
 				C23EC0B426E8D22800828BAB /* ViewController.swift in Sources */,
 				C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */,
@@ -406,7 +407,6 @@
 				C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */,
 				C2AE21E526F8169B00002D61 /* AppUtil.swift in Sources */,
 				C2EFE7FE2734007300C6FB7E /* FilterDialogController.swift in Sources */,
-				C2FDCE8E2740CCB800C60E13 /* BaseDialogController.swift in Sources */,
 				C23EC0C826EBAF4B00828BAB /* IntroViewController.swift in Sources */,
 				C2AE21F626FAEE7800002D61 /* SQLiteService.swift in Sources */,
 				C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */,

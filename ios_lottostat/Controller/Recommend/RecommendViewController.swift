@@ -18,7 +18,7 @@ class RecommendViewController: BaseController {
     
     // 필터버튼 클릭
     @IBAction func onFilter(_ sender: UIButton) {
-        let filterDialog = FilterDialogController()
+        let filterDialog = BottomSheetController()
         filterDialog.modalPresentationStyle = .overFullScreen
         self.present(filterDialog, animated: false, completion: nil)
     }
