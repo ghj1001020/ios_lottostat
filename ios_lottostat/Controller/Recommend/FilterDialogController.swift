@@ -9,12 +9,32 @@ import UIKit
 
 class FilterDialogController: UIViewController {
     
+    // 바텀시트의 상태
+    enum BottomSheetState {
+        case expanded
+        case normal
+    }
+    
+    // 바텀시트와 Safe Area Top 사이의 최소 간격
+    let bottomSheetPanMinTopConstant : CGFloat = 56.0
+    // 바텀시트와 Safe Area Top 사이의 간격
+    lazy var bottomSheetPanCurrentTopConstant : CGFloat = bottomSheetPanMinTopConstant
+    
+
+    
     private let dim : UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         return view
     }()
     
+    private let indicator : UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 4
+        return view
+    }()
+        
     private let bottomSheet : UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -51,12 +71,13 @@ class FilterDialogController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        startBottomSheet()
+        showBottomSheet()
     }
 
     
     func initLayout() {
         self.view.addSubview(dim)
+        self.view.addSubview(indicator)
         self.view.addSubview(bottomSheet)
         
         // 딤영역
@@ -85,28 +106,50 @@ class FilterDialogController: UIViewController {
             bottomSheet.trailingAnchor.constraint(equalTo: self.view.trailingAnchor) ,
             bottomSheet.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
+        
+        // 바텀시트 드래그 제스처
+        let viewPanRecognizer = UIPanGestureRecognizer(target: self, action: #selector(gestureViewPanned(_:)) )
+        // 드래그 제스처의 딜레이 없앰
+        viewPanRecognizer.delaysTouchesBegan = false
+        viewPanRecognizer.delaysTouchesEnded = false
+        self.view.addGestureRecognizer(viewPanRecognizer)
+        
+        // 인디케이터 영역
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            indicator.widthAnchor.constraint(equalToConstant: 55) ,
+            indicator.heightAnchor.constraint(equalToConstant: 8) ,
+            indicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor) ,
+            indicator.bottomAnchor.constraint(equalTo: self.bottomSheet.topAnchor, constant: -6)
+        ])
+    
     }
     
     // 바텀시트 열기 애니메이션
-    func startBottomSheet() {
-        var topHeight = self.view.frame.height - defaultHeight
-        if #available(iOS 11.0, *) {
-            topHeight = self.view.safeAreaInsets.bottom + self.view.safeAreaLayoutGuide.layoutFrame.height - defaultHeight
+    func showBottomSheet(state: BottomSheetState = .normal) {
+        if( state == .normal ) {
+            var topHeight = self.view.frame.height - defaultHeight
+            if #available(iOS 11.0, *) {
+                topHeight = self.view.safeAreaInsets.bottom + self.view.safeAreaLayoutGuide.layoutFrame.height - defaultHeight
+            }
+            bottomSheetTopConstraint.constant = topHeight
         }
-        bottomSheetTopConstraint.constant = topHeight
+        else {
+            bottomSheetTopConstraint.constant = bottomSheetPanMinTopConstant
+        }
         
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveLinear, animations: {
-            self.dim.alpha = 0.7
+            self.dim.alpha = self.getDimAlphaByBottomSheetTopConstant(constant: self.bottomSheetTopConstraint.constant)
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
     
     @objc func gestureDimTapped(_ recognizer: UITapGestureRecognizer) {
-        endBottomSheet()
+        hideBottomSheet()
     }
     
     // 바텀시트 닫기 애니메이션
-    func endBottomSheet() {
+    func hideBottomSheet() {
         var topHeight = self.view.frame.height
         if #available(iOS 11.0, *) {
             topHeight = self.view.safeAreaInsets.bottom + self.view.safeAreaLayoutGuide.layoutFrame.height
@@ -119,5 +162,87 @@ class FilterDialogController: UIViewController {
         } completion: { (isComplete : Bool) in
             self.dismiss(animated: false, completion: nil)
         }
+    }
+    
+    @objc func gestureViewPanned(_ recognizer: UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: self.view)
+        let velocity = recognizer.velocity(in: self.view)
+        
+        switch recognizer.state {
+        case .began:
+            bottomSheetPanCurrentTopConstant = bottomSheetTopConstraint.constant
+            
+        case .changed:
+            if bottomSheetPanCurrentTopConstant + translation.y > bottomSheetPanMinTopConstant {
+                bottomSheetTopConstraint.constant = bottomSheetPanCurrentTopConstant + translation.y
+            }
+            dim.alpha = getDimAlphaByBottomSheetTopConstant(constant: bottomSheetTopConstraint.constant)
+            
+        case .ended:
+            // 빠르게 아래로 드래그하면 닫힘
+            if velocity.y > 1500 {
+                hideBottomSheet()
+                return
+            }
+            
+            var viewHeight = self.view.frame.height
+            if #available(iOS 11.0, *) {
+                viewHeight = self.view.safeAreaInsets.bottom + self.view.safeAreaLayoutGuide.layoutFrame.height
+            }
+            let arrValues : [CGFloat] = [bottomSheetPanMinTopConstant, viewHeight-defaultHeight, viewHeight]
+            let nearest = getNearestNumber(number: bottomSheetTopConstraint.constant, values: arrValues)
+
+            // expanded
+            if nearest == bottomSheetPanMinTopConstant {
+                showBottomSheet(state: .expanded)
+            }
+            // normal
+            else if nearest == viewHeight-defaultHeight {
+                showBottomSheet(state: .normal)
+            }
+            // dismiss
+            else {
+                hideBottomSheet()
+            }
+            
+            bottomSheetPanCurrentTopConstant = bottomSheetTopConstraint.constant
+            
+        default:
+            break
+        }
+    }
+    
+    // 주어진 값과 가장가까운 배열의 값 반환
+    func getNearestNumber(number: CGFloat, values: [CGFloat]) -> CGFloat {
+        let nearest = values.min { num1, num2 in
+            abs(number-num1) < abs(number-num2)
+        }
+        
+        return nearest ?? number
+    }
+    
+    // bottom sheet 의 top constant 값으로 dim alpha 계산
+    func getDimAlphaByBottomSheetTopConstant( constant: CGFloat ) -> CGFloat {
+        let alpha : CGFloat = 0.7
+        
+        var viewHeight = self.view.frame.height
+        if #available(iOS 11.0, *) {
+            viewHeight = self.view.safeAreaInsets.bottom + self.view.safeAreaLayoutGuide.layoutFrame.height
+        }
+        
+        // dim 알파 0.7 위치
+        let fullDimPosition = (viewHeight-defaultHeight)/2
+        if( constant < fullDimPosition ) {
+            return alpha
+        }
+        
+        // dim 알파 0 위치
+        let noDimPosition = viewHeight
+        if( constant >= noDimPosition ) {
+            return 0.0
+        }
+        
+        // 높이에 따라 알파값 계산
+        return alpha * (1 - (constant-fullDimPosition)/(noDimPosition-fullDimPosition))
     }
 }
