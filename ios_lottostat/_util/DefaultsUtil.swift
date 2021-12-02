@@ -14,18 +14,23 @@ class DefaultsUtil {
     private init() {}
     
     // 데이터 저장
-    func putInt(key: String, value: Int) {
+    func put(_ key: String, _ value: Int) {
         let userDefaults = UserDefaults.standard
         userDefaults.set(value, forKey: key)
     }
     
-    func putString(key: String, value: String) {
+    func put(_ key: String, _ value: String) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(value, forKey: key)
+    }
+    
+    func put(_ key: String, _ value: Bool) {
         let userDefaults = UserDefaults.standard
         userDefaults.set(value, forKey: key)
     }
     
     // 데이터 조회
-    func getInt(key: String, defaultValue: Int=0) -> Int {
+    func get(_ key: String, _ defaultValue: Int=0) -> Int {
         let userDefaults = UserDefaults.standard
         if userDefaults.object(forKey: key) == nil {
             return defaultValue
@@ -33,8 +38,16 @@ class DefaultsUtil {
         return userDefaults.integer(forKey: key)
     }
     
-    func getString(key: String, defaultValue: String="") -> String {
+    func get(_ key: String, _ defaultValue: String="") -> String {
         let userDefaults = UserDefaults.standard
         return userDefaults.string(forKey: key) ?? defaultValue
+    }
+    
+    func get(_ key: String, _ defaultValue: Bool=false) -> Bool {
+        let userDefaults = UserDefaults.standard
+        if userDefaults.object(forKey: key) == nil {
+            return defaultValue
+        }
+        return userDefaults.bool(forKey: key)
     }
 }

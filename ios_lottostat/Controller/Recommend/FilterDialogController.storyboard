@@ -16,47 +16,197 @@
                         <viewControllerLayoutGuide type="top" id="OlD-qt-VTO"/>
                         <viewControllerLayoutGuide type="bottom" id="ixL-BX-MbE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvP-de-p2M">
-                                <rect key="frame" x="318" y="60" width="52" height="30"/>
+                                <rect key="frame" x="346" y="60" width="52" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ryd-Di-GZA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="닫기">
                                     <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAY-nT-c50">
-                                <rect key="frame" x="186" y="841" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0u-kg-kJg">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQS-vd-WoG" userLabel="content">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGH-iv-RpL" userLabel="filter_list">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMj-pM-Hmo" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Weo-g6-ybX"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="이전 당첨번호와 %s개 이상 일치시 제외">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgCheck" value="ic_check_on"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_check_off"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onFilterCheckedChangeListener:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="56n-e5-bWV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcL-o5-9Mv" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="fbW-pZ-k3K"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="직전 회차 당첨번호 중 %s개 이상 포함">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgCheck" value="ic_check_on"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_check_off"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ed-8z-EsE" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="100" width="414" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="jSy-zo-akn"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="%s개 이상 연속된 수 제외">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgCheck" value="ic_check_on"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_check_off"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="9Ed-8z-EsE" firstAttribute="leading" secondItem="IGH-iv-RpL" secondAttribute="leading" id="16N-0H-S0f"/>
+                                                    <constraint firstItem="9Ed-8z-EsE" firstAttribute="top" secondItem="FcL-o5-9Mv" secondAttribute="bottom" id="A12-5b-Z9w"/>
+                                                    <constraint firstItem="dMj-pM-Hmo" firstAttribute="leading" secondItem="IGH-iv-RpL" secondAttribute="leading" id="AQ3-CI-sCh"/>
+                                                    <constraint firstItem="FcL-o5-9Mv" firstAttribute="top" secondItem="dMj-pM-Hmo" secondAttribute="bottom" id="DFN-3R-CBm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9Ed-8z-EsE" secondAttribute="trailing" id="cwh-cb-ONE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dMj-pM-Hmo" secondAttribute="trailing" id="fK3-V6-ulQ"/>
+                                                    <constraint firstItem="dMj-pM-Hmo" firstAttribute="top" secondItem="IGH-iv-RpL" secondAttribute="top" id="jCg-vn-l0a"/>
+                                                    <constraint firstAttribute="trailing" secondItem="FcL-o5-9Mv" secondAttribute="trailing" id="nl1-hp-K1K"/>
+                                                    <constraint firstItem="FcL-o5-9Mv" firstAttribute="leading" secondItem="IGH-iv-RpL" secondAttribute="leading" id="rF4-ug-v4g"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2e7-l2-3LY" userLabel="filter_input_count">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="횟수를 입력하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kev-Zt-8uK">
+                                                        <rect key="frame" x="16" y="10" width="115" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="hMI-c8-SL8" customClass="HJNumberTextField" customModule="ios_lottostat" customModuleProvider="target">
+                                                        <rect key="frame" x="167" y="42" width="80" height="37.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="lsP-2K-ktA"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Kev-Zt-8uK" firstAttribute="top" secondItem="2e7-l2-3LY" secondAttribute="top" constant="10" id="2tG-8x-NFp"/>
+                                                    <constraint firstItem="hMI-c8-SL8" firstAttribute="top" secondItem="Kev-Zt-8uK" secondAttribute="bottom" constant="12" id="4ud-h3-ZK1"/>
+                                                    <constraint firstItem="hMI-c8-SL8" firstAttribute="centerX" secondItem="2e7-l2-3LY" secondAttribute="centerX" id="Snt-mt-RYz"/>
+                                                    <constraint firstItem="Kev-Zt-8uK" firstAttribute="leading" secondItem="2e7-l2-3LY" secondAttribute="leading" constant="16" id="hwi-fa-pZK"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <constraints>
+                                            <constraint firstItem="2e7-l2-3LY" firstAttribute="top" secondItem="DQS-vd-WoG" secondAttribute="top" id="Jcp-A9-LZP"/>
+                                            <constraint firstItem="2e7-l2-3LY" firstAttribute="leading" secondItem="DQS-vd-WoG" secondAttribute="leading" id="Jrh-RC-doV"/>
+                                            <constraint firstItem="IGH-iv-RpL" firstAttribute="top" secondItem="DQS-vd-WoG" secondAttribute="top" id="OwR-xl-tDC"/>
+                                            <constraint firstAttribute="bottom" secondItem="IGH-iv-RpL" secondAttribute="bottom" id="VG2-8T-Vcf"/>
+                                            <constraint firstAttribute="trailing" secondItem="IGH-iv-RpL" secondAttribute="trailing" id="ckq-e8-kKp"/>
+                                            <constraint firstAttribute="height" constant="200" id="eum-ww-W42"/>
+                                            <constraint firstAttribute="trailing" secondItem="2e7-l2-3LY" secondAttribute="trailing" id="fTr-Uh-bUd"/>
+                                            <constraint firstAttribute="bottom" secondItem="2e7-l2-3LY" secondAttribute="bottom" id="fcm-MP-7lb"/>
+                                            <constraint firstItem="IGH-iv-RpL" firstAttribute="leading" secondItem="DQS-vd-WoG" secondAttribute="leading" id="vGb-HC-Mi2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DQS-vd-WoG" firstAttribute="leading" secondItem="dWM-E3-RWL" secondAttribute="leading" id="1eM-hl-Mk5"/>
+                                    <constraint firstItem="DQS-vd-WoG" firstAttribute="bottom" secondItem="dWM-E3-RWL" secondAttribute="bottom" id="LT6-Ee-Y6t"/>
+                                    <constraint firstItem="DQS-vd-WoG" firstAttribute="width" secondItem="7h0-Jv-Mhm" secondAttribute="width" id="OWd-W3-QDq"/>
+                                    <constraint firstItem="DQS-vd-WoG" firstAttribute="trailing" secondItem="dWM-E3-RWL" secondAttribute="trailing" id="ilI-OH-PCF"/>
+                                    <constraint firstItem="DQS-vd-WoG" firstAttribute="top" secondItem="dWM-E3-RWL" secondAttribute="top" id="wEg-nF-1eM"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="dWM-E3-RWL"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7h0-Jv-Mhm"/>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LAY-nT-c50" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="4J3-LH-QvR"/>
                             <constraint firstItem="xvP-de-p2M" firstAttribute="top" secondItem="OlD-qt-VTO" secondAttribute="bottom" constant="16" id="7Sx-sU-v7M"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xvP-de-p2M" secondAttribute="trailing" constant="24" id="cvU-rf-Mec"/>
-                            <constraint firstItem="ixL-BX-MbE" firstAttribute="top" secondItem="LAY-nT-c50" secondAttribute="bottom" id="wQL-9V-ULr"/>
+                            <constraint firstItem="Q0u-kg-kJg" firstAttribute="top" secondItem="xvP-de-p2M" secondAttribute="bottom" constant="10" id="Ks0-TU-UeL"/>
+                            <constraint firstAttribute="bottom" secondItem="Q0u-kg-kJg" secondAttribute="bottom" id="XfY-l8-Ox2"/>
+                            <constraint firstAttribute="trailing" secondItem="xvP-de-p2M" secondAttribute="trailing" constant="16" id="cvU-rf-Mec"/>
+                            <constraint firstItem="Q0u-kg-kJg" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="oJh-06-bY4"/>
+                            <constraint firstAttribute="trailing" secondItem="Q0u-kg-kJg" secondAttribute="trailing" id="wCg-NS-j0w"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="chkExcludePrevWinNumber" destination="dMj-pM-Hmo" id="Gyg-yF-4rD"/>
+                        <outlet property="layoutFilterList" destination="IGH-iv-RpL" id="WYg-YV-jfL"/>
+                        <outlet property="layoutInputCount" destination="2e7-l2-3LY" id="xtX-gj-6P4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45" y="60.999999999999993"/>
+            <point key="canvasLocation" x="44.927536231884062" y="60.9375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ic_check_off" width="28" height="28"/>
+        <image name="ic_check_on" width="28" height="28"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

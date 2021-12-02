@@ -23,6 +23,10 @@
 		C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0CD26EFF42000828BAB /* DateUtil.swift */; };
 		C23EC0DA26F14AA400828BAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C23EC0D926F14AA400828BAB /* GoogleService-Info.plist */; };
 		C23EC0DC26F366B400828BAB /* LogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0DB26F366B400828BAB /* LogUtil.swift */; };
+		C2AA464F2744600000F213EB /* HJCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA464E2744600000F213EB /* HJCheckBox.swift */; };
+		C2AA46512745196700F213EB /* HJScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA46502745196700F213EB /* HJScrollView.swift */; };
+		C2AA46552757B05300F213EB /* HJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA46542757B05300F213EB /* HJTextField.swift */; };
+		C2AA46572759056700F213EB /* HJNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA46562759056700F213EB /* HJNumberTextField.swift */; };
 		C2AE21DB26F580D700002D61 /* CommonDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AE21DA26F580D700002D61 /* CommonDialog.xib */; };
 		C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21DC26F615F500002D61 /* CommonDialog.swift */; };
 		C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E226F764ED00002D61 /* LTCardView.swift */; };
@@ -44,8 +48,6 @@
 		C2EFE7FE2734007300C6FB7E /* FilterDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */; };
 		C2FDCE902740CD4500C60E13 /* BottomSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FDCE8F2740CD4500C60E13 /* BottomSheetController.swift */; };
 		C2FDCE922740D0DA00C60E13 /* FilterDialogController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FDCE912740D0DA00C60E13 /* FilterDialogController.storyboard */; };
-		C2FDCE962740D65900C60E13 /* FilterDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FDCE952740D65900C60E13 /* FilterDialog.xib */; };
-		C2FDCE982740D6EA00C60E13 /* FilterDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FDCE972740D6EA00C60E13 /* FilterDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,10 @@
 		C23EC0CD26EFF42000828BAB /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		C23EC0D926F14AA400828BAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C23EC0DB26F366B400828BAB /* LogUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
+		C2AA464E2744600000F213EB /* HJCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJCheckBox.swift; sourceTree = "<group>"; };
+		C2AA46502745196700F213EB /* HJScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJScrollView.swift; sourceTree = "<group>"; };
+		C2AA46542757B05300F213EB /* HJTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJTextField.swift; sourceTree = "<group>"; };
+		C2AA46562759056700F213EB /* HJNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJNumberTextField.swift; sourceTree = "<group>"; };
 		C2AE21DA26F580D700002D61 /* CommonDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonDialog.xib; sourceTree = "<group>"; };
 		C2AE21DC26F615F500002D61 /* CommonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDialog.swift; sourceTree = "<group>"; };
 		C2AE21E226F764ED00002D61 /* LTCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCardView.swift; sourceTree = "<group>"; };
@@ -90,8 +96,6 @@
 		C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDialogController.swift; sourceTree = "<group>"; };
 		C2FDCE8F2740CD4500C60E13 /* BottomSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetController.swift; sourceTree = "<group>"; };
 		C2FDCE912740D0DA00C60E13 /* FilterDialogController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterDialogController.storyboard; sourceTree = "<group>"; };
-		C2FDCE952740D65900C60E13 /* FilterDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterDialog.xib; sourceTree = "<group>"; };
-		C2FDCE972740D6EA00C60E13 /* FilterDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +124,8 @@
 			children = (
 				C20F0DB52701F2FD009D18FB /* RecommendViewController.storyboard */,
 				C20F0DB72701F311009D18FB /* RecommendViewController.swift */,
-				C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */,
 				C2FDCE912740D0DA00C60E13 /* FilterDialogController.storyboard */,
-				C2FDCE952740D65900C60E13 /* FilterDialog.xib */,
-				C2FDCE972740D6EA00C60E13 /* FilterDialog.swift */,
+				C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -205,6 +207,10 @@
 				C2AE21E226F764ED00002D61 /* LTCardView.swift */,
 				C2EFE7F927310B6800C6FB7E /* LTGradientButton.swift */,
 				C2EFE7FB2733355300C6FB7E /* HJDivider.swift */,
+				C2AA464E2744600000F213EB /* HJCheckBox.swift */,
+				C2AA46502745196700F213EB /* HJScrollView.swift */,
+				C2AA46542757B05300F213EB /* HJTextField.swift */,
+				C2AA46562759056700F213EB /* HJNumberTextField.swift */,
 			);
 			path = _ui;
 			sourceTree = "<group>";
@@ -339,7 +345,6 @@
 				C20F0DB62701F2FD009D18FB /* RecommendViewController.storyboard in Resources */,
 				C2AE21DB26F580D700002D61 /* CommonDialog.xib in Resources */,
 				C2FDCE922740D0DA00C60E13 /* FilterDialogController.storyboard in Resources */,
-				C2FDCE962740D65900C60E13 /* FilterDialog.xib in Resources */,
 				C23EC0DA26F14AA400828BAB /* GoogleService-Info.plist in Resources */,
 				C23EC0BC26E8D22A00828BAB /* LaunchScreen.storyboard in Resources */,
 				C23EC0B926E8D22A00828BAB /* Assets.xcassets in Resources */,
@@ -410,18 +415,21 @@
 				C2AE21F426FAB42600002D61 /* FileUtil.swift in Sources */,
 				C20F0DB82701F311009D18FB /* RecommendViewController.swift in Sources */,
 				C2EFE7FC2733355300C6FB7E /* HJDivider.swift in Sources */,
+				C2AA46552757B05300F213EB /* HJTextField.swift in Sources */,
 				C2AE21FA26FAF1FA00002D61 /* LottoWinNumber.swift in Sources */,
 				C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */,
 				C2AE21E526F8169B00002D61 /* AppUtil.swift in Sources */,
+				C2AA46512745196700F213EB /* HJScrollView.swift in Sources */,
 				C2EFE7FE2734007300C6FB7E /* FilterDialogController.swift in Sources */,
 				C23EC0C826EBAF4B00828BAB /* IntroViewController.swift in Sources */,
 				C2AE21F626FAEE7800002D61 /* SQLiteService.swift in Sources */,
 				C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */,
+				C2AA46572759056700F213EB /* HJNumberTextField.swift in Sources */,
+				C2AA464F2744600000F213EB /* HJCheckBox.swift in Sources */,
 				C23EC0DC26F366B400828BAB /* LogUtil.swift in Sources */,
 				C2AE21F026F97D2300002D61 /* DefineQuery.swift in Sources */,
 				C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */,
 				C20F0DBF270BA8F4009D18FB /* BaseController.swift in Sources */,
-				C2FDCE982740D6EA00C60E13 /* FilterDialog.swift in Sources */,
 				C2EFE7FA27310B6800C6FB7E /* LTGradientButton.swift in Sources */,
 				C23EC0CB26EC61C500828BAB /* LTHorizontalLoadingView.swift in Sources */,
 			);
@@ -567,7 +575,7 @@
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = WGWMP4P875;
 				INFOPLIST_FILE = ios_lottostat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,7 +598,7 @@
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = WGWMP4P875;
 				INFOPLIST_FILE = ios_lottostat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,8 +9,13 @@ import UIKit
 
 class HJDivider: UIView {
 
-    @IBInspectable public var lineColor : UIColor = UIColor.lightGray   // 선색
+    // 선색
+    @IBInspectable public var lineColor : UIColor = UIColor.lightGray
+
+    // true-선, false-점선
     @IBInspectable public var isLine : Bool = true
+    
+    // 점선
     @IBInspectable public var dashLine : Int = 7
     @IBInspectable public var dashGap : Int = 3
 

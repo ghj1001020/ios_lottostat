@@ -73,7 +73,7 @@ class IntroViewController: UIViewController {
     
     // SQLite에서 데이터 읽기
     func getLottoNumber() {
-        let copyVersion = DefaultsUtil.shared.getInt(key: DefineDefaults.VERSION_COPY_SQLITE)
+        let copyVersion : Int = DefaultsUtil.shared.get(DefineDefaults.VERSION_COPY_SQLITE)
         var isCopy = copyVersion != SQLite.SQLite_VERSION
         if( !isCopy ) {
             lbMessage.text = "데이터 파일을 가져옵니다"
@@ -93,7 +93,7 @@ class IntroViewController: UIViewController {
                 }
 
                 if( isCopy ) {
-                    DefaultsUtil.shared.putInt(key: DefineDefaults.VERSION_COPY_SQLITE, value: SQLite.SQLite_VERSION)
+                    DefaultsUtil.shared.put(DefineDefaults.VERSION_COPY_SQLITE, SQLite.SQLite_VERSION)
                 }
             }
         }
