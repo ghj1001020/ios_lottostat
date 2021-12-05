@@ -122,9 +122,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="hMI-c8-SL8" customClass="HJNumberTextField" customModule="ios_lottostat" customModuleProvider="target">
-                                                        <rect key="frame" x="167" y="42" width="80" height="37.5"/>
+                                                        <rect key="frame" x="167" y="42" width="80" height="40"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Rf5-ed-Thn"/>
                                                             <constraint firstAttribute="width" constant="80" id="lsP-2K-ktA"/>
                                                         </constraints>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,19 +135,83 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                 <integer key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.4823529411764706" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="borderBottom" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7O-aS-FjT" userLabel="minus">
+                                                        <rect key="frame" x="119" y="46" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="vlA-Xg-R2A"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" backgroundImage="ic_minus"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZs-JC-2Sa" userLabel="plus">
+                                                        <rect key="frame" x="263" y="46" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="NNO-Mj-dLI"/>
+                                                            <constraint firstAttribute="width" constant="32" id="NR2-un-3e6"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" backgroundImage="ic_plus"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxe-kV-Wit" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
+                                                        <rect key="frame" x="244" y="94" width="150" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="cYe-nM-BG9"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                                                        <state key="normal" title="보너스 포함 여부">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgCheck" value="ic_check_bonus_on"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_check_bonus_off"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1개 : 연속된 수가 하나도 없다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPQ-UG-6Ot" userLabel="안내" customClass="HJLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="138" width="382" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="Kev-Zt-8uK" firstAttribute="top" secondItem="2e7-l2-3LY" secondAttribute="top" constant="10" id="2tG-8x-NFp"/>
                                                     <constraint firstItem="hMI-c8-SL8" firstAttribute="top" secondItem="Kev-Zt-8uK" secondAttribute="bottom" constant="12" id="4ud-h3-ZK1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fxe-kV-Wit" secondAttribute="trailing" constant="20" id="GBJ-2G-N1Y"/>
+                                                    <constraint firstItem="hMI-c8-SL8" firstAttribute="bottom" secondItem="j7O-aS-FjT" secondAttribute="bottom" constant="4" id="HO1-OU-wz3"/>
+                                                    <constraint firstItem="hMI-c8-SL8" firstAttribute="leading" secondItem="j7O-aS-FjT" secondAttribute="trailing" constant="16" id="JSZ-rR-QBA"/>
+                                                    <constraint firstItem="BZs-JC-2Sa" firstAttribute="leading" secondItem="hMI-c8-SL8" secondAttribute="trailing" constant="16" id="S3f-nF-KRL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MPQ-UG-6Ot" secondAttribute="trailing" constant="16" id="SUS-eh-S9b"/>
                                                     <constraint firstItem="hMI-c8-SL8" firstAttribute="centerX" secondItem="2e7-l2-3LY" secondAttribute="centerX" id="Snt-mt-RYz"/>
+                                                    <constraint firstItem="BZs-JC-2Sa" firstAttribute="top" secondItem="hMI-c8-SL8" secondAttribute="top" constant="4" id="VzY-hp-Tsc"/>
+                                                    <constraint firstItem="fxe-kV-Wit" firstAttribute="top" secondItem="hMI-c8-SL8" secondAttribute="bottom" constant="12" id="YTE-X6-aYh"/>
+                                                    <constraint firstItem="MPQ-UG-6Ot" firstAttribute="leading" secondItem="2e7-l2-3LY" secondAttribute="leading" constant="16" id="aos-fi-Nqs"/>
+                                                    <constraint firstItem="j7O-aS-FjT" firstAttribute="top" secondItem="hMI-c8-SL8" secondAttribute="top" constant="4" id="hw8-no-zqY"/>
                                                     <constraint firstItem="Kev-Zt-8uK" firstAttribute="leading" secondItem="2e7-l2-3LY" secondAttribute="leading" constant="16" id="hwi-fa-pZK"/>
+                                                    <constraint firstItem="MPQ-UG-6Ot" firstAttribute="top" secondItem="fxe-kV-Wit" secondAttribute="bottom" constant="12" id="lMz-YL-huh"/>
+                                                    <constraint firstItem="hMI-c8-SL8" firstAttribute="bottom" secondItem="BZs-JC-2Sa" secondAttribute="bottom" constant="4" id="q5O-kA-1td"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
                                         <constraints>
                                             <constraint firstItem="2e7-l2-3LY" firstAttribute="top" secondItem="DQS-vd-WoG" secondAttribute="top" id="Jcp-A9-LZP"/>
                                             <constraint firstItem="2e7-l2-3LY" firstAttribute="leading" secondItem="DQS-vd-WoG" secondAttribute="leading" id="Jrh-RC-doV"/>
@@ -194,11 +259,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_check_bonus_off" width="22" height="22"/>
+        <image name="ic_check_bonus_on" width="22" height="22"/>
         <image name="ic_check_off" width="28" height="28"/>
         <image name="ic_check_on" width="28" height="28"/>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="ic_minus" width="48" height="48"/>
+        <image name="ic_plus" width="48" height="48"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

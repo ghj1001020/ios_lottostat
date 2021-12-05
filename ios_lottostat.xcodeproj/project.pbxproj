@@ -27,6 +27,7 @@
 		C2AA46512745196700F213EB /* HJScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA46502745196700F213EB /* HJScrollView.swift */; };
 		C2AA46552757B05300F213EB /* HJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA46542757B05300F213EB /* HJTextField.swift */; };
 		C2AA46572759056700F213EB /* HJNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA46562759056700F213EB /* HJNumberTextField.swift */; };
+		C2AA4659275BC69800F213EB /* HJLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA4658275BC69800F213EB /* HJLabel.swift */; };
 		C2AE21DB26F580D700002D61 /* CommonDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AE21DA26F580D700002D61 /* CommonDialog.xib */; };
 		C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21DC26F615F500002D61 /* CommonDialog.swift */; };
 		C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E226F764ED00002D61 /* LTCardView.swift */; };
@@ -75,6 +76,7 @@
 		C2AA46502745196700F213EB /* HJScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJScrollView.swift; sourceTree = "<group>"; };
 		C2AA46542757B05300F213EB /* HJTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJTextField.swift; sourceTree = "<group>"; };
 		C2AA46562759056700F213EB /* HJNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJNumberTextField.swift; sourceTree = "<group>"; };
+		C2AA4658275BC69800F213EB /* HJLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJLabel.swift; sourceTree = "<group>"; };
 		C2AE21DA26F580D700002D61 /* CommonDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonDialog.xib; sourceTree = "<group>"; };
 		C2AE21DC26F615F500002D61 /* CommonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDialog.swift; sourceTree = "<group>"; };
 		C2AE21E226F764ED00002D61 /* LTCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCardView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				C2AA46502745196700F213EB /* HJScrollView.swift */,
 				C2AA46542757B05300F213EB /* HJTextField.swift */,
 				C2AA46562759056700F213EB /* HJNumberTextField.swift */,
+				C2AA4658275BC69800F213EB /* HJLabel.swift */,
 			);
 			path = _ui;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				C2AE21EA26F8C5E000002D61 /* DefineDefaults.swift in Sources */,
 				C2AE21F426FAB42600002D61 /* FileUtil.swift in Sources */,
 				C20F0DB82701F311009D18FB /* RecommendViewController.swift in Sources */,
+				C2AA4659275BC69800F213EB /* HJLabel.swift in Sources */,
 				C2EFE7FC2733355300C6FB7E /* HJDivider.swift in Sources */,
 				C2AA46552757B05300F213EB /* HJTextField.swift in Sources */,
 				C2AE21FA26FAF1FA00002D61 /* LottoWinNumber.swift in Sources */,

@@ -79,7 +79,33 @@ class BottomSheetController: UIViewController {
         super.viewDidLoad()
 
         initLayout()
+        
+        
+        // 키보드 show/hide 옵저버
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    // 키보드 보이면 뷰 올리기
+    @objc func keyboardWillShow(_ sender: Notification) {
+        guard let userInfo = sender.userInfo else {
+            self.view.frame.origin.y = -200
+            return
+        }
+        guard let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+            self.view.frame.origin.y = -200
+            return
+        }
+        
+        let keyboardHeight = keyboardFrame.cgRectValue.height
+        self.view.frame.origin.y = -keyboardHeight
+    }
+    
+    // 키보드 숨기면 뷰 내리기
+    @objc func keyboardWillHide(_ sender: Notification) {
+        self.view.frame.origin.y = 0
+    }
+    
 
     // 로드된 뷰가 화면에 표시될때 마다 호출
     override func viewDidAppear(_ animated: Bool) {
@@ -87,7 +113,6 @@ class BottomSheetController: UIViewController {
         
         showBottomSheet()
     }
-
     
     func initLayout() {
         self.view.addSubview(dim)

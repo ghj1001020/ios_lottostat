@@ -11,6 +11,13 @@ class HJTextField: UITextField , UITextFieldDelegate {
     
     // 최대글자수
     @IBInspectable var maxLength : Int = -1
+    // border
+    @IBInspectable var borderTop : Bool = false
+    @IBInspectable var borderLeft : Bool = false
+    @IBInspectable var borderBottom : Bool = false
+    @IBInspectable var borderRight : Bool = false
+    @IBInspectable var borderWidth : CGFloat = 1
+    @IBInspectable var borderColor : UIColor = UIColor.black
     
 
     override init(frame: CGRect) {
@@ -25,6 +32,8 @@ class HJTextField: UITextField , UITextFieldDelegate {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        updateBorder()
     }
     
     // 글자 변경리스너
@@ -41,5 +50,39 @@ class HJTextField: UITextField , UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    // border rendering
+    func updateBorder() {
+        LogUtil.p("\(frame.minX), \(frame.maxX), \(frame.minY), \(frame.maxY), \(frame.width), \(frame.height)")
+        
+        if( borderTop ) {
+            let borderLayer = CALayer()
+            borderLayer.backgroundColor = borderColor.cgColor
+            borderLayer.frame = CGRect(x: 0, y: 0, width: frame.width, height: borderWidth)
+            
+            self.layer.addSublayer(borderLayer)
+        }
+        if( borderBottom ) {
+            let borderLayer = CALayer()
+            borderLayer.backgroundColor = borderColor.cgColor
+            borderLayer.frame = CGRect(x: 0, y: frame.height, width: frame.width, height: borderWidth)
+            
+            self.layer.addSublayer(borderLayer)
+        }
+        if( borderLeft ) {
+            let borderLayer = CALayer()
+            borderLayer.backgroundColor = borderColor.cgColor
+            borderLayer.frame = CGRect(x: 0, y: 0, width: borderWidth, height: frame.height)
+            
+            self.layer.addSublayer(borderLayer)
+        }
+        if( borderRight ) {
+            let borderLayer = CALayer()
+            borderLayer.backgroundColor = borderColor.cgColor
+            borderLayer.frame = CGRect(x: frame.width, y: 0, width: borderWidth, height: frame.height)
+            
+            self.layer.addSublayer(borderLayer)
+        }
     }
 }

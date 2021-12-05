@@ -38,6 +38,7 @@ class FilterDialogController: UIViewController {
         chkExcludePrevWinNumber.tag = 0
     }
     
+    
     // 필터 체크박스 선택변경 리스너
     @IBAction func onFilterCheckedChangeListener(_ sender: HJCheckBox) {
         
