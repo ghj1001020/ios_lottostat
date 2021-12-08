@@ -32,15 +32,18 @@
                                 <state key="normal" title="닫기">
                                     <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onBackButtonClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="enT-85-hCE"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0u-kg-kJg">
                                 <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQS-vd-WoG" userLabel="content">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGH-iv-RpL" userLabel="filter_list">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMj-pM-Hmo" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -80,6 +83,9 @@
                                                             <userDefinedRuntimeAttribute type="image" keyPath="imgCheck" value="ic_check_on"/>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_check_off"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onFilterCheckedChangeListener:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jt8-A9-HMz"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ed-8z-EsE" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="100" width="414" height="50"/>
@@ -98,6 +104,9 @@
                                                             <userDefinedRuntimeAttribute type="image" keyPath="imgCheck" value="ic_check_on"/>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_check_off"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onFilterCheckedChangeListener:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PzO-W6-pZ7"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -112,17 +121,17 @@
                                                     <constraint firstItem="FcL-o5-9Mv" firstAttribute="leading" secondItem="IGH-iv-RpL" secondAttribute="leading" id="rF4-ug-v4g"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2e7-l2-3LY" userLabel="filter_input_count">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2e7-l2-3LY" userLabel="filter_input_count">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="횟수를 입력하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kev-Zt-8uK">
-                                                        <rect key="frame" x="16" y="10" width="115" height="20"/>
+                                                        <rect key="frame" x="16" y="10" width="115" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="hMI-c8-SL8" customClass="HJNumberTextField" customModule="ios_lottostat" customModuleProvider="target">
-                                                        <rect key="frame" x="167" y="42" width="80" height="40"/>
+                                                        <rect key="frame" x="167" y="41.5" width="80" height="40"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Rf5-ed-Thn"/>
@@ -145,7 +154,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7O-aS-FjT" userLabel="minus">
-                                                        <rect key="frame" x="119" y="46" width="32" height="32"/>
+                                                        <rect key="frame" x="119" y="45.5" width="32" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="32" id="vlA-Xg-R2A"/>
                                                         </constraints>
@@ -153,7 +162,7 @@
                                                         <state key="normal" backgroundImage="ic_minus"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZs-JC-2Sa" userLabel="plus">
-                                                        <rect key="frame" x="263" y="46" width="32" height="32"/>
+                                                        <rect key="frame" x="263" y="45.5" width="32" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="NNO-Mj-dLI"/>
                                                             <constraint firstAttribute="width" constant="32" id="NR2-un-3e6"/>
@@ -162,7 +171,7 @@
                                                         <state key="normal" backgroundImage="ic_plus"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxe-kV-Wit" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
-                                                        <rect key="frame" x="244" y="94" width="150" height="32"/>
+                                                        <rect key="frame" x="244" y="93.5" width="150" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="cYe-nM-BG9"/>
                                                         </constraints>
@@ -178,7 +187,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1개 : 연속된 수가 하나도 없다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPQ-UG-6Ot" userLabel="안내" customClass="HJLabel" customModule="ios_lottostat" customModuleProvider="target">
-                                                        <rect key="frame" x="16" y="138" width="382" height="14.5"/>
+                                                        <rect key="frame" x="16" y="137.5" width="382" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -189,8 +198,46 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
                                                                 <real key="value" value="12"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isBullet" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qlM-gs-tW1">
+                                                        <rect key="frame" x="16" y="182" width="382" height="50"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HT-Lk-Wqf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="105" height="50"/>
+                                                                <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="취소">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJC-o8-VOS">
+                                                                <rect key="frame" x="115" y="0.0" width="267" height="50"/>
+                                                                <color key="backgroundColor" red="1" green="0.5607843137254902" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="확인">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="8zL-1R-hXo"/>
+                                                            <constraint firstItem="bJC-o8-VOS" firstAttribute="width" secondItem="8HT-Lk-Wqf" secondAttribute="width" multiplier="2.54545" id="wr1-3j-oQg"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -202,13 +249,16 @@
                                                     <constraint firstItem="BZs-JC-2Sa" firstAttribute="leading" secondItem="hMI-c8-SL8" secondAttribute="trailing" constant="16" id="S3f-nF-KRL"/>
                                                     <constraint firstAttribute="trailing" secondItem="MPQ-UG-6Ot" secondAttribute="trailing" constant="16" id="SUS-eh-S9b"/>
                                                     <constraint firstItem="hMI-c8-SL8" firstAttribute="centerX" secondItem="2e7-l2-3LY" secondAttribute="centerX" id="Snt-mt-RYz"/>
+                                                    <constraint firstItem="qlM-gs-tW1" firstAttribute="top" secondItem="MPQ-UG-6Ot" secondAttribute="bottom" constant="30" id="Utd-PW-1ed"/>
                                                     <constraint firstItem="BZs-JC-2Sa" firstAttribute="top" secondItem="hMI-c8-SL8" secondAttribute="top" constant="4" id="VzY-hp-Tsc"/>
                                                     <constraint firstItem="fxe-kV-Wit" firstAttribute="top" secondItem="hMI-c8-SL8" secondAttribute="bottom" constant="12" id="YTE-X6-aYh"/>
                                                     <constraint firstItem="MPQ-UG-6Ot" firstAttribute="leading" secondItem="2e7-l2-3LY" secondAttribute="leading" constant="16" id="aos-fi-Nqs"/>
                                                     <constraint firstItem="j7O-aS-FjT" firstAttribute="top" secondItem="hMI-c8-SL8" secondAttribute="top" constant="4" id="hw8-no-zqY"/>
                                                     <constraint firstItem="Kev-Zt-8uK" firstAttribute="leading" secondItem="2e7-l2-3LY" secondAttribute="leading" constant="16" id="hwi-fa-pZK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qlM-gs-tW1" secondAttribute="trailing" constant="16" id="l3o-gl-XDh"/>
                                                     <constraint firstItem="MPQ-UG-6Ot" firstAttribute="top" secondItem="fxe-kV-Wit" secondAttribute="bottom" constant="12" id="lMz-YL-huh"/>
                                                     <constraint firstItem="hMI-c8-SL8" firstAttribute="bottom" secondItem="BZs-JC-2Sa" secondAttribute="bottom" constant="4" id="q5O-kA-1td"/>
+                                                    <constraint firstItem="qlM-gs-tW1" firstAttribute="leading" secondItem="2e7-l2-3LY" secondAttribute="leading" constant="16" id="wzi-VP-n7m"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -218,7 +268,7 @@
                                             <constraint firstItem="IGH-iv-RpL" firstAttribute="top" secondItem="DQS-vd-WoG" secondAttribute="top" id="OwR-xl-tDC"/>
                                             <constraint firstAttribute="bottom" secondItem="IGH-iv-RpL" secondAttribute="bottom" id="VG2-8T-Vcf"/>
                                             <constraint firstAttribute="trailing" secondItem="IGH-iv-RpL" secondAttribute="trailing" id="ckq-e8-kKp"/>
-                                            <constraint firstAttribute="height" constant="200" id="eum-ww-W42"/>
+                                            <constraint firstAttribute="height" constant="257" id="eum-ww-W42"/>
                                             <constraint firstAttribute="trailing" secondItem="2e7-l2-3LY" secondAttribute="trailing" id="fTr-Uh-bUd"/>
                                             <constraint firstAttribute="bottom" secondItem="2e7-l2-3LY" secondAttribute="bottom" id="fcm-MP-7lb"/>
                                             <constraint firstItem="IGH-iv-RpL" firstAttribute="leading" secondItem="DQS-vd-WoG" secondAttribute="leading" id="vGb-HC-Mi2"/>
@@ -248,7 +298,9 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
-                        <outlet property="chkExcludePrevWinNumber" destination="dMj-pM-Hmo" id="Gyg-yF-4rD"/>
+                        <outlet property="chkExcludeConsecutiveNumber" destination="9Ed-8z-EsE" id="Asg-bJ-gVQ"/>
+                        <outlet property="chkExcludePrevWinNumber" destination="dMj-pM-Hmo" id="r4f-Eo-hFH"/>
+                        <outlet property="chkIncludeLastRoundWinNumber" destination="FcL-o5-9Mv" id="Sev-Rn-K1k"/>
                         <outlet property="layoutFilterList" destination="IGH-iv-RpL" id="WYg-YV-jfL"/>
                         <outlet property="layoutInputCount" destination="2e7-l2-3LY" id="xtX-gj-6P4"/>
                     </connections>

@@ -25,10 +25,20 @@ class HJCheckBox: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        initView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        initView()
+    }
+    
+    func initView() {
+        self.addTarget(self, action: #selector(onClick), for: .touchUpInside)
+    }
+    
+    @objc func onClick() {
+        isChecked = !isChecked
     }
 
     override func layoutSubviews() {

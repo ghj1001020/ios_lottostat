@@ -7,17 +7,19 @@
 
 import UIKit
 
+
 class BottomSheetController: UIViewController {
 
-    private let contentController : UIViewController
+    private let contentController : BaseBottomSheetContent
     
-    init(contentController: UIViewController) {
+    
+    init(contentController: BaseBottomSheetContent) {
         self.contentController = contentController
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
-        self.contentController = UIViewController()
+        self.contentController = BaseBottomSheetContent()
         super.init(coder: coder)
     }
     
@@ -167,6 +169,7 @@ class BottomSheetController: UIViewController {
         bottomSheet.addSubview(contentController.view)
         contentController.didMove(toParent: self)
         bottomSheet.clipsToBounds = true
+        contentController.bottomSheet = self
         contentController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             contentController.view.topAnchor.constraint(equalTo: bottomSheet.topAnchor) ,

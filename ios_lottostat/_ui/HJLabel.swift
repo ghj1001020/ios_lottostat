@@ -16,6 +16,12 @@ class HJLabel: UILabel {
     @IBInspectable var rightPadding : CGFloat = 0
     var edgeInsets : UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
+    // 불릿
+    private let bullet = "• "
+    @IBInspectable var isBullet : Bool = false
+    
+    // 텍스트
+    var content : String = ""
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,34 +37,13 @@ class HJLabel: UILabel {
         super.layoutSubviews()
         edgeInsets = UIEdgeInsets(top: topPadding, left: leftPadding, bottom: bottomPadding, right: rightPadding)
         
-        self.text
-        
-        let bullet = "• "
-                
-        var strings = [String]()
-        strings.append("Payment will be charged to your iTunes account at confirmation of purchase.")
-        strings.append("Your subscription will automatically renew unless auto-renew is turned off at least 24-hours before the end of the current subscription period.")
-        strings.append("Your account will be charged for renewal within 24-hours prior to the end of the current subscription period.")
-        strings.append("Automatic renewals will cost the same price you were originally charged for the subscription.")
-        strings.append("You can manage your subscriptions and turn off auto-renewal by going to your Account Settings on the App Store after purchase.")
-        strings.append("Read our terms of service and privacy policy for more information.")
-        strings = strings.map { return bullet + $0 }
-        
-        var attributes = [NSAttributedString.Key: Any]()
-//        attributes[.font] = UIFont.preferredFont(forTextStyle: .body)
-//        attributes[.foregroundColor] = UIColor.red
-        
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.headIndent = (bullet as NSString).size(withAttributes: attributes).width
-        attributes[.paragraphStyle] = paragraphStyle
-
-        let string = strings.joined(separator: "\n\n")
-        self.attributedText = NSAttributedString(string: string, attributes: attributes)
-
+        if( isBullet ) {
+            addBullet()
+        }
     }
     
     func initView() {
-        
+        content = self.text ?? ""
     }
     
     override func drawText(in rect: CGRect) {
@@ -71,5 +56,16 @@ class HJLabel: UILabel {
         intrinsicContentSize.width += edgeInsets.left + edgeInsets.right
         intrinsicContentSize.height += edgeInsets.top + edgeInsets.bottom
         return intrinsicContentSize
+    }
+    
+    // 불릿 추가
+    func addBullet() {
+        var attributes = [NSAttributedString.Key: Any]()
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.headIndent = (bullet as NSString).size(withAttributes: attributes).width
+        attributes[.paragraphStyle] = paragraphStyle
+        
+        let string = bullet + content
+        self.attributedText = NSAttributedString(string: string, attributes: attributes)
     }
 }
