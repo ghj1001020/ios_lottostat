@@ -29,6 +29,7 @@ class RecommendViewController: BaseController {
 
         if let controller = controller {
             let filterDialog = BottomSheetController(contentController: controller)
+            filterDialog.isCancelable = false
             filterDialog.modalPresentationStyle = .overFullScreen
             self.present(filterDialog, animated: false, completion: nil)
         }

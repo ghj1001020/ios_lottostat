@@ -130,7 +130,7 @@
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="hMI-c8-SL8" customClass="HJNumberTextField" customModule="ios_lottostat" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="hMI-c8-SL8" customClass="HJLottoNumberTextField" customModule="ios_lottostat" customModuleProvider="target">
                                                         <rect key="frame" x="167" y="41.5" width="80" height="40"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -320,6 +320,8 @@
                         <outlet property="chkIncludeLastRoundWinNumber" destination="FcL-o5-9Mv" id="Sev-Rn-K1k"/>
                         <outlet property="layoutFilterList" destination="IGH-iv-RpL" id="WYg-YV-jfL"/>
                         <outlet property="layoutInputCount" destination="2e7-l2-3LY" id="xtX-gj-6P4"/>
+                        <outlet property="lbCountTitle" destination="Kev-Zt-8uK" id="f1h-ek-E7G"/>
+                        <outlet property="lbDesc" destination="MPQ-UG-6Ot" id="H5d-f0-GKo"/>
                         <outlet property="tfCount" destination="hMI-c8-SL8" id="eJU-3b-2Vb"/>
                     </connections>
                 </viewController>

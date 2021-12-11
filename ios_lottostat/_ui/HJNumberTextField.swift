@@ -21,7 +21,7 @@ class HJNumberTextField: HJTextField {
         initView()
     }
 
-    func initView() {
+    private func initView() {
         // 숫자키패드 설정
         self.keyboardType = .numberPad
         

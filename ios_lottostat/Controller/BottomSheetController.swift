@@ -12,6 +12,9 @@ class BottomSheetController: UIViewController {
 
     private let contentController : BaseBottomSheetContent
     
+    // 딤영역 클릭시 취소 여부
+    var isCancelable = true
+    
     
     init(contentController: BaseBottomSheetContent) {
         self.contentController = contentController
@@ -131,8 +134,11 @@ class BottomSheetController: UIViewController {
             dim.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
         let dimTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(gestureDimTapped(_:)) )
-        dim.addGestureRecognizer(dimTapRecognizer)
-        dim.isUserInteractionEnabled = true
+        if isCancelable {
+            dim.addGestureRecognizer(dimTapRecognizer)
+            dim.isUserInteractionEnabled = true
+        }
+
         
         // 바텀시트 영역
         bottomSheet.translatesAutoresizingMaskIntoConstraints = false
