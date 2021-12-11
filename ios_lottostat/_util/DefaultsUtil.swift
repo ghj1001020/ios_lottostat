@@ -30,7 +30,7 @@ class DefaultsUtil {
     }
     
     // 데이터 조회
-    func get(_ key: String, _ defaultValue: Int=0) -> Int {
+    func getInt(_ key: String, _ defaultValue: Int=0) -> Int {
         let userDefaults = UserDefaults.standard
         if userDefaults.object(forKey: key) == nil {
             return defaultValue
@@ -38,12 +38,12 @@ class DefaultsUtil {
         return userDefaults.integer(forKey: key)
     }
     
-    func get(_ key: String, _ defaultValue: String="") -> String {
+    func getString(_ key: String, _ defaultValue: String="") -> String {
         let userDefaults = UserDefaults.standard
         return userDefaults.string(forKey: key) ?? defaultValue
     }
     
-    func get(_ key: String, _ defaultValue: Bool=false) -> Bool {
+    func getBool(_ key: String, _ defaultValue: Bool=false) -> Bool {
         let userDefaults = UserDefaults.standard
         if userDefaults.object(forKey: key) == nil {
             return defaultValue

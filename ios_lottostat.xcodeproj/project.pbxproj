@@ -29,6 +29,7 @@
 		C2AA46572759056700F213EB /* HJNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA46562759056700F213EB /* HJNumberTextField.swift */; };
 		C2AA4659275BC69800F213EB /* HJLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA4658275BC69800F213EB /* HJLabel.swift */; };
 		C2AA465B275E45B600F213EB /* BaseBottomSheetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA465A275E45B600F213EB /* BaseBottomSheetContent.swift */; };
+		C2AA465D2764A8C100F213EB /* HJLottoNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA465C2764A8C100F213EB /* HJLottoNumberTextField.swift */; };
 		C2AE21DB26F580D700002D61 /* CommonDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AE21DA26F580D700002D61 /* CommonDialog.xib */; };
 		C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21DC26F615F500002D61 /* CommonDialog.swift */; };
 		C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E226F764ED00002D61 /* LTCardView.swift */; };
@@ -79,6 +80,7 @@
 		C2AA46562759056700F213EB /* HJNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJNumberTextField.swift; sourceTree = "<group>"; };
 		C2AA4658275BC69800F213EB /* HJLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJLabel.swift; sourceTree = "<group>"; };
 		C2AA465A275E45B600F213EB /* BaseBottomSheetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBottomSheetContent.swift; sourceTree = "<group>"; };
+		C2AA465C2764A8C100F213EB /* HJLottoNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJLottoNumberTextField.swift; sourceTree = "<group>"; };
 		C2AE21DA26F580D700002D61 /* CommonDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonDialog.xib; sourceTree = "<group>"; };
 		C2AE21DC26F615F500002D61 /* CommonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDialog.swift; sourceTree = "<group>"; };
 		C2AE21E226F764ED00002D61 /* LTCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCardView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				C2AA46542757B05300F213EB /* HJTextField.swift */,
 				C2AA46562759056700F213EB /* HJNumberTextField.swift */,
 				C2AA4658275BC69800F213EB /* HJLabel.swift */,
+				C2AA465C2764A8C100F213EB /* HJLottoNumberTextField.swift */,
 			);
 			path = _ui;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				C2FDCE902740CD4500C60E13 /* BottomSheetController.swift in Sources */,
 				C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */,
 				C23EC0B426E8D22800828BAB /* ViewController.swift in Sources */,
+				C2AA465D2764A8C100F213EB /* HJLottoNumberTextField.swift in Sources */,
 				C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */,
 				C20F0DBD270340CA009D18FB /* LTAppBar.swift in Sources */,
 				C2AE21FF26FB6AD700002D61 /* MainViewController.swift in Sources */,

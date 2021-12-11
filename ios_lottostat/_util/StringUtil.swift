@@ -7,6 +7,22 @@
 
 import Foundation
 
+class StringUtil {
+    
+    // string -> int
+    static func convertToInt(_ str: String?) -> Int {
+        guard let str = str else {
+            return 0
+        }
+        
+        if str.isEmpty {
+            return 0
+        }
+        
+        return Int(str) ?? 0
+    }
+}
+
 extension Optional where Wrapped == String {
     
     // null check, to string

@@ -34,55 +34,49 @@ class FilterDialogController: BaseBottomSheetContent {
     @IBOutlet var chkIncludeLastRoundWinNumber: HJCheckBox!
     @IBOutlet var chkExcludeConsecutiveNumber: HJCheckBox!
     
-    
-    // 이전 당첨번호 n개 이상 일치시 제외
-    var isExcludePrevWinNumberWithBonus : Bool = true   // 보너스 포함여부
-    
-    // 이전 회차 번호 중 n개 이상 포함
-    var isIncludeLastRoundWinNumberWithBonus : Bool = true  // 보너스 포함여부
+    // 필터입력 버튼
+    @IBOutlet var tfCount: HJNumberTextField!
+    @IBOutlet var chkBonus: HJCheckBox!
+    @IBOutlet var btnCountCancel: UIButton!
+    @IBOutlet var btnCountOk: UIButton!
+    @IBOutlet var btnCountMinus: UIButton!
+    @IBOutlet var btnCountPlus: UIButton!
     
     
     override func viewDidLoad() {
-        LogUtil.p("FilterDialogController")
         
-        // 필터목록 인덱스
+        // 버튼 인덱스
         chkExcludePrevWinNumber.tag = 0
         chkIncludeLastRoundWinNumber.tag = 1
         chkExcludeConsecutiveNumber.tag = 2
+        btnCountCancel.tag = 100
+        btnCountOk.tag = 101
+        btnCountMinus.tag = 102
+        btnCountPlus.tag = 103
     }
     
     
-    // 닫기버튼 이벤트
     
-    // 필터 목록화면 클릭 이벤트
+    // 닫기 이벤트
     @IBAction func onBackButtonClick(_ sender: UIButton) {
         cancelFilterSetting()
-        if( mLayoutType != .LIST ) {
-            mLayoutType = .LIST
-            changeFilterLayout()
-            return
-        }
-        bottomSheet?.hideBottomSheet()
+        dismissDialog()
     }
     
-    // 필터 입력화면 클릭 이벤트
-    
-    
-    // 필터 체크박스 선택변경 리스너
+    // 필터 목록화면 체크박스 이벤트
     @IBAction func onFilterCheckedChangeListener(_ sender: HJCheckBox) {
         // 이전 당첨번호 제외
         if sender.tag == 0 {
-            sender.isChecked = !sender.isChecked
             if sender.isChecked {
                 mFilterType = .EXCLUDE_PREV_WIN_NUMBER
                 mLayoutType = .INPUT_COUNT
                 
                 changeFilterLayout()
-                setInputCount(isBonusShow: true, isBonus: isExcludePrevWinNumberWithBonus)
+                setInputCount(isBonusShow: true, isBonus: DefaultsUtil.shared.getBool(FILTER_KEY.IS_EXCLUDE_PREV_WIN_NUMBER_WITH_BONUS))
             }
             else {
-                DefaultsUtil.shared.put( DEFAULTS_FILTER_KEY.IS_EXCLUDE_PREV_WIN_NUMBER, false)
-                chkExcludePrevWinNumber.setTitle(String(format: "이전 당첨번호와 %s개 이상 일치시 제외", "n"), for: .normal)
+                DefaultsUtil.shared.put( FILTER_KEY.IS_EXCLUDE_PREV_WIN_NUMBER, false)
+                chkExcludePrevWinNumber.setTitle(String(format: "이전 당첨번호와 %@개 이상 일치시 제외", "n"), for: .normal)
             }
         }
         // 이전 회차 번호 중 n개 이상 포함
@@ -92,11 +86,11 @@ class FilterDialogController: BaseBottomSheetContent {
                 mLayoutType = .INPUT_COUNT
                 
                 changeFilterLayout()
-                setInputCount(isBonusShow: true, isBonus: isIncludeLastRoundWinNumberWithBonus)
+                setInputCount(isBonusShow: true, isBonus: DefaultsUtil.shared.getBool(FILTER_KEY.IS_INCLUDE_LAST_ROUND_WIN_NUMBER))
             }
             else {
-                DefaultsUtil.shared.put( DEFAULTS_FILTER_KEY.IS_INCLUDE_LAST_ROUND_WIN_NUMBER, false)
-                chkIncludeLastRoundWinNumber.setTitle(String(format: "직전 회차 당첨번호 중 %s개 이상 포함", "n"), for: .normal)
+                DefaultsUtil.shared.put( FILTER_KEY.IS_INCLUDE_LAST_ROUND_WIN_NUMBER, false)
+                chkIncludeLastRoundWinNumber.setTitle(String(format: "직전 회차 당첨번호 중 %@개 이상 포함", "n"), for: .normal)
             }
         }
         // n개 이상 연속된 수 제외
@@ -109,9 +103,101 @@ class FilterDialogController: BaseBottomSheetContent {
                 setInputCount(isBonusShow: false, isBonus: false)
             }
             else {
-                DefaultsUtil.shared.put( DEFAULTS_FILTER_KEY.IS_EXCLUDE_CONSECUTIVE_NUMBER, false)
-                chkExcludeConsecutiveNumber.setTitle(String(format: "%s개 이상 연속된 수 제외", "n"), for: .normal)
+                DefaultsUtil.shared.put( FILTER_KEY.IS_EXCLUDE_CONSECUTIVE_NUMBER, false)
+                chkExcludeConsecutiveNumber.setTitle(String(format: "%@개 이상 연속된 수 제외", "n"), for: .normal)
             }
+        }
+    }
+    
+    // 필터 입력화면 클릭 이벤트
+    @IBAction func onFilterInputCountListener(_ sender: UIButton) {
+        tfCount.resignFirstResponder()
+
+        // 취소
+        if sender.tag == 100 {
+            onBackButtonClick(sender)
+        }
+        // 확인
+        else if sender.tag == 101 {
+            let cnt = StringUtil.convertToInt(tfCount.text)
+            let isBonus = chkBonus.isChecked
+            
+            // 이전 당첨번호 제외
+            if mFilterType == .EXCLUDE_PREV_WIN_NUMBER {
+                DefaultsUtil.shared.put(FILTER_KEY.IS_EXCLUDE_PREV_WIN_NUMBER, true)
+                DefaultsUtil.shared.put(FILTER_KEY.CNT_EXCLUDE_PREV_WIN_NUMBER, cnt)
+                DefaultsUtil.shared.put(FILTER_KEY.IS_EXCLUDE_PREV_WIN_NUMBER_WITH_BONUS, isBonus)
+                updateExcludePrevWinNumber()
+            }
+            // 이전 회차 번호 중 n개 이상 포함
+            else if mFilterType == .INCLUDE_LAST_ROUND_WIN_NUMBER {
+                DefaultsUtil.shared.put(FILTER_KEY.IS_INCLUDE_LAST_ROUND_WIN_NUMBER, true)
+                DefaultsUtil.shared.put(FILTER_KEY.CNT_INCLUDE_LAST_ROUND_WIN_NUMBER, cnt)
+                DefaultsUtil.shared.put(FILTER_KEY.IS_INCLUDE_LAST_ROUND_WIN_NUMBER_WITH_BONUS, isBonus)
+                updateIncludeLastRoundWinNumber()
+            }
+            // n개 이상 연속된 수 제외
+            else if mFilterType == .EXCLUDE_CONSECUTIVE_NUMBER {
+                DefaultsUtil.shared.put(FILTER_KEY.IS_EXCLUDE_CONSECUTIVE_NUMBER, true)
+                DefaultsUtil.shared.put(FILTER_KEY.CNT_EXCLUDE_CONSECUTIVE_NUMBER, cnt)
+                updateExcludeConsecutiveNumber()
+            }
+            
+            dismissDialog()
+        }
+        // 횟수입력 > 숫자 -
+        else if sender.tag == 102 {
+            tfCount.minus()
+        }
+        // 횟수입력 > 숫자 +
+        else if sender.tag == 103 {
+            tfCount.add()
+        }
+    }
+    
+    // 이전 당첨번호 n개 이상 일치시 제외
+    func updateExcludePrevWinNumber() {
+        let isExcludePrevWinNumber = DefaultsUtil.shared.getBool(FILTER_KEY.IS_EXCLUDE_PREV_WIN_NUMBER)
+        let cntExcludePrevWinNumber = DefaultsUtil.shared.getInt(FILTER_KEY.CNT_EXCLUDE_PREV_WIN_NUMBER)
+        let isExcludePrevWinNumberWithBonus = DefaultsUtil.shared.getBool(FILTER_KEY.IS_EXCLUDE_PREV_WIN_NUMBER_WITH_BONUS)
+        
+        chkExcludePrevWinNumber.isChecked = isExcludePrevWinNumber
+        if isExcludePrevWinNumber {
+            let strBonus = isExcludePrevWinNumberWithBonus ? "보너스 포함" : "보너스 미포함"
+            chkExcludePrevWinNumber.setTitle(String(format: "이전 당첨번호와 %d개 이상 일치시 제외 (%@)", cntExcludePrevWinNumber, strBonus), for: .normal)
+        }
+        else {
+            chkExcludePrevWinNumber.setTitle(String(format: "이전 당첨번호와 %@이전 당첨번호와 %@개 이상 일치시 제외", "n"), for: .normal)
+        }
+    }
+    
+    // 이전 회차 번호 중 n개 이상 포함
+    func updateIncludeLastRoundWinNumber() {
+        let isIncludeLastRoundWinNumber = DefaultsUtil.shared.getBool(FILTER_KEY.IS_INCLUDE_LAST_ROUND_WIN_NUMBER)
+        let cntIncludeLastRoundWinNumber = DefaultsUtil.shared.getInt(FILTER_KEY.CNT_INCLUDE_LAST_ROUND_WIN_NUMBER)
+        let isIncludeLastRoundWinNumberWithBonus = DefaultsUtil.shared.getBool(FILTER_KEY.IS_INCLUDE_LAST_ROUND_WIN_NUMBER_WITH_BONUS)
+        
+        chkIncludeLastRoundWinNumber.isChecked = isIncludeLastRoundWinNumber
+        if isIncludeLastRoundWinNumber {
+            let strBonus = isIncludeLastRoundWinNumberWithBonus ? "보너스 포함" : "보너스 미포함"
+            chkIncludeLastRoundWinNumber.setTitle(String(format: "직전 회차 당첨번호 중 %d개 이상 포함 (%@)", cntIncludeLastRoundWinNumber, strBonus), for: .normal)
+        }
+        else {
+            chkIncludeLastRoundWinNumber.setTitle(String(format: "직전 회차 당첨번호 중 %@개 이상 포함", "n"), for: .normal)
+        }
+    }
+    
+    // n개 이상 연속된 수 제외
+    func updateExcludeConsecutiveNumber() {
+        let isExcludeConsecutiveNumber = DefaultsUtil.shared.getBool(FILTER_KEY.IS_EXCLUDE_CONSECUTIVE_NUMBER)
+        let cntExcludeConsecutiveNumber = DefaultsUtil.shared.getInt(FILTER_KEY.CNT_EXCLUDE_CONSECUTIVE_NUMBER)
+        
+        chkExcludeConsecutiveNumber.isChecked = isExcludeConsecutiveNumber
+        if isExcludeConsecutiveNumber {
+            chkExcludeConsecutiveNumber.setTitle(String(format: "%d개 이상 연속된 수 제외", cntExcludeConsecutiveNumber), for: .normal)
+        }
+        else {
+            chkExcludeConsecutiveNumber.setTitle(String(format: "%@개 이상 연속된 수 제외", "n"), for: .normal)
         }
     }
     
@@ -133,6 +219,16 @@ class FilterDialogController: BaseBottomSheetContent {
         else if( mFilterType == .EXCLUDE_CONSECUTIVE_NUMBER ) {
             chkExcludeConsecutiveNumber.isChecked = false
         }
+    }
+    
+    // 다이얼로그 닫기
+    func dismissDialog() {
+        if( mLayoutType != .LIST ) {
+            mLayoutType = .LIST
+            changeFilterLayout()
+            return
+        }
+        bottomSheet?.hideBottomSheet()
     }
     
     // 필터화면 레이아웃 변경

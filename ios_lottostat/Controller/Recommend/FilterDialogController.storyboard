@@ -160,6 +160,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" backgroundImage="ic_minus"/>
+                                                        <connections>
+                                                            <action selector="onFilterInputCountListener:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LmB-rE-lth"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZs-JC-2Sa" userLabel="plus">
                                                         <rect key="frame" x="263" y="45.5" width="32" height="32"/>
@@ -169,6 +172,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" backgroundImage="ic_plus"/>
+                                                        <connections>
+                                                            <action selector="onFilterInputCountListener:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ToH-eO-Z0X"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxe-kV-Wit" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
                                                         <rect key="frame" x="244" y="93.5" width="150" height="32"/>
@@ -217,6 +223,9 @@
                                                                         <integer key="value" value="3"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="onFilterInputCountListener:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EGn-yx-uhw"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJC-o8-VOS">
                                                                 <rect key="frame" x="115" y="0.0" width="267" height="50"/>
@@ -231,6 +240,9 @@
                                                                         <integer key="value" value="3"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="onFilterInputCountListener:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zlJ-67-fhb"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -298,11 +310,17 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
+                        <outlet property="btnCountCancel" destination="8HT-Lk-Wqf" id="UFl-YM-C15"/>
+                        <outlet property="btnCountMinus" destination="j7O-aS-FjT" id="S9u-rG-IOX"/>
+                        <outlet property="btnCountOk" destination="bJC-o8-VOS" id="zSF-ed-SfS"/>
+                        <outlet property="btnCountPlus" destination="BZs-JC-2Sa" id="G5O-yJ-1gY"/>
+                        <outlet property="chkBonus" destination="fxe-kV-Wit" id="lml-hD-E6F"/>
                         <outlet property="chkExcludeConsecutiveNumber" destination="9Ed-8z-EsE" id="Asg-bJ-gVQ"/>
                         <outlet property="chkExcludePrevWinNumber" destination="dMj-pM-Hmo" id="r4f-Eo-hFH"/>
                         <outlet property="chkIncludeLastRoundWinNumber" destination="FcL-o5-9Mv" id="Sev-Rn-K1k"/>
                         <outlet property="layoutFilterList" destination="IGH-iv-RpL" id="WYg-YV-jfL"/>
                         <outlet property="layoutInputCount" destination="2e7-l2-3LY" id="xtX-gj-6P4"/>
+                        <outlet property="tfCount" destination="hMI-c8-SL8" id="eJU-3b-2Vb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

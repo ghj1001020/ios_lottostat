@@ -73,7 +73,7 @@ class IntroViewController: UIViewController {
     
     // SQLite에서 데이터 읽기
     func getLottoNumber() {
-        let copyVersion : Int = DefaultsUtil.shared.get(DefineDefaults.VERSION_COPY_SQLITE)
+        let copyVersion : Int = DefaultsUtil.shared.getInt(DefineDefaults.VERSION_COPY_SQLITE)
         var isCopy = copyVersion != SQLite.SQLite_VERSION
         if( !isCopy ) {
             lbMessage.text = "데이터 파일을 가져옵니다"
