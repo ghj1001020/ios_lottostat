@@ -32,4 +32,39 @@ class SQLiteService {
         
         return list
     }
+    
+    // 마지막 로또번호 조회
+    public static func selectLastRoundWinNumber(isBonus: Bool) -> [Int] {
+        var result : [Int] = []
+        
+        SQLite.shared.open()
+        SQLite.shared.select(sql: DefineQuery.SELECT_LAST_ROUND_WIN_NUMBER) { (stmt: OpaquePointer?) in
+            while sqlite3_step(stmt) == SQLITE_ROW {
+                result.append( Int(sqlite3_column_int(stmt, 0)) )
+                result.append( Int(sqlite3_column_int(stmt, 1)) )
+                result.append( Int(sqlite3_column_int(stmt, 2)) )
+                result.append( Int(sqlite3_column_int(stmt, 3)) )
+                result.append( Int(sqlite3_column_int(stmt, 4)) )
+                result.append( Int(sqlite3_column_int(stmt, 5)) )
+                
+                if( isBonus ) {
+                    result.append( Int(sqlite3_column_int(stmt, 6)) )
+                }
+            }
+        }
+        SQLite.shared.close()
+        
+        return result
+    }
+    
+    // 해당 번호가 포함된 당첨번호 조회
+    public static func selectPrevWinNumberByNum(num: Int, isBonus: Bool) -> [Int] {
+        var result : [Int] = []
+        
+        SQLite.shared.open()
+        
+        SQLite.shared.close()
+        
+        return result
+    }
 }

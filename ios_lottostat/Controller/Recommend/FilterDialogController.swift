@@ -171,9 +171,9 @@ class FilterDialogController: BaseBottomSheetContent {
     
     // 이전 당첨번호 n개 이상 일치시 제외
     func updateExcludePrevWinNumber() {
-        let isExcludePrevWinNumber = DefaultsUtil.shared.getBool(FILTER_KEY.IS_EXCLUDE_PREV_WIN_NUMBER)
-        let cntExcludePrevWinNumber = DefaultsUtil.shared.getInt(FILTER_KEY.CNT_EXCLUDE_PREV_WIN_NUMBER)
-        let isExcludePrevWinNumberWithBonus = DefaultsUtil.shared.getBool(FILTER_KEY.IS_EXCLUDE_PREV_WIN_NUMBER_WITH_BONUS)
+        let isExcludePrevWinNumber = DefaultsUtil.shared.getBool(FILTER_KEY.IS_EXCLUDE_PREV_WIN_NUMBER, FILTER_KEY.DFT_IS_EXCLUDE_PREV_WIN_NUMBER)
+        let cntExcludePrevWinNumber = DefaultsUtil.shared.getInt(FILTER_KEY.CNT_EXCLUDE_PREV_WIN_NUMBER, FILTER_KEY.DFT_CNT_EXCLUDE_PREV_WIN_NUMBER)
+        let isExcludePrevWinNumberWithBonus = DefaultsUtil.shared.getBool(FILTER_KEY.IS_EXCLUDE_PREV_WIN_NUMBER_WITH_BONUS, FILTER_KEY.DFT_IS_EXCLUDE_PREV_WIN_NUMBER_WITH_BONUS)
         
         chkExcludePrevWinNumber.isChecked = isExcludePrevWinNumber
         if isExcludePrevWinNumber {
@@ -187,9 +187,9 @@ class FilterDialogController: BaseBottomSheetContent {
     
     // 이전 회차 번호 중 n개 이상 포함
     func updateIncludeLastRoundWinNumber() {
-        let isIncludeLastRoundWinNumber = DefaultsUtil.shared.getBool(FILTER_KEY.IS_INCLUDE_LAST_ROUND_WIN_NUMBER)
-        let cntIncludeLastRoundWinNumber = DefaultsUtil.shared.getInt(FILTER_KEY.CNT_INCLUDE_LAST_ROUND_WIN_NUMBER)
-        let isIncludeLastRoundWinNumberWithBonus = DefaultsUtil.shared.getBool(FILTER_KEY.IS_INCLUDE_LAST_ROUND_WIN_NUMBER_WITH_BONUS)
+        let isIncludeLastRoundWinNumber = DefaultsUtil.shared.getBool(FILTER_KEY.IS_INCLUDE_LAST_ROUND_WIN_NUMBER, FILTER_KEY.DFT_IS_INCLUDE_LAST_ROUND_WIN_NUMBER)
+        let cntIncludeLastRoundWinNumber = DefaultsUtil.shared.getInt(FILTER_KEY.CNT_INCLUDE_LAST_ROUND_WIN_NUMBER, FILTER_KEY.DFT_CNT_INCLUDE_LAST_ROUND_WIN_NUMBER)
+        let isIncludeLastRoundWinNumberWithBonus = DefaultsUtil.shared.getBool(FILTER_KEY.IS_INCLUDE_LAST_ROUND_WIN_NUMBER_WITH_BONUS, FILTER_KEY.DFT_IS_INCLUDE_LAST_ROUND_WIN_NUMBER_WITH_BONUS)
         
         chkIncludeLastRoundWinNumber.isChecked = isIncludeLastRoundWinNumber
         if isIncludeLastRoundWinNumber {
@@ -203,8 +203,8 @@ class FilterDialogController: BaseBottomSheetContent {
     
     // n개 이상 연속된 수 제외
     func updateExcludeConsecutiveNumber() {
-        let isExcludeConsecutiveNumber = DefaultsUtil.shared.getBool(FILTER_KEY.IS_EXCLUDE_CONSECUTIVE_NUMBER)
-        let cntExcludeConsecutiveNumber = DefaultsUtil.shared.getInt(FILTER_KEY.CNT_EXCLUDE_CONSECUTIVE_NUMBER)
+        let isExcludeConsecutiveNumber = DefaultsUtil.shared.getBool(FILTER_KEY.IS_EXCLUDE_CONSECUTIVE_NUMBER, FILTER_KEY.DFT_IS_EXCLUDE_CONSECUTIVE_NUMBER)
+        let cntExcludeConsecutiveNumber = DefaultsUtil.shared.getInt(FILTER_KEY.CNT_EXCLUDE_CONSECUTIVE_NUMBER, FILTER_KEY.DFT_CNT_EXCLUDE_CONSECUTIVE_NUMBER)
         
         chkExcludeConsecutiveNumber.isChecked = isExcludeConsecutiveNumber
         if isExcludeConsecutiveNumber {
