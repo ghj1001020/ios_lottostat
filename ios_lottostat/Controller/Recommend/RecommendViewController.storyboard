@@ -110,6 +110,10 @@
                                     <action selector="onGenerateLottoNumber:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a1Y-7d-kmx"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NUk-ek-gNN">
+                                <rect key="frame" x="0.0" y="156" width="414" height="656"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7C0-Gk-Qlm" userLabel="no_content">
                                 <rect key="frame" x="0.0" y="156" width="414" height="656"/>
                                 <subviews>
@@ -155,13 +159,17 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="P1J-J3-xIg" secondAttribute="bottom" id="09S-qv-sDU"/>
                             <constraint firstItem="dRd-5h-J7S" firstAttribute="top" secondItem="MnE-H6-d9e" secondAttribute="top" id="0YG-gg-nRI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="P1J-J3-xIg" secondAttribute="trailing" id="0p6-ct-Cuf"/>
+                            <constraint firstItem="P1J-J3-xIg" firstAttribute="top" secondItem="NUk-ek-gNN" secondAttribute="bottom" id="1I2-w3-Wzo"/>
                             <constraint firstItem="P1J-J3-xIg" firstAttribute="top" secondItem="7C0-Gk-Qlm" secondAttribute="bottom" id="1bO-7g-4iB"/>
+                            <constraint firstItem="NUk-ek-gNN" firstAttribute="top" secondItem="MnE-H6-d9e" secondAttribute="bottom" constant="10" id="2dA-hm-Jl8"/>
                             <constraint firstItem="7C0-Gk-Qlm" firstAttribute="top" secondItem="MnE-H6-d9e" secondAttribute="bottom" constant="10" id="6Fc-dn-l54"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NUk-ek-gNN" secondAttribute="trailing" id="9rK-yf-bHv"/>
                             <constraint firstItem="KJX-hm-T5l" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="A3f-OK-rwj"/>
                             <constraint firstItem="P1J-J3-xIg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Jp7-ux-GJw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7C0-Gk-Qlm" secondAttribute="trailing" id="MZ4-Q1-5mw"/>
                             <constraint firstItem="7C0-Gk-Qlm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Mfx-kZ-tPx"/>
                             <constraint firstItem="KJX-hm-T5l" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Q2m-vU-ZXS"/>
+                            <constraint firstItem="NUk-ek-gNN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="diY-dw-Msd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KJX-hm-T5l" secondAttribute="trailing" id="edl-f4-H8e"/>
                             <constraint firstItem="MnE-H6-d9e" firstAttribute="leading" secondItem="dRd-5h-J7S" secondAttribute="trailing" constant="8" id="i2U-kc-BdE"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MnE-H6-d9e" secondAttribute="trailing" constant="16" id="nee-3U-V5x"/>

@@ -58,11 +58,33 @@ class SQLiteService {
     }
     
     // 해당 번호가 포함된 당첨번호 조회
-    public static func selectPrevWinNumberByNum(num: Int, isBonus: Bool) -> [Int] {
-        var result : [Int] = []
+    public static func selectPrevWinNumberByNum(num: Int, isBonus: Bool) -> [[Int]] {
+        var result : [[Int]] = []
+        var query : String = DefineQuery.SELECT_PREV_WIN_NUMBER_BY_NUM
+        var param = [num, num, num, num, num, num]
+
+        if( isBonus ) {
+            query = DefineQuery.SELECT_PREV_WIN_NUMBER_BY_NUM_WITH_BONUS
+            param.append(num)
+        }
         
         SQLite.shared.open()
-        
+        SQLite.shared.select(sql: query, params: param) { (stmt: OpaquePointer?) in
+            while sqlite3_step(stmt) == SQLITE_ROW {
+                var arrNum : [Int] = []
+                arrNum.append( Int(sqlite3_column_int(stmt, 0)) )
+                arrNum.append( Int(sqlite3_column_int(stmt, 1)) )
+                arrNum.append( Int(sqlite3_column_int(stmt, 2)) )
+                arrNum.append( Int(sqlite3_column_int(stmt, 3)) )
+                arrNum.append( Int(sqlite3_column_int(stmt, 4)) )
+                arrNum.append( Int(sqlite3_column_int(stmt, 5)) )
+                if isBonus {
+                    arrNum.append( Int(sqlite3_column_int(stmt, 6)) )
+                }
+                
+                result.append(arrNum)
+            }
+        }
         SQLite.shared.close()
         
         return result

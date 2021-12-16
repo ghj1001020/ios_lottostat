@@ -9,6 +9,10 @@ import UIKit
 import KWDrawerController
 
 class RecommendViewController: BaseController {
+    
+    // 번호추출 로또 데이터 리스트
+    private var mLottoList : [[Int]] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +72,7 @@ class RecommendViewController: BaseController {
             
             // 직전회차 당첨번호 중 n개이상 포함
             if( isIncludeLastRoundWinNumber ) {
-                var lastRound = SQLiteService.selectLastRoundWinNumber(isBonus: isExcludePrevWinNumberWithBonus)
+                var lastRound = SQLiteService.selectLastRoundWinNumber(isBonus: isIncludeLastRoundWinNumberWithBonus)
                 // 0 <= idx < cntIncludeLastRoundWinNumber
                 for _ in 0..<cntIncludeLastRoundWinNumber {
                     // 인덱스 구해서 추천번호 뽑기
@@ -88,7 +92,68 @@ class RecommendViewController: BaseController {
                 if isExcludePrevWinNumber {
                     if( LOTTO.count == cntExcludePrevWinNumber-1 ) {
                         // 0번째 번호가 포함된 로또당첨번호 리스트
-                        let list : [Int] = SQLiteService.selectPrevWinNumberByNum()
+                        let list : [[Int]] = SQLiteService.selectPrevWinNumberByNum(num: LOTTO[0], isBonus: isExcludePrevWinNumberWithBonus)
+                        
+                        for item in list {
+                            let WIN_NUMBER : [Int] = item
+                            var isPrevWinNumber : Bool = true   // 이전번호와 n-1개 일치여부
+                            // 이전 당첨번호와 n-1개 일치하는지 체크
+                            for _lotto in LOTTO {
+                                if( !WIN_NUMBER.contains(_lotto) ) {
+                                    isPrevWinNumber = false
+                                    break
+                                }
+                            }
+                            
+                            // 이전번호와 n-1개 일치하면 나머지번호 삭제
+                            if( isPrevWinNumber ) {
+                                for _winNumber in WIN_NUMBER {
+                                    if let _index = GROUP.firstIndex(of: _winNumber) {
+                                        GROUP.remove(at: _index)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                // 번호추천
+                let numIndex = Int( arc4random_uniform(UInt32(GROUP.count)) )
+                let number = GROUP[numIndex]
+                
+                // 추천번호 결과담고 모그룹에서 삭제
+                LOTTO.append(number)
+                LOTTO.sort()
+                GROUP.remove(at: numIndex)
+                
+                // n개이상 연속된 수 체크
+                if( isExcludeConsecutiveNumber ) {
+                    var isConsecutive : Bool = false    // 결과체크
+                    var cntConsecutive = 1  // 연속된수 개수
+                    var temp : Int = -1 // 이전번호
+                    for _lotto in LOTTO {
+                        // 두수 사이 간격이 1이면 이전번호와 연속된 수
+                        if( abs(temp-_lotto) <= 1 ) {
+                            // 지금까지 연속수 >= n 연속수 한계 설정개수
+                            cntConsecutive += 1
+                            if( cntConsecutive >= cntExcludeConsecutiveNumber ) {
+                                isConsecutive = true
+                                break
+                            }
+                        }
+                        // 이전번호와 연속되지 않은 수
+                        else {
+                            cntConsecutive = 1
+                        }
+                        temp = _lotto
+                    }
+                    
+                    // n개이상 연속된 수이면 지우고 다시하기
+                    if isConsecutive {
+                        if let _index = LOTTO.firstIndex(of: number) {
+                            LOTTO.remove(at: _index)
+                        }
+                        continue
                     }
                 }
             }
@@ -97,9 +162,22 @@ class RecommendViewController: BaseController {
             index += 1
         }
         
-        
         let runTime = Date().toMilliSeconds() - startTime
         LogUtil.p("runTime \(runTime) ms")
     }
+    
+}
+
+// 번호추출 목록
+extension RecommendViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mLottoList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    }
+    
     
 }
