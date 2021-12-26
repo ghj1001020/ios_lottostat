@@ -21,7 +21,16 @@ class HJLabel: UILabel {
     @IBInspectable var isBullet : Bool = false
     
     // 텍스트
+    override var text: String? {
+        didSet(value) {
+            setText(newVal: value)
+        }
+    }
+
     var content : String = ""
+    
+    // 글자 세팅
+    func setText(newVal: String?) {}
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -22,7 +22,7 @@ class DefineQuery {
     // 해당 번호가 포함된 당첨번호 조회
     public static let SELECT_PREV_WIN_NUMBER_BY_NUM = "SELECT WIN1, WIN2, WIN3, WIN4, WIN5, WIN6, BONUS " +
                                                       "FROM   LOTTO_WIN_NUMBER " +
-                                                       "WHERE  WIN1=? OR WIN2=? OR WIN3=? OR WIN4=? OR WIN5=? OR WIN6=?"
+                                                      "WHERE  WIN1=? OR WIN2=? OR WIN3=? OR WIN4=? OR WIN5=? OR WIN6=?"
     
     // 해당 번호가 포함된 당첨번호 조회 (보너스 포함)
     public static let SELECT_PREV_WIN_NUMBER_BY_NUM_WITH_BONUS = "SELECT WIN1, WIN2, WIN3, WIN4, WIN5, WIN6, BONUS " +

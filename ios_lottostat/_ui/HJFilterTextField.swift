@@ -1,5 +1,5 @@
 //
-//  HJLottoNumberTextField.swift
+//  HJFilterTextField.swift
 //  ios_lottostat
 //
 //  Created by 권혁준 on 2021/12/11.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HJLottoNumberTextField: HJNumberTextField {
+class HJFilterTextField: HJNumberTextField {
 
     var mCurrentNumber: Int = 0
     var minNum : Int = 0

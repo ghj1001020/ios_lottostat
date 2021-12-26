@@ -13,11 +13,19 @@ class RecommendViewController: BaseController {
     // 번호추출 로또 데이터 리스트
     private var mLottoList : [[Int]] = []
     
+    // 번호추출 목록
+    @IBOutlet var tblLottoNumber: UITableView!
+    @IBOutlet var viewNoContent: UIView!
+    @IBOutlet var btnSave: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setAppBarTitle("번호추천")
+        
+        self.tblLottoNumber.delegate = self
+        self.tblLottoNumber.dataSource = self
     }
     
     // 필터버튼 클릭
@@ -62,6 +70,7 @@ class RecommendViewController: BaseController {
         var index : Int = 0
         var LOTTO : [Int] = []
         
+        self.mLottoList.removeAll()
         while( index < count ) {
             // 번호생성
             LOTTO.removeAll()
@@ -158,14 +167,32 @@ class RecommendViewController: BaseController {
                 }
             }
             
+            // 번호 추천 목록에 담기
+            self.mLottoList.append( LOTTO )
+            
             // 인덱스 1추가
             index += 1
         }
+        tblLottoNumber.reloadData()
+        renderLottoNumberList()
         
         let runTime = Date().toMilliSeconds() - startTime
         LogUtil.p("runTime \(runTime) ms")
     }
     
+    func renderLottoNumberList() {
+        if( mLottoList.isEmpty ) {
+            tblLottoNumber.isHidden = true
+            btnSave.isHidden = true
+            viewNoContent.isHidden = false
+        }
+        else {
+            tblLottoNumber.isHidden = false
+            btnSave.isHidden = false
+            viewNoContent.isHidden = true
+        }
+    }
+
 }
 
 // 번호추출 목록
@@ -176,8 +203,19 @@ extension RecommendViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "lottoNumberCell", for: indexPath) as? RecommendLottoNumberTableCell else {
+            return UITableViewCell()
+        }
         
+        cell.lbNum1.text = String(self.mLottoList[indexPath.row][0])
+        cell.lbNum2.text = String(self.mLottoList[indexPath.row][1])
+        cell.lbNum3.text = String(self.mLottoList[indexPath.row][2])
+        cell.lbNum4.text = String(self.mLottoList[indexPath.row][3])
+        cell.lbNum5.text = String(self.mLottoList[indexPath.row][4])
+        cell.lbNum6.text = String(self.mLottoList[indexPath.row][5])
+        
+        cell.divider.isHidden = indexPath.row == self.mLottoList.count-1 ? true : false
+
+        return cell
     }
-    
-    
 }

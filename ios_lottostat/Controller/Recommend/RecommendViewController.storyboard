@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,7 +49,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnE-H6-d9e">
-                                <rect key="frame" x="292" y="106" width="106" height="40"/>
+                                <rect key="frame" x="300" y="106" width="106" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.4823529411764706" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bcm-3d-UiO"/>
@@ -68,7 +69,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRd-5h-J7S">
-                                <rect key="frame" x="178" y="106" width="106" height="40"/>
+                                <rect key="frame" x="186" y="106" width="106" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.5607843137254902" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="106" id="Nia-a3-j2P"/>
@@ -110,9 +111,164 @@
                                     <action selector="onGenerateLottoNumber:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a1Y-7d-kmx"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NUk-ek-gNN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NUk-ek-gNN">
                                 <rect key="frame" x="0.0" y="156" width="414" height="656"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="lottoNumberCell" id="qg2-26-ant" customClass="RecommendLottoNumberTableCell" customModule="ios_lottostat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qg2-26-ant" id="X1t-Pk-Hnj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="35N-LL-mg9">
+                                                    <rect key="frame" x="8" y="8" width="398" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98U-vq-zAY" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <color key="backgroundColor" red="0.98431372549019602" green="0.76862745098039209" blue="0.0" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="JKB-xq-nXW"/>
+                                                                <constraint firstAttribute="width" constant="50" id="f7S-Mj-ixE"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="25"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="41" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc1-8f-TyL" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                            <rect key="frame" x="69.5" y="0.0" width="50" height="50"/>
+                                                            <color key="backgroundColor" red="0.41176470588235292" green="0.78431372549019607" blue="0.94901960784313721" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="3VX-Sj-sxl"/>
+                                                                <constraint firstAttribute="height" constant="50" id="Mez-eT-YYa"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="25"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxc-Dr-2FW" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                            <rect key="frame" x="139" y="0.0" width="50" height="50"/>
+                                                            <color key="backgroundColor" red="1" green="0.44705882352941173" blue="0.44705882352941173" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="dqJ-OG-CsX"/>
+                                                                <constraint firstAttribute="width" constant="50" id="f4c-t5-kTF"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="25"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0X-AV-2rt" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                            <rect key="frame" x="209" y="0.0" width="50" height="50"/>
+                                                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                                                            <color key="tintColor" name="AccentColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="3ZR-SZ-o3c"/>
+                                                                <constraint firstAttribute="width" constant="50" id="Hyi-Sg-SqA"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="25"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLB-Ia-yXx" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                            <rect key="frame" x="278.5" y="0.0" width="50" height="50"/>
+                                                            <color key="backgroundColor" red="0.69019607843137254" green="0.84705882352941175" blue="0.25098039215686274" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="oYu-Bz-x1I"/>
+                                                                <constraint firstAttribute="height" constant="50" id="yi0-Sa-tnU"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="25"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAu-EG-7by" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                            <rect key="frame" x="348" y="0.0" width="50" height="50"/>
+                                                            <color key="backgroundColor" red="0.98431372549019602" green="0.76862745098039209" blue="0.0" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="WHF-9g-E3x"/>
+                                                                <constraint firstAttribute="width" constant="50" id="xPD-Q9-pvl"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="25"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sz-yY-wjZ" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="65" width="398" height="1"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="oUM-03-2au"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isLine" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="35N-LL-mg9" secondAttribute="bottom" constant="8" id="4uK-Wu-7uY"/>
+                                                <constraint firstItem="35N-LL-mg9" firstAttribute="top" secondItem="X1t-Pk-Hnj" secondAttribute="top" constant="8" id="6T1-FE-X7l"/>
+                                                <constraint firstItem="5sz-yY-wjZ" firstAttribute="leading" secondItem="X1t-Pk-Hnj" secondAttribute="leading" constant="8" id="C7i-zh-mPW"/>
+                                                <constraint firstAttribute="trailing" secondItem="35N-LL-mg9" secondAttribute="trailing" constant="8" id="Kta-T9-XdI"/>
+                                                <constraint firstAttribute="trailing" secondItem="5sz-yY-wjZ" secondAttribute="trailing" constant="8" id="P3h-hy-Nlg"/>
+                                                <constraint firstItem="35N-LL-mg9" firstAttribute="leading" secondItem="X1t-Pk-Hnj" secondAttribute="leading" constant="8" id="c8g-jk-vSI"/>
+                                                <constraint firstAttribute="bottom" secondItem="5sz-yY-wjZ" secondAttribute="bottom" id="yPb-TB-OzR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="divider" destination="5sz-yY-wjZ" id="CJl-fZ-z3l"/>
+                                            <outlet property="lbNum1" destination="98U-vq-zAY" id="FjG-Wc-1Ib"/>
+                                            <outlet property="lbNum2" destination="hc1-8f-TyL" id="zcq-xY-IYB"/>
+                                            <outlet property="lbNum3" destination="gxc-Dr-2FW" id="NsP-Ro-qex"/>
+                                            <outlet property="lbNum4" destination="e0X-AV-2rt" id="iXT-iF-Ryf"/>
+                                            <outlet property="lbNum5" destination="sLB-Ia-yXx" id="OEl-Ww-Ac3"/>
+                                            <outlet property="lbNum6" destination="PAu-EG-7by" id="jjQ-CH-IVL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="TkT-pq-5hG"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="ZyK-UX-iXu"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7C0-Gk-Qlm" userLabel="no_content">
                                 <rect key="frame" x="0.0" y="156" width="414" height="656"/>
@@ -172,13 +328,16 @@
                             <constraint firstItem="NUk-ek-gNN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="diY-dw-Msd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KJX-hm-T5l" secondAttribute="trailing" id="edl-f4-H8e"/>
                             <constraint firstItem="MnE-H6-d9e" firstAttribute="leading" secondItem="dRd-5h-J7S" secondAttribute="trailing" constant="8" id="i2U-kc-BdE"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MnE-H6-d9e" secondAttribute="trailing" constant="16" id="nee-3U-V5x"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MnE-H6-d9e" secondAttribute="trailing" constant="8" id="nee-3U-V5x"/>
                             <constraint firstItem="MnE-H6-d9e" firstAttribute="top" secondItem="KJX-hm-T5l" secondAttribute="bottom" constant="12" id="x9W-RY-che"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8gS-Y0-MN1"/>
                     <connections>
                         <outlet property="appBar" destination="KJX-hm-T5l" id="sn7-8f-1ih"/>
+                        <outlet property="btnSave" destination="dRd-5h-J7S" id="ZKH-sS-12S"/>
+                        <outlet property="tblLottoNumber" destination="NUk-ek-gNN" id="gaP-cL-m2Q"/>
+                        <outlet property="viewNoContent" destination="7C0-Gk-Qlm" id="sjU-vd-sBO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -203,6 +362,9 @@
     </scenes>
     <resources>
         <image name="ic_no_content" width="40" height="40"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

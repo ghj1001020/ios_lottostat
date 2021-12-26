@@ -35,7 +35,7 @@ class FilterDialogController: BaseBottomSheetContent {
     @IBOutlet var chkExcludeConsecutiveNumber: HJCheckBox!
     
     // 필터입력 버튼
-    @IBOutlet var tfCount: HJLottoNumberTextField!
+    @IBOutlet var tfCount: HJFilterTextField!
     @IBOutlet var chkBonus: HJCheckBox!
     @IBOutlet var btnCountCancel: UIButton!
     @IBOutlet var btnCountOk: UIButton!
@@ -266,6 +266,7 @@ class FilterDialogController: BaseBottomSheetContent {
             lbCountTitle.text = "이전 당첨번호와 n개 이상 일치시 제외"
             lbDesc.isHidden = true
             tfCount.setNumber(num: DefaultsUtil.shared.getInt(FILTER_KEY.CNT_EXCLUDE_PREV_WIN_NUMBER))
+            break
             
         case .INCLUDE_LAST_ROUND_WIN_NUMBER:
             tfCount.setMinNumber(num: 0)
@@ -274,6 +275,7 @@ class FilterDialogController: BaseBottomSheetContent {
             lbDesc.isHidden = false
             lbDesc.text = "0개 : 직전회차 당첨번호 모두 제외한다"
             tfCount.setNumber(num: DefaultsUtil.shared.getInt(FILTER_KEY.CNT_INCLUDE_LAST_ROUND_WIN_NUMBER))
+            break
             
         case .EXCLUDE_CONSECUTIVE_NUMBER:
             tfCount.setMinNumber(num: 1)
@@ -282,6 +284,7 @@ class FilterDialogController: BaseBottomSheetContent {
             lbDesc.isHidden = false
             lbDesc.text = "1개 : 연속된 수가 하나도 없다"
             tfCount.setNumber(num: DefaultsUtil.shared.getInt(FILTER_KEY.CNT_EXCLUDE_CONSECUTIVE_NUMBER))
+            break
         }
         
         chkBonus.isChecked = true
