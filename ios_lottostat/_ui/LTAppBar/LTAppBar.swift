@@ -21,18 +21,17 @@ class LTAppBar : UIView {
     public var delegate : LTAppBarPortocol? = nil
     
     @IBOutlet var lbTitle: UILabel!
-    
+    @IBOutlet var btnBack: UIButton!
+        
 
     // 인스턴스로 사용
     override init(frame: CGRect) {
         super.init(frame: frame)
-        loadXib()
     }
 
     // xib, 스토리보드로 사용
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        loadXib()
     }
     
     func loadXib() {
@@ -44,17 +43,18 @@ class LTAppBar : UIView {
         self.addSubview(view)
     }
     
+    // 타이틀
     func setTitle(_ title: String?) {
         lbTitle.text = title
-    }
-
-    // 뒤로가기
-    @IBAction func onBackButton(_ sender: UIButton) {
-        self.delegate?.onBackButtonClick()
     }
     
     // 사이드메뉴
     @IBAction func onMoreButton(_ sender: UIButton) {
         self.delegate?.onMoreButtonClick()
+    }
+    
+    // 뒤로가기
+    @IBAction func onBackButton(_ sender: UIButton) {
+        self.delegate?.onBackButtonClick()
     }
 }

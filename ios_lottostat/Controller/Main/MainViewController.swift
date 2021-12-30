@@ -31,4 +31,15 @@ class MainViewController: UIViewController {
             self.present(controller, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func moveToMyLotto(_ sender: UIButton) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "MyLottoViewController", bundle: nil)
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "myLotto") as? MyLottoViewController else {
+            return
+        }
+        
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true, completion: nil)
+    }
+    
 }

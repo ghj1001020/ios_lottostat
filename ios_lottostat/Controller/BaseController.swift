@@ -10,30 +10,25 @@ import UIKit
 
 class BaseController : UIViewController {
     
-    @IBOutlet var appBar: LTAppBar!
+    public var appBar: LTAppBar? = nil
+    
+    @IBOutlet weak var titleBarView: UIView!
+    private var titleBar: LTAppBar? = nil
     
     
     override func viewDidLoad() {
-        self.appBar.delegate = self
+        setAppBar()
     }
     
     func setAppBar() {
         guard let xib = Bundle.main.loadNibNamed("LTAppBar", owner: self, options: nil)?.first as? LTAppBar else  {
             return
         }
-        xib.delegate = self
-        let safeArea : UIView = UIView()
-        safeArea.translatesAutoresizingMaskIntoConstraints = false
-
-        self.view.addSubview(safeArea)
         
-        if #available(iOS 11, *) {
-            let safeAreaGuide = view.safeAreaLayoutGuide
-            safeArea.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor).isActive = true
-        }
-        safeArea.addSubview(xib)
-    }
-    
+        titleBar = xib
+        titleBar?.delegate = self
+        self.titleBarView.addSubview(titleBar!)
+    }    
 }
 
 extension BaseController : LTAppBarPortocol {
@@ -47,6 +42,6 @@ extension BaseController : LTAppBarPortocol {
     
     // 타이틀명 변경
     func setAppBarTitle(_ title: String) {
-        self.appBar.setTitle(title)
+        self.titleBar?.setTitle(title)
     }
 }

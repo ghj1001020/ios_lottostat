@@ -28,4 +28,8 @@ class DefineQuery {
     public static let SELECT_PREV_WIN_NUMBER_BY_NUM_WITH_BONUS = "SELECT WIN1, WIN2, WIN3, WIN4, WIN5, WIN6, BONUS " +
                                                                  "FROM   LOTTO_WIN_NUMBER " +
                                                                  "WHERE  WIN1=? OR WIN2=? OR WIN3=? OR WIN4=? OR WIN5=? OR WIN6=? OR BONUS=?"
+    
+    // 마지막 로또번호 회차
+    public static let SELECT_MAX_NO = "SELECT MAX(NO) " +
+                                      "FROM LOTTO_WIN_NUMBER"
 }

@@ -4,16 +4,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LTAppBar" customModule="ios_lottostat" customModuleProvider="target">
-            <connections>
-                <outlet property="lbTitle" destination="9cE-bc-XU8" id="HbF-wL-RKa"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view tag="99999" contentMode="scaleToFill" restorationIdentifier="LTAppBar" id="iN0-l3-epB" customClass="LTAppBar" customModule="ios_lottostat" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -22,7 +19,7 @@
                     <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                     <state key="normal" image="ic_back"/>
                     <connections>
-                        <action selector="onBackButton:" destination="-1" eventType="touchUpInside" id="9hb-WK-iVD"/>
+                        <action selector="onBackButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="wI1-Cz-fqg"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnD-gF-xwU" userLabel="more">
@@ -30,7 +27,7 @@
                     <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                     <state key="normal" image="ic_more"/>
                     <connections>
-                        <action selector="onMoreButton:" destination="-1" eventType="touchUpInside" id="aiJ-ak-KR4"/>
+                        <action selector="onMoreButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="T3E-hI-lGb"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타이틀바" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cE-bc-XU8">
@@ -40,7 +37,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" systemColor="systemBrownColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Xao-c1-zeu" secondAttribute="bottom" constant="5" id="987-wE-xLZ"/>
                 <constraint firstItem="qnD-gF-xwU" firstAttribute="leading" secondItem="Xao-c1-zeu" secondAttribute="trailing" id="CwE-Xy-Qsk"/>
@@ -54,11 +51,18 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnBack" destination="Xao-c1-zeu" id="KjC-bX-ps2"/>
+                <outlet property="lbTitle" destination="9cE-bc-XU8" id="9N0-dK-Dth"/>
+            </connections>
             <point key="canvasLocation" x="122" y="100"/>
         </view>
     </objects>
     <resources>
         <image name="ic_back" width="24" height="24"/>
         <image name="ic_more" width="24" height="24"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

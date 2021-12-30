@@ -89,4 +89,19 @@ class SQLiteService {
         
         return result
     }
+    
+    // 마지막 로또번호 회차
+    public static func selectMaxNo() -> Int {
+        var result = 0
+        
+        SQLite.shared.open()
+        SQLite.shared.select(sql: DefineQuery.SELECT_MAX_NO) { (stmt: OpaquePointer?) in
+            if sqlite3_step(stmt) == SQLITE_ROW {
+                result = Int(sqlite3_column_int(stmt, 0))
+            }
+        }
+        SQLite.shared.close()
+        
+        return result
+    }
 }

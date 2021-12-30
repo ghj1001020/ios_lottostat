@@ -34,6 +34,8 @@
 		C2AA4661276EEC9F00F213EB /* RecommendLottoNumberTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA4660276EEC9F00F213EB /* RecommendLottoNumberTableCell.swift */; };
 		C2AA4663276F656000F213EB /* HJLottoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA4662276F656000F213EB /* HJLottoLabel.swift */; };
 		C2AA4665276F7DA700F213EB /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA4664276F7DA700F213EB /* ColorUtil.swift */; };
+		C2AA466A2778A2A800F213EB /* MyLottoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2AA46692778A2A800F213EB /* MyLottoViewController.storyboard */; };
+		C2AA466C2778A2C500F213EB /* MyLottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA466B2778A2C500F213EB /* MyLottoViewController.swift */; };
 		C2AE21DB26F580D700002D61 /* CommonDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AE21DA26F580D700002D61 /* CommonDialog.xib */; };
 		C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21DC26F615F500002D61 /* CommonDialog.swift */; };
 		C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E226F764ED00002D61 /* LTCardView.swift */; };
@@ -91,6 +93,8 @@
 		C2AA4664276F7DA700F213EB /* ColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		C2AA4666277215F300F213EB /* ios_lottostat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ios_lottostat.entitlements; sourceTree = "<group>"; };
 		C2AA46672772161200F213EB /* ios_lottostatRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ios_lottostatRelease.entitlements; sourceTree = "<group>"; };
+		C2AA46692778A2A800F213EB /* MyLottoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyLottoViewController.storyboard; sourceTree = "<group>"; };
+		C2AA466B2778A2C500F213EB /* MyLottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLottoViewController.swift; sourceTree = "<group>"; };
 		C2AE21DA26F580D700002D61 /* CommonDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonDialog.xib; sourceTree = "<group>"; };
 		C2AE21DC26F615F500002D61 /* CommonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDialog.swift; sourceTree = "<group>"; };
 		C2AE21E226F764ED00002D61 /* LTCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCardView.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 		C23EC0C326EA231800828BAB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2AA46682778A19000F213EB /* MyLotto */,
 				C20F0DB42701F2AB009D18FB /* Recommend */,
 				C2AE21FB26FB6AAB00002D61 /* Main */,
 				C23EC0C426EA232700828BAB /* Intro */,
@@ -250,6 +255,15 @@
 				C2AA4664276F7DA700F213EB /* ColorUtil.swift */,
 			);
 			path = _util;
+			sourceTree = "<group>";
+		};
+		C2AA46682778A19000F213EB /* MyLotto */ = {
+			isa = PBXGroup;
+			children = (
+				C2AA46692778A2A800F213EB /* MyLottoViewController.storyboard */,
+				C2AA466B2778A2C500F213EB /* MyLottoViewController.swift */,
+			);
+			path = MyLotto;
 			sourceTree = "<group>";
 		};
 		C2AE21D926F57D4A00002D61 /* Dialog */ = {
@@ -374,6 +388,7 @@
 				C23EC0BC26E8D22A00828BAB /* LaunchScreen.storyboard in Resources */,
 				C23EC0B926E8D22A00828BAB /* Assets.xcassets in Resources */,
 				C20F0DBB270340AF009D18FB /* LTAppBar.xib in Resources */,
+				C2AA466A2778A2A800F213EB /* MyLottoViewController.storyboard in Resources */,
 				C2AE21FD26FB6ABD00002D61 /* MainViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +447,7 @@
 				C2FDCE902740CD4500C60E13 /* BottomSheetController.swift in Sources */,
 				C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */,
 				C23EC0B426E8D22800828BAB /* ViewController.swift in Sources */,
+				C2AA466C2778A2C500F213EB /* MyLottoViewController.swift in Sources */,
 				C2AA465D2764A8C100F213EB /* HJFilterTextField.swift in Sources */,
 				C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */,
 				C20F0DBD270340CA009D18FB /* LTAppBar.swift in Sources */,

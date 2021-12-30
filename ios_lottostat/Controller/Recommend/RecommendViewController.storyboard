@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -41,11 +41,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJX-hm-T5l" customClass="LTAppBar" customModule="ios_lottostat" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3r-l1-LFP">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="9TN-ec-3ph"/>
+                                    <constraint firstAttribute="height" constant="50" id="AI7-lh-8nA"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnE-H6-d9e">
@@ -116,7 +116,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="lottoNumberCell" id="qg2-26-ant" customClass="RecommendLottoNumberTableCell" customModule="ios_lottostat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="66"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qg2-26-ant" id="X1t-Pk-Hnj">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
@@ -143,7 +143,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="41" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc1-8f-TyL" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
-                                                            <rect key="frame" x="69.5" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="69.666666666666671" y="0.0" width="50" height="50"/>
                                                             <color key="backgroundColor" red="0.41176470588235292" green="0.78431372549019607" blue="0.94901960784313721" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="3VX-Sj-sxl"/>
@@ -160,7 +160,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxc-Dr-2FW" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
-                                                            <rect key="frame" x="139" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="139.33333333333334" y="0.0" width="50" height="50"/>
                                                             <color key="backgroundColor" red="1" green="0.44705882352941173" blue="0.44705882352941173" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="dqJ-OG-CsX"/>
@@ -177,7 +177,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0X-AV-2rt" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
-                                                            <rect key="frame" x="209" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="208.66666666666666" y="0.0" width="49.999999999999972" height="50"/>
                                                             <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
                                                             <color key="tintColor" name="AccentColor"/>
                                                             <constraints>
@@ -195,7 +195,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLB-Ia-yXx" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
-                                                            <rect key="frame" x="278.5" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="278.33333333333331" y="0.0" width="50" height="50"/>
                                                             <color key="backgroundColor" red="0.69019607843137254" green="0.84705882352941175" blue="0.25098039215686274" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="oYu-Bz-x1I"/>
@@ -289,7 +289,7 @@
                                         <rect key="frame" x="40" y="61" width="40" height="40"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRx-8i-1dQ">
-                                        <rect key="frame" x="40" y="111" width="120" height="53"/>
+                                        <rect key="frame" x="40.000000000000007" y="111.00000000000001" width="119.66666666666669" height="52.666666666666671"/>
                                         <string key="text">번호를
 추천받으세요.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -320,23 +320,23 @@
                             <constraint firstItem="NUk-ek-gNN" firstAttribute="top" secondItem="MnE-H6-d9e" secondAttribute="bottom" constant="10" id="2dA-hm-Jl8"/>
                             <constraint firstItem="7C0-Gk-Qlm" firstAttribute="top" secondItem="MnE-H6-d9e" secondAttribute="bottom" constant="10" id="6Fc-dn-l54"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NUk-ek-gNN" secondAttribute="trailing" id="9rK-yf-bHv"/>
-                            <constraint firstItem="KJX-hm-T5l" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="A3f-OK-rwj"/>
                             <constraint firstItem="P1J-J3-xIg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Jp7-ux-GJw"/>
+                            <constraint firstItem="x3r-l1-LFP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Lba-5d-Qy1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7C0-Gk-Qlm" secondAttribute="trailing" id="MZ4-Q1-5mw"/>
                             <constraint firstItem="7C0-Gk-Qlm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Mfx-kZ-tPx"/>
-                            <constraint firstItem="KJX-hm-T5l" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Q2m-vU-ZXS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="x3r-l1-LFP" secondAttribute="trailing" id="c6g-St-HVj"/>
                             <constraint firstItem="NUk-ek-gNN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="diY-dw-Msd"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KJX-hm-T5l" secondAttribute="trailing" id="edl-f4-H8e"/>
+                            <constraint firstItem="x3r-l1-LFP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="frU-LJ-zOR"/>
                             <constraint firstItem="MnE-H6-d9e" firstAttribute="leading" secondItem="dRd-5h-J7S" secondAttribute="trailing" constant="8" id="i2U-kc-BdE"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MnE-H6-d9e" secondAttribute="trailing" constant="8" id="nee-3U-V5x"/>
-                            <constraint firstItem="MnE-H6-d9e" firstAttribute="top" secondItem="KJX-hm-T5l" secondAttribute="bottom" constant="12" id="x9W-RY-che"/>
+                            <constraint firstItem="MnE-H6-d9e" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="62" id="x9W-RY-che"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8gS-Y0-MN1"/>
                     <connections>
-                        <outlet property="appBar" destination="KJX-hm-T5l" id="sn7-8f-1ih"/>
                         <outlet property="btnSave" destination="dRd-5h-J7S" id="ZKH-sS-12S"/>
                         <outlet property="tblLottoNumber" destination="NUk-ek-gNN" id="gaP-cL-m2Q"/>
+                        <outlet property="titleBarView" destination="x3r-l1-LFP" id="aoQ-68-8RZ"/>
                         <outlet property="viewNoContent" destination="7C0-Gk-Qlm" id="sjU-vd-sBO"/>
                     </connections>
                 </viewController>

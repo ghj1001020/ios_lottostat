@@ -13,6 +13,11 @@ class RecommendViewController: BaseController {
     // 번호추출 로또 데이터 리스트
     private var mLottoList : [[Int]] = []
     
+    // 번호추출 회차
+    private let mLottoNo = {
+        return SQLiteService.selectMaxNo() + 1
+    }()
+    
     // 번호추출 목록
     @IBOutlet var tblLottoNumber: UITableView!
     @IBOutlet var viewNoContent: UIView!
@@ -22,7 +27,7 @@ class RecommendViewController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setAppBarTitle("번호추천")
+        setAppBarTitle("\(mLottoNo)회 번호추천")
         
         self.tblLottoNumber.delegate = self
         self.tblLottoNumber.dataSource = self
