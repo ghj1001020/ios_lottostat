@@ -27,6 +27,7 @@ class RecommendViewController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setAppBar(.BACK_MORE)
         setAppBarTitle("\(mLottoNo)회 번호추천")
         
         self.tblLottoNumber.delegate = self

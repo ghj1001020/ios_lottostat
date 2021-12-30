@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+enum APPBAR {
+    case BACK
+    case BACK_MORE
+}
+
 class BaseController : UIViewController {
     
     public var appBar: LTAppBar? = nil
@@ -17,18 +22,20 @@ class BaseController : UIViewController {
     
     
     override func viewDidLoad() {
-        setAppBar()
+        
     }
     
-    func setAppBar() {
+    func setAppBar(_ type: APPBAR) {
         guard let xib = Bundle.main.loadNibNamed("LTAppBar", owner: self, options: nil)?.first as? LTAppBar else  {
             return
         }
         
         titleBar = xib
         titleBar?.delegate = self
+        titleBar?.initUI(type)
+        
         self.titleBarView.addSubview(titleBar!)
-    }    
+    }
 }
 
 extension BaseController : LTAppBarPortocol {

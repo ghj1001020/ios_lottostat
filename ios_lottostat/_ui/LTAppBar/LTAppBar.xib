@@ -42,7 +42,7 @@
                 <constraint firstAttribute="bottom" secondItem="Xao-c1-zeu" secondAttribute="bottom" constant="5" id="987-wE-xLZ"/>
                 <constraint firstItem="qnD-gF-xwU" firstAttribute="leading" secondItem="Xao-c1-zeu" secondAttribute="trailing" id="CwE-Xy-Qsk"/>
                 <constraint firstItem="Xao-c1-zeu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="D8H-aF-E7y"/>
-                <constraint firstItem="9cE-bc-XU8" firstAttribute="leading" secondItem="qnD-gF-xwU" secondAttribute="trailing" constant="5" id="JDX-yM-p0Q"/>
+                <constraint firstItem="9cE-bc-XU8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="83" id="JDX-yM-p0Q"/>
                 <constraint firstItem="9cE-bc-XU8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QKd-Ze-pwW"/>
                 <constraint firstItem="Xao-c1-zeu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="TVc-KE-BDb"/>
                 <constraint firstAttribute="bottom" secondItem="qnD-gF-xwU" secondAttribute="bottom" constant="5" id="alv-pH-uMn"/>
@@ -53,7 +53,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="btnBack" destination="Xao-c1-zeu" id="KjC-bX-ps2"/>
+                <outlet property="btnMore" destination="qnD-gF-xwU" id="HTd-wF-135"/>
                 <outlet property="lbTitle" destination="9cE-bc-XU8" id="9N0-dK-Dth"/>
+                <outlet property="lbTitleLeftConstraint" destination="JDX-yM-p0Q" id="qD8-P9-Etj"/>
             </connections>
             <point key="canvasLocation" x="122" y="100"/>
         </view>

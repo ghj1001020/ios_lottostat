@@ -22,7 +22,9 @@ class LTAppBar : UIView {
     
     @IBOutlet var lbTitle: UILabel!
     @IBOutlet var btnBack: UIButton!
-        
+    @IBOutlet var btnMore: UIButton!
+    @IBOutlet var lbTitleLeftConstraint: NSLayoutConstraint!
+    
 
     // 인스턴스로 사용
     override init(frame: CGRect) {
@@ -41,6 +43,15 @@ class LTAppBar : UIView {
         }
         view.frame = self.bounds
         self.addSubview(view)
+    }
+    
+    // 타이틀바 UI
+    func initUI(_ type: APPBAR) {
+        if( type == .BACK ) {
+            btnMore.isHidden = true
+            lbTitleLeftConstraint.constant = 49
+            lbTitle.layoutIfNeeded()
+        }
     }
     
     // 타이틀
