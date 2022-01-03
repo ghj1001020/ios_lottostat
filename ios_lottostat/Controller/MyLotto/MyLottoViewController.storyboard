@@ -24,16 +24,30 @@
                                     <constraint firstAttribute="height" constant="50" id="ex4-j0-KOx"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="48" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eqc-rU-fad">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="tlW-5A-O4L"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="y1W-td-hZ1"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="i33-Z5-hzs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="2Ix-e8-0WV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eqc-rU-fad" secondAttribute="trailing" id="3XT-b9-gtH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="i33-Z5-hzs" secondAttribute="trailing" id="6Fm-PP-SF1"/>
                             <constraint firstItem="i33-Z5-hzs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="M6e-Ea-iA6"/>
+                            <constraint firstItem="eqc-rU-fad" firstAttribute="top" secondItem="i33-Z5-hzs" secondAttribute="bottom" id="cat-gx-5l6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="eqc-rU-fad" secondAttribute="bottom" id="hl5-v4-Y8a"/>
+                            <constraint firstItem="eqc-rU-fad" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xZn-LZ-YaH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tblMyLotto" destination="eqc-rU-fad" id="MSZ-Pc-ZyB"/>
                         <outlet property="titleBarView" destination="i33-Z5-hzs" id="Ray-9I-pjc"/>
                     </connections>
                 </viewController>
