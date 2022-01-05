@@ -53,6 +53,7 @@ class IntroViewController: UIViewController {
                     }
                     // 정상버전이면 로또번호 가져오기
                     self.getLottoNumber()
+                    self.createTable()
                 }
             }
             // 버전요청 실패
@@ -115,6 +116,17 @@ class IntroViewController: UIViewController {
                 })
                 .show(self.view)
 
+        }
+    }
+    
+    // 테이블 생성
+    func createTable() {
+        let dbVersion : Int = DefaultsUtil.shared.getInt(DefineDefaults.DB_VERSION)
+        if dbVersion != SQLite.DB_VERSION {
+            let isSuccess = SQLiteService.createTable()
+            if isSuccess {
+                DefaultsUtil.shared.put(DefineDefaults.DB_VERSION, SQLite.DB_VERSION)
+            }
         }
     }
     

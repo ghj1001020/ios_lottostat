@@ -104,4 +104,16 @@ class SQLiteService {
         
         return result
     }
+    
+    
+    // 테이블 생성
+    public static func createTable() -> Bool {
+        SQLite.shared.open()
+        // My로또 테이블
+        _ = SQLite.shared.execSQL(sql: DefineQuery.DROP_MY_LOTTO_TABLE)
+        let tbl1 = SQLite.shared.execSQL(sql: DefineQuery.CREATE_MY_LOTTO_TABLE)
+        SQLite.shared.close()
+        
+        return tbl1
+    }
 }

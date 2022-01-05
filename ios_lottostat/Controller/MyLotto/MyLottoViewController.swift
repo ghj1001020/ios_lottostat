@@ -30,6 +30,7 @@ class MyLottoViewController: BaseController {
         // 섹션 nib
         let nibSection = UINib(nibName: "ItemMyLottoSection", bundle: nil)
         tblMyLotto.register(nibSection, forHeaderFooterViewReuseIdentifier: "myLottoSection")
+        // 섹션높이
         tblMyLotto.sectionHeaderHeight = UITableView.automaticDimension
         tblMyLotto.estimatedSectionHeaderHeight = 48
         // 푸터높이 0
@@ -37,10 +38,17 @@ class MyLottoViewController: BaseController {
         tblMyLotto.estimatedSectionFooterHeight = 0
         // 비어있는 셀의 divider 제거
         tblMyLotto.tableFooterView = UIView()
+        // 셀 nib
+        let nibDateCell = UINib(nibName: "ItemMyLottoDate", bundle: nil)
+        tblMyLotto.register(nibDateCell, forCellReuseIdentifier: "myLottoDateCell")
+        let nibNumberCell = UINib(nibName: "ItemMyLottoNumber", bundle: nil)
+        tblMyLotto.register(nibNumberCell, forCellReuseIdentifier: "myLottoNumberCell")
+        // 셀높이
+        tblMyLotto.rowHeight = UITableView.automaticDimension
         
         
         // 테스트
-        let item1 = MyLottoNumber(3, true)
+        let item1 = MyLottoNumber(3, false)
         item1.mLottoList.append(MyLottoData(.DATE, "20220212164030"))
         item1.mLottoList.append(MyLottoData(.LOTTO, "20220212164030", 10, 11, 12, 13, 14, 19))
         item1.mLottoList.append(MyLottoData(.LOTTO, "20220212164030", 20, 21, 22, 23, 24, 29))
@@ -95,6 +103,28 @@ extension MyLottoViewController : UITableViewDelegate, UITableViewDataSource, My
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let data : MyLottoData = mMyLottoList[indexPath.section].mLottoList[indexPath.row]
+        
+        // 날짜 셀
+        if data.type == .DATE {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "myLottoDateCell") as? ItemMyLottoDate else {
+                return UITableViewCell()
+            }
+            cell.backgroundColor = ColorUtil.uiColorByRGB(rgb: "#f0eeed")
+            return cell
+        }
+        // 로또번호 셀
+        else if data.type == .LOTTO {
+            guard var cell = tableView.dequeueReusableCell(withIdentifier: "myLottoNumberCell") as? ItemMyLottoNumber else {
+                return UITableViewCell()
+            }
+            
+            // 디바이더
+            cell.divider.isHidden = indexPath.row == mMyLottoList[indexPath.section].mLottoList.count - 1 ? true : false
+            
+            return cell
+        }
+        
         return UITableViewCell()
     }
     

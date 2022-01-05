@@ -84,6 +84,9 @@
                                         <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onSaveLottoNumver:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TeO-bg-BS2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1J-J3-xIg" customClass="LTGradientButton" customModule="ios_lottostat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="812" width="414" height="50"/>

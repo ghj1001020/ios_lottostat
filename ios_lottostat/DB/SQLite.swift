@@ -9,11 +9,12 @@ import Foundation
 import SQLite3
 
 class SQLite {
-    
-    // SQLite 파일 버전 관리
-    public static let SQLite_VERSION = 1
+
     // DB 버전 관리
     public static let DB_VERSION = 1
+    // SQLite 파일 버전 관리
+    public static let SQLite_VERSION = 1
+    
     public static let DB_FILE_NAME = "lotto.db" // DB 파일명
     public static let DB_RESOURCE_FILE_NAME = "lotto"   // 리소스 DB 파일명
     public static let DB_RESOURCE_FILE_EXT = "db"   // 리소스 DB 파일확장자

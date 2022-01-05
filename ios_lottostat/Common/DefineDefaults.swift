@@ -9,6 +9,7 @@ import Foundation
 
 class DefineDefaults {
     public static let VERSION_COPY_SQLITE = "dfts_version_copy_sqlite"
+    public static let DB_VERSION = "dfts_db_version"
 }
 
 // 필터 DEFAULTS 키

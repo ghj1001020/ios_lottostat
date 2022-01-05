@@ -58,6 +58,13 @@ class RecommendViewController: BaseController {
         generateLottoNumber(count: 20)
     }
     
+    // 저장 클릭
+    @IBAction func onSaveLottoNumver(_ sender: UIButton) {
+        
+        
+    }
+    
+    
     // 번호생성
     func generateLottoNumber(count: Int) {
         let startTime = Date().toMilliSeconds()
