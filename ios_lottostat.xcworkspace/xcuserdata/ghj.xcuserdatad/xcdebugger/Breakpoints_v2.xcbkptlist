@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DE216D3A-2591-4BD8-9212-25A8FAF0BFEF"
+            uuid = "8E98A4AD-C713-4E22-87CA-4127695167AD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ios_lottostat/Controller/Intro/IntroViewController.swift"
+            filePath = "ios_lottostat/DB/SQLiteService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "124"
             endingLineNumber = "124"
-            landmarkName = "createTable()"
+            landmarkName = "insertMyLottoData(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CDE287C-69D4-438C-894E-00C4E6CE5F65"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios_lottostat/DB/SQLiteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "selectMyLottoRoundNo()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

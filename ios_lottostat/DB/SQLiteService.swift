@@ -116,4 +116,73 @@ class SQLiteService {
         
         return tbl1
     }
+    
+    // My로또 데이터 저장
+    public static func insertMyLottoData(_ roundNo: Int, _ list: Array<[Int]>) {
+        SQLite.shared.open()
+        let date : String = Date().toString("yyyyMMddHHmmss")
+        for lottoDatas in list {
+            var params: [Any] = []
+            params.insert(roundNo, at: 0)
+            params.insert(date, at: 1)
+            for data in lottoDatas {
+                params.append(data)
+            }
+            
+            _ = SQLite.shared.execSQL(sql: DefineQuery.INSERT_MY_LOTTO, params: params)
+        }
+        SQLite.shared.close()
+    }
+    
+    // My로또 회차 데이터 조회
+    public static func selectMyLottoRoundNo() -> [MyLottoNumber] {
+        var list : [MyLottoNumber] = []
+        
+        SQLite.shared.open()
+        SQLite.shared.select(sql: DefineQuery.SELECT_MY_LOTTO_ROUND) { (stmt: OpaquePointer?) in
+            while sqlite3_step(stmt) == SQLITE_ROW {
+                let roundNo = Int(sqlite3_column_int(stmt, 0))
+                list.append(MyLottoNumber(roundNo, false))
+            }
+        }
+        SQLite.shared.close()
+        
+        // 첫번째 no 로또번호 조회
+        if list.count > 0 {
+            list[0].isOpen(true)
+            list[0].mLottoList.removeAll()
+            list[0].mLottoList = selectMyLottoData(list[0].no)
+        }
+        
+        return list
+    }
+    
+    // My로또 데이터 조회
+    public static func selectMyLottoData(_ no: Int) -> [MyLottoData] {
+        var list : [MyLottoData] = []
+        
+        var tempDate : String = ""
+        SQLite.shared.open()
+        SQLite.shared.select(sql: DefineQuery.SELECT_MY_LOTTO_NUMBER, params: [no]) { (stmt: OpaquePointer?) in
+            while sqlite3_step(stmt) == SQLITE_ROW {
+                let no = Int(sqlite3_column_int(stmt, 0))
+                let date = String(cString: sqlite3_column_text(stmt, 1))
+                let num1 = Int(sqlite3_column_int(stmt, 2))
+                let num2 = Int(sqlite3_column_int(stmt, 3))
+                let num3 = Int(sqlite3_column_int(stmt, 4))
+                let num4 = Int(sqlite3_column_int(stmt, 5))
+                let num5 = Int(sqlite3_column_int(stmt, 6))
+                let num6 = Int(sqlite3_column_int(stmt, 7))
+                
+                if tempDate != date {
+                    list.append(MyLottoData(.DATE, date))
+                    tempDate = date
+                }
+                list.append(MyLottoData(.LOTTO, date, num1, num2, num3, num4, num5, num6))
+            }
+        }
+        SQLite.shared.close()
+        
+        return list
+    }
 }

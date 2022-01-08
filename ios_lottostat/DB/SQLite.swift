@@ -69,7 +69,10 @@ class SQLite {
         if sqlite3_prepare_v2(dbPointer, sql, -1, &stmt, nil) == SQLITE_OK  {
             let SQLITE_STATIC = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
             for (index, item) in params.enumerated() {
-                if( item is Int32 ) {
+                if( item is Int ) {
+                    sqlite3_bind_int(stmt, Int32(index+1), Int32(item as! Int))
+                }
+                else if( item is Int32 ) {
                     sqlite3_bind_int(stmt, Int32(index+1), item as! Int32)
                 }
                 else if( item is Int64 ) {

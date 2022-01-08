@@ -60,8 +60,17 @@ class RecommendViewController: BaseController {
     
     // 저장 클릭
     @IBAction func onSaveLottoNumver(_ sender: UIButton) {
-        
-        
+        if( self.mLottoList.count == 0 ) {
+            AlertUtil.Alert(self, "", "번호를 생성하세요.").show()
+            return
+        }
+
+        let alert = AlertUtil.Alert(self, "", "저장하시겠습니까?")
+        alert.setNegative()
+        alert.setPositive {
+            SQLiteService.insertMyLottoData(self.mLottoNo, self.mLottoList)
+        }
+        alert.show()
     }
     
     

@@ -25,7 +25,7 @@ class DefineQuery {
     public static let DROP_MY_LOTTO_TABLE = "DROP TABLE IF EXISTS MY_LOTTO_TBL"
     
     // My로또번호 데이터 입력
-    public static let INSERT_MY_LOTTO = "INSERT INTO MY_LOTTO_TBL(NO_ROUND, REG_DATE, NUM1, NUM2, NUM3, NUM4, NUM5, NUM1) " +
+    public static let INSERT_MY_LOTTO = "INSERT INTO MY_LOTTO_TBL(NO_ROUND, REG_DATE, NUM1, NUM2, NUM3, NUM4, NUM5, NUM6) " +
         "VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
     
     // My로또번호 회차그룹 조회
@@ -33,7 +33,7 @@ class DefineQuery {
                                               "FROM     MY_LOTTO_TBL " +
                                               "GROUP BY NO_ROUND"
     
-    // My로또번호 회차그룹 조회
+    // My로또번호 데이터 조회
     public static let SELECT_MY_LOTTO_NUMBER = "SELECT   NO_ROUND, REG_DATE, NUM1, NUM2, NUM3, NUM4, NUM5, NUM6 " +
                                                "FROM     MY_LOTTO_TBL " +
                                                "WHERE    NO_ROUND = ? " +

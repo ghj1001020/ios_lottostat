@@ -27,6 +27,10 @@ class MyLottoNumber {
         self.type = isOpen ? .SECT_OPEN : .SECT_CLOSE
         self.no = no
     }
+    
+    func isOpen(_ isOpen: Bool) {
+        self.type = isOpen ? .SECT_OPEN : .SECT_CLOSE
+    }
 }
 
 // My 로또데이터

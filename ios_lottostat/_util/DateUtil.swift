@@ -13,4 +13,11 @@ extension Date {
     func toMilliSeconds() -> Int64 {
         return Int64(self.timeIntervalSince1970 * 1000)
     }
+    
+    // Date -> String 포맷
+    func toString(_ format: String="yyyyMMdd") -> String {
+        let formatter : DateFormatter = DateFormatter()
+        formatter.dateFormat = format
+        return formatter.string(from: self)
+    }
 }

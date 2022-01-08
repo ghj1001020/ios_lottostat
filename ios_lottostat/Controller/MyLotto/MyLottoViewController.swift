@@ -15,7 +15,9 @@ protocol MyLottoProtocol {
 class MyLottoViewController: BaseController {
     
     // My로또 데이터
-    private var mMyLottoList : [MyLottoNumber] = []
+    private var mMyLottoList : [MyLottoNumber] = {
+        return SQLiteService.selectMyLottoRoundNo()
+    }()
     
     @IBOutlet var tblMyLotto: UITableView!
     
@@ -45,31 +47,6 @@ class MyLottoViewController: BaseController {
         tblMyLotto.register(nibNumberCell, forCellReuseIdentifier: "myLottoNumberCell")
         // 셀높이
         tblMyLotto.rowHeight = UITableView.automaticDimension
-        
-        
-        // 테스트
-        let item1 = MyLottoNumber(3, false)
-        item1.mLottoList.append(MyLottoData(.DATE, "20220212164030"))
-        item1.mLottoList.append(MyLottoData(.LOTTO, "20220212164030", 10, 11, 12, 13, 14, 19))
-        item1.mLottoList.append(MyLottoData(.LOTTO, "20220212164030", 20, 21, 22, 23, 24, 29))
-        item1.mLottoList.append(MyLottoData(.LOTTO, "20220212164030", 20, 21, 22, 33, 34, 39))
-        item1.mLottoList.append(MyLottoData(.LOTTO, "20220212164030", 20, 31, 32, 33, 34, 40))
-        item1.mLottoList.append(MyLottoData(.LOTTO, "20220212164030", 20, 41, 42, 43, 44, 45))
-        mMyLottoList.append(item1)
-        let item2 = MyLottoNumber(2, false)
-        item2.mLottoList.append(MyLottoData(.DATE, "30221212164030"))
-        item2.mLottoList.append(MyLottoData(.LOTTO, "30221212164030", 10, 11, 12, 13, 14, 19))
-        item2.mLottoList.append(MyLottoData(.LOTTO, "30221212164030", 20, 21, 22, 23, 24, 29))
-        item2.mLottoList.append(MyLottoData(.LOTTO, "30221212164030", 20, 21, 22, 33, 34, 39))
-        item2.mLottoList.append(MyLottoData(.LOTTO, "30221212164030", 20, 31, 32, 33, 34, 40))
-        item2.mLottoList.append(MyLottoData(.LOTTO, "30221212164030", 20, 41, 42, 43, 44, 45))
-        mMyLottoList.append(item2)
-        let item3 = MyLottoNumber(1, false)
-        item3.mLottoList.append(MyLottoData(.DATE, "20220102164030"))
-        item3.mLottoList.append(MyLottoData(.LOTTO, "20220102164030", 10, 11, 12, 13, 14, 19))
-        item3.mLottoList.append(MyLottoData(.LOTTO, "20220102164030", 20, 21, 22, 23, 24, 29))
-        item3.mLottoList.append(MyLottoData(.LOTTO, "20220102164030", 20, 21, 22, 33, 34, 39))
-        mMyLottoList.append(item3)
     }
 }
 
