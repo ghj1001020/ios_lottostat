@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,7 +25,6 @@
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="cCn-Lx-bmE"/>
-            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
             <constraints>
                 <constraint firstItem="Ovh-IX-8UL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="9UL-Mg-3cX"/>
                 <constraint firstItem="Ovh-IX-8UL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KyH-bP-hLl"/>
@@ -35,15 +33,15 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                    <color key="value" red="0.94117647058823528" green="0.93333333333333335" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="lbDate" destination="Ovh-IX-8UL" id="rg0-al-KCT"/>
             </connections>
             <point key="canvasLocation" x="128" y="72"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

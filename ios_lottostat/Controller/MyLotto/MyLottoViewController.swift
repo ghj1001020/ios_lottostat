@@ -87,14 +87,21 @@ extension MyLottoViewController : UITableViewDelegate, UITableViewDataSource, My
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "myLottoDateCell") as? ItemMyLottoDate else {
                 return UITableViewCell()
             }
-            cell.backgroundColor = ColorUtil.uiColorByRGB(rgb: "#f0eeed")
+            cell.lbDate.text = DateUtil.convertDateFormat(data.regDate, "yyyyMMddHHmmss", "yyyy-MM-dd HH:mm:ss")
             return cell
         }
         // 로또번호 셀
         else if data.type == .LOTTO {
-            guard var cell = tableView.dequeueReusableCell(withIdentifier: "myLottoNumberCell") as? ItemMyLottoNumber else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "myLottoNumberCell") as? ItemMyLottoNumber else {
                 return UITableViewCell()
             }
+            
+            cell.number1.text = "\(data.numnber1)"
+            cell.number2.text = "\(data.numnber2)"
+            cell.number3.text = "\(data.numnber3)"
+            cell.number4.text = "\(data.numnber4)"
+            cell.number5.text = "\(data.numnber5)"
+            cell.number6.text = "\(data.numnber6)"
             
             // 디바이더
             cell.divider.isHidden = indexPath.row == mMyLottoList[indexPath.section].mLottoList.count - 1 ? true : false

@@ -7,6 +7,22 @@
 
 import Foundation
 
+class DateUtil {
+    
+    // date string을 from format -> to format 으로 변환
+    static func convertDateFormat(_ date: String, _ fromFormat: String, _ toFormat: String ) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = fromFormat
+        
+        guard let date : Date = formatter.date(from: date) else {
+            return ""
+        }
+        
+        formatter.dateFormat = toFormat
+        return formatter.string(from: date)
+    }
+}
+
 extension Date {
     
     // 1970.01.01 이후의 시간 밀리초
