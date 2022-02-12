@@ -12,17 +12,55 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var navigationController : UINavigationController?
+    
 
     // 앱을 실행할 준비가 되었음
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // 파이어베이스 초기화
         FirebaseApp.configure()
+        
+        self.window = UIWindow()
+        self.window?.backgroundColor = .white
+        setRootViewController(.INTRO)
                 
         return true
     }
     
-    public func setRootViewController( root: UIViewController) {
-        window?.rootViewController = root
+    // 루트뷰 설정
+    public func setRootViewController(_ type: ROOT) {
+        var controller : UIViewController? = nil
+        
+        if( type == ROOT.INTRO ) {
+            let storyboard : UIStoryboard = UIStoryboard(name: "IntroViewController", bundle: nil)
+            if #available(iOS 13.0, *) {
+                controller = storyboard.instantiateViewController(identifier: "intro")
+            }
+            else {
+                controller = storyboard.instantiateViewController(withIdentifier: "intro") as? IntroViewController
+            }
+        }
+        else if( type == ROOT.MAIN ) {
+            let storyboard : UIStoryboard = UIStoryboard(name: "MainViewController", bundle: nil)
+            if #available(iOS 13.0, *) {
+                controller = storyboard.instantiateViewController(identifier: "main")
+            }
+            else {
+                controller = storyboard.instantiateViewController(withIdentifier: "main") as? MainViewController
+            }
+        }
+        
+        if let controller = controller {
+            controller.modalPresentationStyle = .fullScreen
+            self.navigationController = UINavigationController(rootViewController: controller)
+            self.window?.rootViewController = self.navigationController
+            self.window?.makeKeyAndVisible()
+        }
     }
+}
+
+enum ROOT {
+    case INTRO
+    case MAIN
 }

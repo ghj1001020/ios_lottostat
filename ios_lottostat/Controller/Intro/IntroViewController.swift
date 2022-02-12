@@ -147,26 +147,8 @@ class IntroViewController: UIViewController {
 
     // 메인으로 이동
     func moveToMainStoryBoard() {
-        let storyboard : UIStoryboard = UIStoryboard(name: "MainViewController", bundle: nil)
-        
-        if #available(iOS 13.0, *) {
-            guard let controller = storyboard.instantiateViewController(identifier: "main") as? MainViewController else {
-                return
-            }
-            controller.modalPresentationStyle = .fullScreen
-            self.present(controller, animated: true, completion: nil)
-
-//            (UIApplication.shared.delegate as! AppDelegate).setRootViewController(root: controller)
-//            self.dismiss(animated: true) {
-//                self.present(controller, animated: false, completion: nil)
-//            }
-        }
-        else {
-            guard let controller = storyboard.instantiateViewController(withIdentifier: "main") as? MainViewController else {
-                return
-            }
-            controller.modalPresentationStyle = .fullScreen
-            self.present(controller, animated: true, completion: nil)
+        if let delegate = UIApplication.shared.delegate as? AppDelegate {
+            delegate.setRootViewController(.MAIN)
         }
     }
 }
