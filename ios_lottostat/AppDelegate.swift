@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         self.window = UIWindow()
-        self.window?.backgroundColor = .white
         setRootViewController(.INTRO)
                 
         return true
@@ -54,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let controller = controller {
             controller.modalPresentationStyle = .fullScreen
             self.navigationController = UINavigationController(rootViewController: controller)
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
             self.window?.rootViewController = self.navigationController
             self.window?.makeKeyAndVisible()
         }

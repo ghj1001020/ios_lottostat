@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="jqh-N7-vpq"/>
-                        <color key="backgroundColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="mainSegueIdentifier" value="main"/>
@@ -300,7 +300,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="UTO-Ho-z62" firstAttribute="leading" secondItem="7C0-Gk-Qlm" secondAttribute="leading" constant="40" id="2oY-hA-jQX"/>
                                     <constraint firstAttribute="trailing" secondItem="JhY-L7-6Rv" secondAttribute="trailing" constant="16" id="JyK-nr-LNg"/>

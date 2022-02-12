@@ -16,6 +16,8 @@ enum APPBAR {
 class BaseController : UIViewController {
     
     public var appBar: LTAppBar? = nil
+    public let delegate = UIApplication.shared.delegate as? AppDelegate
+    
     
     @IBOutlet weak var titleBarView: UIView!
     private var titleBar: LTAppBar? = nil
@@ -40,7 +42,7 @@ class BaseController : UIViewController {
 
 extension BaseController : LTAppBarPortocol {
     func onBackButtonClick() {
-        dismiss(animated: true, completion: nil)
+        delegate?.navigationController?.popViewController(animated: true)
     }
     
     func onMoreButtonClick() {

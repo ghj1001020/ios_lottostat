@@ -32,7 +32,6 @@
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Y9r-Ej-k6h" secondAttribute="trailing" constant="26" id="5Cd-GC-elI"/>
                 <constraint firstItem="Y9r-Ej-k6h" firstAttribute="leading" secondItem="hzp-jd-n5t" secondAttribute="trailing" constant="4" id="6UX-vx-pHx"/>
@@ -44,6 +43,11 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                    <color key="value" red="0.94117647058823528" green="0.93333333333333335" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="imgArrow" destination="Y9r-Ej-k6h" id="Ywb-KT-x3w"/>
                 <outlet property="lbNo" destination="hzp-jd-n5t" id="j2B-Q9-VUx"/>

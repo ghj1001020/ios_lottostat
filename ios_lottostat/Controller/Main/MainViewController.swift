@@ -8,7 +8,7 @@
 import UIKit
 import KWDrawerController
 
-class MainViewController: UIViewController {
+class MainViewController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +28,25 @@ class MainViewController: UIViewController {
         
         if let controller = controller {
             controller.modalPresentationStyle = .fullScreen
-            self.present(controller, animated: true, completion: nil)
+            delegate?.navigationController?.pushViewController(controller, animated: true)
         }
     }
     
+    // 나의 로또번호화면으로 이동
     @IBAction func moveToMyLotto(_ sender: UIButton) {
         let storyboard : UIStoryboard = UIStoryboard(name: "MyLottoViewController", bundle: nil)
-        guard let controller = storyboard.instantiateViewController(withIdentifier: "myLotto") as? MyLottoViewController else {
-            return
+        var controller : MyLottoViewController? = nil
+        if #available(iOS 13.0, *) {
+            controller = storyboard.instantiateViewController(identifier: "myLotto") as? MyLottoViewController
+        }
+        else {
+            controller = storyboard.instantiateViewController(withIdentifier: "myLotto") as? MyLottoViewController
         }
         
-        controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: true, completion: nil)
+        if let controller = controller {
+            controller.modalPresentationStyle = .fullScreen
+            delegate?.navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
 }
