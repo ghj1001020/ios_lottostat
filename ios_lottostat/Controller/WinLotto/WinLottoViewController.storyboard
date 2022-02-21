@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Win Lotto View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="winLotto" id="Y6W-OH-hqX" customClass="WinLottoViewController" customModule="ios_lottostat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKo-Bf-CTc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VZb-6L-OX1"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-dl-uvp">
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="winLottoCell" id="jmP-x2-Ibo" customClass="WinLottoNumberTableCell" customModule="ios_lottostat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="351"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jmP-x2-Ibo" id="Mgx-R6-zss">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="351"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J9-yv-ysX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="890회" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuL-Ve-qhv">
+                                                            <rect key="frame" x="26" y="14" width="48.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(2022-01-30)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftu-dj-ZnH">
+                                                            <rect key="frame" x="82.5" y="15.5" width="89.5" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow_d" translatesAutoresizingMaskIntoConstraints="NO" id="rtz-Ci-BdU">
+                                                            <rect key="frame" x="364" y="12" width="24" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="24" id="GLD-Ux-QIV"/>
+                                                                <constraint firstAttribute="height" constant="24" id="N6S-yi-Qer"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.94509803921568625" green="0.94901960784313721" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="ftu-dj-ZnH" firstAttribute="leading" secondItem="RuL-Ve-qhv" secondAttribute="trailing" constant="8" id="3F4-29-H0b"/>
+                                                        <constraint firstItem="rtz-Ci-BdU" firstAttribute="centerY" secondItem="5J9-yv-ysX" secondAttribute="centerY" id="44b-Sk-YgY"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rtz-Ci-BdU" secondAttribute="trailing" constant="26" id="BDy-se-YJs"/>
+                                                        <constraint firstAttribute="height" constant="48" id="EJc-FL-VbA"/>
+                                                        <constraint firstItem="RuL-Ve-qhv" firstAttribute="leading" secondItem="5J9-yv-ysX" secondAttribute="leading" constant="26" id="bvc-o9-vRd"/>
+                                                        <constraint firstItem="RuL-Ve-qhv" firstAttribute="centerY" secondItem="5J9-yv-ysX" secondAttribute="centerY" id="cWe-Lo-Ygr"/>
+                                                        <constraint firstItem="ftu-dj-ZnH" firstAttribute="centerY" secondItem="5J9-yv-ysX" secondAttribute="centerY" id="nCG-dB-2Mc"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Wff-G7-FhO">
+                                                    <rect key="frame" x="8" y="60" width="398" height="275"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="T9C-Dy-wgM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="42"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdn-3N-KPl" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="42" id="O1D-wm-fXz"/>
+                                                                        <constraint firstAttribute="height" constant="42" id="vcE-vC-lgH"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxB-Hg-E7h" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="60.5" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="42" id="Mvo-Y2-7Po"/>
+                                                                        <constraint firstAttribute="height" constant="42" id="ssV-3w-trg"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcM-5z-ciW" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="120.5" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="42" id="0Ed-aE-4gP"/>
+                                                                        <constraint firstAttribute="width" constant="42" id="uXY-vT-Lay"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IP-Vr-RLg" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="181" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="42" id="Em2-k1-h23"/>
+                                                                        <constraint firstAttribute="width" constant="42" id="lvs-8e-acB"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wb6-tw-J7e" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="241.5" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="42" id="cMi-gx-YHW"/>
+                                                                        <constraint firstAttribute="height" constant="42" id="clG-zB-cDi"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i4-cT-bup" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="301.5" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="42" id="5gB-jC-MA7"/>
+                                                                        <constraint firstAttribute="height" constant="42" id="ZvO-TV-NPL"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLc-OI-Oxg" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="362" y="6" width="36" height="36"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="36" id="Pve-FI-keQ"/>
+                                                                        <constraint firstAttribute="height" constant="36" id="dmm-yj-ygA"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="42" id="IXO-5e-HVN"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DHS-sw-RcJ">
+                                                            <rect key="frame" x="0.0" y="58" width="398" height="217"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcb-fF-l2B" userLabel="Divider1" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="1"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="uKA-rC-5Md"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kct-5K-bwu" userLabel="Head">
+                                                                    <rect key="frame" x="0.0" y="1" width="398" height="35"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKS-dT-Y7g" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="3aM-m7-3La"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="순위" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgA-rE-rqq">
+                                                                            <rect key="frame" x="1" y="0.0" width="60" height="35"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="60" id="ogm-wT-YSy"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5WL-Mn-r6z" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="61" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="qrM-Eg-7Kq"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXg-4w-FIx">
+                                                                            <rect key="frame" x="62" y="0.0" width="336" height="35"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당첨게임 수" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqm-TW-70p">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgS-Fv-WDk" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                                    <rect key="frame" x="151" y="0.0" width="1" height="35"/>
+                                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="1" id="CUj-4C-sba"/>
+                                                                                    </constraints>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </view>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당첨금액" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwh-sw-EOj">
+                                                                                    <rect key="frame" x="151" y="0.0" width="185" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstItem="Bqm-TW-70p" firstAttribute="leading" secondItem="HXg-4w-FIx" secondAttribute="leading" id="Edq-DW-PC0"/>
+                                                                                <constraint firstItem="Gwh-sw-EOj" firstAttribute="width" secondItem="HXg-4w-FIx" secondAttribute="width" multiplier="0.55" id="IV3-dx-SaU"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="Gwh-sw-EOj" secondAttribute="bottom" id="M2B-9N-V0v"/>
+                                                                                <constraint firstItem="Gwh-sw-EOj" firstAttribute="top" secondItem="HXg-4w-FIx" secondAttribute="top" id="QRG-Nq-1wK"/>
+                                                                                <constraint firstItem="NgS-Fv-WDk" firstAttribute="leading" secondItem="Bqm-TW-70p" secondAttribute="trailing" id="TfU-v6-xDn"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="Bqm-TW-70p" secondAttribute="bottom" id="V50-c7-Uzg"/>
+                                                                                <constraint firstItem="NgS-Fv-WDk" firstAttribute="top" secondItem="HXg-4w-FIx" secondAttribute="top" id="X06-I4-sSy"/>
+                                                                                <constraint firstItem="Bqm-TW-70p" firstAttribute="width" secondItem="HXg-4w-FIx" secondAttribute="width" multiplier="0.45" id="eP3-zy-f1Y"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="NgS-Fv-WDk" secondAttribute="bottom" id="epS-oc-RC3"/>
+                                                                                <constraint firstItem="Bqm-TW-70p" firstAttribute="top" secondItem="HXg-4w-FIx" secondAttribute="top" id="gwF-1P-4sC"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="Gwh-sw-EOj" secondAttribute="trailing" id="uOd-3d-nE0"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RP2-r4-PXD" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="397" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="PZt-lP-7kn"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="HXg-4w-FIx" firstAttribute="leading" secondItem="5WL-Mn-r6z" secondAttribute="trailing" id="9dX-2S-8i6"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="HXg-4w-FIx" secondAttribute="trailing" id="C4v-BY-ce1"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="5WL-Mn-r6z" secondAttribute="bottom" id="DEY-JH-hbL"/>
+                                                                        <constraint firstItem="AKS-dT-Y7g" firstAttribute="leading" secondItem="kct-5K-bwu" secondAttribute="leading" id="I70-0l-pVs"/>
+                                                                        <constraint firstAttribute="height" constant="35" id="JXD-ez-xfg"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="IgA-rE-rqq" secondAttribute="bottom" id="Mu5-u2-TC8"/>
+                                                                        <constraint firstItem="AKS-dT-Y7g" firstAttribute="top" secondItem="kct-5K-bwu" secondAttribute="top" id="UfR-jH-YMa"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="RP2-r4-PXD" secondAttribute="trailing" id="VR9-Ly-931"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="AKS-dT-Y7g" secondAttribute="bottom" id="YJ7-dt-fCZ"/>
+                                                                        <constraint firstItem="5WL-Mn-r6z" firstAttribute="leading" secondItem="IgA-rE-rqq" secondAttribute="trailing" id="dFi-IV-lW2"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="HXg-4w-FIx" secondAttribute="bottom" id="jjk-jj-vj4"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="RP2-r4-PXD" secondAttribute="bottom" id="k6D-qK-Bqf"/>
+                                                                        <constraint firstItem="IgA-rE-rqq" firstAttribute="leading" secondItem="AKS-dT-Y7g" secondAttribute="trailing" id="s0C-5P-yh5"/>
+                                                                        <constraint firstItem="HXg-4w-FIx" firstAttribute="top" secondItem="kct-5K-bwu" secondAttribute="top" id="vy3-DR-iQM"/>
+                                                                        <constraint firstItem="IgA-rE-rqq" firstAttribute="top" secondItem="kct-5K-bwu" secondAttribute="top" id="wWk-BC-7fz"/>
+                                                                        <constraint firstItem="5WL-Mn-r6z" firstAttribute="top" secondItem="kct-5K-bwu" secondAttribute="top" id="zhL-o1-Y1e"/>
+                                                                        <constraint firstItem="RP2-r4-PXD" firstAttribute="top" secondItem="kct-5K-bwu" secondAttribute="top" id="znN-Mu-caf"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67g-J0-COK" userLabel="Divider2" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="36" width="398" height="1"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="fwl-w5-3Qi"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yH-ff-0Zs" userLabel="Win1">
+                                                                    <rect key="frame" x="0.0" y="37" width="398" height="35"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAT-wc-uZ9" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="b6X-pD-GX4"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1등" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUk-nn-fhT">
+                                                                            <rect key="frame" x="1" y="0.0" width="60" height="35"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="60" id="ZgE-xR-taG"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uqc-iW-ip7" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="61" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="ppa-Jq-Oct"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44a-Wr-dkt">
+                                                                            <rect key="frame" x="62" y="0.0" width="336" height="35"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,369,326" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJK-oo-met">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCc-bf-IKn" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                                    <rect key="frame" x="151" y="0.0" width="1" height="35"/>
+                                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="1" id="S3G-r7-wvO"/>
+                                                                                    </constraints>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </view>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24,212,396,640" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jr5-ZS-Nth" customClass="HJLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                                    <rect key="frame" x="151" y="0.0" width="185" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.83137254901960778" green="0.20000000000000001" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                                            <real key="value" value="10"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="UCc-bf-IKn" firstAttribute="top" secondItem="44a-Wr-dkt" secondAttribute="top" id="0YL-rO-dts"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="jr5-ZS-Nth" secondAttribute="trailing" id="1tF-Lk-sgv"/>
+                                                                                <constraint firstItem="jr5-ZS-Nth" firstAttribute="top" secondItem="44a-Wr-dkt" secondAttribute="top" id="IAm-t7-D8f"/>
+                                                                                <constraint firstItem="jr5-ZS-Nth" firstAttribute="width" secondItem="44a-Wr-dkt" secondAttribute="width" multiplier="0.55" id="KAx-ce-8SZ"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="jr5-ZS-Nth" secondAttribute="bottom" id="O7O-Q1-z2T"/>
+                                                                                <constraint firstItem="wJK-oo-met" firstAttribute="leading" secondItem="44a-Wr-dkt" secondAttribute="leading" id="VsZ-uI-bI0"/>
+                                                                                <constraint firstItem="wJK-oo-met" firstAttribute="width" secondItem="44a-Wr-dkt" secondAttribute="width" multiplier="0.45" id="d4T-Ru-4d0"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="UCc-bf-IKn" secondAttribute="bottom" id="eRR-t0-Wmg"/>
+                                                                                <constraint firstItem="UCc-bf-IKn" firstAttribute="leading" secondItem="wJK-oo-met" secondAttribute="trailing" id="tWl-Pc-9h9"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="wJK-oo-met" secondAttribute="bottom" id="uVE-23-2Z0"/>
+                                                                                <constraint firstItem="wJK-oo-met" firstAttribute="top" secondItem="44a-Wr-dkt" secondAttribute="top" id="yf7-tb-BYn"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tzs-qo-ZZM" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="397" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="Gdp-Uw-c4b"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="kAT-wc-uZ9" firstAttribute="top" secondItem="6yH-ff-0Zs" secondAttribute="top" id="5xa-Ym-zb5"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="vUk-nn-fhT" secondAttribute="bottom" id="6dh-Dz-AFl"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="Tzs-qo-ZZM" secondAttribute="bottom" id="8YD-Ua-nou"/>
+                                                                        <constraint firstItem="Tzs-qo-ZZM" firstAttribute="top" secondItem="6yH-ff-0Zs" secondAttribute="top" id="8ZV-35-Y2z"/>
+                                                                        <constraint firstItem="kAT-wc-uZ9" firstAttribute="leading" secondItem="6yH-ff-0Zs" secondAttribute="leading" id="Bxg-fH-Iyo"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="Tzs-qo-ZZM" secondAttribute="trailing" id="IWy-6w-lmB"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="Uqc-iW-ip7" secondAttribute="bottom" id="Ibz-1c-3ry"/>
+                                                                        <constraint firstItem="Uqc-iW-ip7" firstAttribute="leading" secondItem="vUk-nn-fhT" secondAttribute="trailing" id="LZd-bA-nef"/>
+                                                                        <constraint firstItem="44a-Wr-dkt" firstAttribute="top" secondItem="6yH-ff-0Zs" secondAttribute="top" id="PcY-wt-0Xy"/>
+                                                                        <constraint firstItem="vUk-nn-fhT" firstAttribute="leading" secondItem="kAT-wc-uZ9" secondAttribute="trailing" id="XUY-UA-Bb6"/>
+                                                                        <constraint firstItem="vUk-nn-fhT" firstAttribute="top" secondItem="6yH-ff-0Zs" secondAttribute="top" id="ZIv-WU-A1R"/>
+                                                                        <constraint firstAttribute="height" constant="35" id="ljg-da-gnQ"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="kAT-wc-uZ9" secondAttribute="bottom" id="nba-4X-g73"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="44a-Wr-dkt" secondAttribute="trailing" id="oAJ-Tq-OcE"/>
+                                                                        <constraint firstItem="44a-Wr-dkt" firstAttribute="leading" secondItem="Uqc-iW-ip7" secondAttribute="trailing" id="vVN-0c-Kas"/>
+                                                                        <constraint firstItem="Uqc-iW-ip7" firstAttribute="top" secondItem="6yH-ff-0Zs" secondAttribute="top" id="xRy-VY-MJB"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="44a-Wr-dkt" secondAttribute="bottom" id="zdT-TO-Tf0"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXb-yq-o63" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="72" width="398" height="1"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="t7R-BS-dW7"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnl-Tt-qeH" userLabel="Win2">
+                                                                    <rect key="frame" x="0.0" y="73" width="398" height="35"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmk-KO-LOr" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="26F-Zd-DNr"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2등" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfi-UB-VAs">
+                                                                            <rect key="frame" x="1" y="0.0" width="60" height="35"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="60" id="Rnn-mu-GHR"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQH-6g-p1a" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="61" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="thS-Aq-stH"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFn-j3-z68">
+                                                                            <rect key="frame" x="62" y="0.0" width="336" height="35"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,369,326" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jot-J5-utj">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTX-Vk-9oW" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                                    <rect key="frame" x="151" y="0.0" width="1" height="35"/>
+                                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="1" id="MmC-ok-A14"/>
+                                                                                    </constraints>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </view>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24,212,396,640" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAc-kS-2St" customClass="HJLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                                    <rect key="frame" x="151" y="0.0" width="185" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.83137254901960778" green="0.20000000000000001" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                                            <real key="value" value="10"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="jAc-kS-2St" firstAttribute="top" secondItem="qFn-j3-z68" secondAttribute="top" id="3g9-Fp-Xth"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="Jot-J5-utj" secondAttribute="bottom" id="Cac-LK-8bd"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="jAc-kS-2St" secondAttribute="bottom" id="GmV-Bd-UMZ"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="jAc-kS-2St" secondAttribute="trailing" id="HkK-Ag-enP"/>
+                                                                                <constraint firstItem="jAc-kS-2St" firstAttribute="width" secondItem="qFn-j3-z68" secondAttribute="width" multiplier="0.55" id="Itm-Nk-Wrw"/>
+                                                                                <constraint firstItem="Jot-J5-utj" firstAttribute="width" secondItem="qFn-j3-z68" secondAttribute="width" multiplier="0.45" id="K6b-Ow-YSP"/>
+                                                                                <constraint firstItem="zTX-Vk-9oW" firstAttribute="top" secondItem="qFn-j3-z68" secondAttribute="top" id="cim-Z4-egs"/>
+                                                                                <constraint firstItem="Jot-J5-utj" firstAttribute="top" secondItem="qFn-j3-z68" secondAttribute="top" id="dTb-qW-pjD"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="zTX-Vk-9oW" secondAttribute="bottom" id="deA-dO-Fye"/>
+                                                                                <constraint firstItem="zTX-Vk-9oW" firstAttribute="leading" secondItem="Jot-J5-utj" secondAttribute="trailing" id="fiz-68-Uc6"/>
+                                                                                <constraint firstItem="Jot-J5-utj" firstAttribute="leading" secondItem="qFn-j3-z68" secondAttribute="leading" id="gjf-zY-Eat"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIY-0r-Osa" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="397" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="vJh-1B-FAR"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="bmk-KO-LOr" firstAttribute="leading" secondItem="Tnl-Tt-qeH" secondAttribute="leading" id="0lc-wU-uBy"/>
+                                                                        <constraint firstItem="LIY-0r-Osa" firstAttribute="top" secondItem="Tnl-Tt-qeH" secondAttribute="top" id="CmX-WK-z0q"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="LIY-0r-Osa" secondAttribute="bottom" id="HPM-o4-CAJ"/>
+                                                                        <constraint firstItem="cfi-UB-VAs" firstAttribute="top" secondItem="Tnl-Tt-qeH" secondAttribute="top" id="PZF-JH-Ptc"/>
+                                                                        <constraint firstItem="AQH-6g-p1a" firstAttribute="top" secondItem="Tnl-Tt-qeH" secondAttribute="top" id="QJJ-8b-f2O"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="cfi-UB-VAs" secondAttribute="bottom" id="Rvk-53-2J9"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="qFn-j3-z68" secondAttribute="bottom" id="S2y-QX-yW6"/>
+                                                                        <constraint firstItem="bmk-KO-LOr" firstAttribute="top" secondItem="Tnl-Tt-qeH" secondAttribute="top" id="ehe-41-k8h"/>
+                                                                        <constraint firstAttribute="height" constant="35" id="hk9-Zc-xv5"/>
+                                                                        <constraint firstItem="qFn-j3-z68" firstAttribute="top" secondItem="Tnl-Tt-qeH" secondAttribute="top" id="i9X-r7-Vby"/>
+                                                                        <constraint firstItem="cfi-UB-VAs" firstAttribute="leading" secondItem="bmk-KO-LOr" secondAttribute="trailing" id="m1h-hU-e2Y"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="LIY-0r-Osa" secondAttribute="trailing" id="mHl-rH-i1r"/>
+                                                                        <constraint firstItem="AQH-6g-p1a" firstAttribute="leading" secondItem="cfi-UB-VAs" secondAttribute="trailing" id="nEx-j7-sNl"/>
+                                                                        <constraint firstItem="qFn-j3-z68" firstAttribute="leading" secondItem="AQH-6g-p1a" secondAttribute="trailing" id="p3x-Uc-ANo"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="AQH-6g-p1a" secondAttribute="bottom" id="u3p-Wt-FJ3"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="bmk-KO-LOr" secondAttribute="bottom" id="xh4-gB-msN"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="qFn-j3-z68" secondAttribute="trailing" id="zMx-bd-eZn"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prC-rs-wXw" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="108" width="398" height="1"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="Cb1-OT-y2R"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeR-CF-QmA" userLabel="Win3">
+                                                                    <rect key="frame" x="0.0" y="109" width="398" height="35"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOj-Ya-cVy" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="x0R-k2-vA4"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3등" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGP-M3-9r1">
+                                                                            <rect key="frame" x="1" y="0.0" width="60" height="35"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="60" id="7LO-Fc-0BW"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHS-NK-yms" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="61" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="xlQ-cj-5C8"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1H1-De-nGP">
+                                                                            <rect key="frame" x="62" y="0.0" width="336" height="35"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,369,326" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNi-zz-Pin">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCf-bA-TUE" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                                    <rect key="frame" x="151" y="0.0" width="1" height="35"/>
+                                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="1" id="DGz-TJ-v1L"/>
+                                                                                    </constraints>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </view>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24,212,396,640" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqf-X2-eI0" customClass="HJLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                                    <rect key="frame" x="151" y="0.0" width="185" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.83137254901960778" green="0.20000000000000001" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                                            <real key="value" value="10"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="gqf-X2-eI0" firstAttribute="top" secondItem="1H1-De-nGP" secondAttribute="top" id="9mX-a3-eJX"/>
+                                                                                <constraint firstItem="CNi-zz-Pin" firstAttribute="width" secondItem="1H1-De-nGP" secondAttribute="width" multiplier="0.45" id="E4Y-ug-bZY"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="gqf-X2-eI0" secondAttribute="bottom" id="NPn-QP-47m"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="CNi-zz-Pin" secondAttribute="bottom" id="OB0-KD-QTl"/>
+                                                                                <constraint firstItem="gqf-X2-eI0" firstAttribute="width" secondItem="1H1-De-nGP" secondAttribute="width" multiplier="0.55" id="Sry-Gy-iES"/>
+                                                                                <constraint firstItem="pCf-bA-TUE" firstAttribute="top" secondItem="1H1-De-nGP" secondAttribute="top" id="ULT-7u-qov"/>
+                                                                                <constraint firstItem="pCf-bA-TUE" firstAttribute="leading" secondItem="CNi-zz-Pin" secondAttribute="trailing" id="Z4I-7z-vPM"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="gqf-X2-eI0" secondAttribute="trailing" id="daw-dN-GKA"/>
+                                                                                <constraint firstItem="CNi-zz-Pin" firstAttribute="leading" secondItem="1H1-De-nGP" secondAttribute="leading" id="lfc-HJ-DIg"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="pCf-bA-TUE" secondAttribute="bottom" id="lmN-kX-dwd"/>
+                                                                                <constraint firstItem="CNi-zz-Pin" firstAttribute="top" secondItem="1H1-De-nGP" secondAttribute="top" id="moN-nS-bgG"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-li-DXp" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="397" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="b9z-aR-ZGG"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="aHS-NK-yms" firstAttribute="leading" secondItem="fGP-M3-9r1" secondAttribute="trailing" id="71X-Ni-uWn"/>
+                                                                        <constraint firstItem="aHS-NK-yms" firstAttribute="top" secondItem="TeR-CF-QmA" secondAttribute="top" id="9NQ-C1-xFy"/>
+                                                                        <constraint firstItem="fGP-M3-9r1" firstAttribute="leading" secondItem="TOj-Ya-cVy" secondAttribute="trailing" id="F51-GO-W6i"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="1H1-De-nGP" secondAttribute="bottom" id="GOz-Ez-4Op"/>
+                                                                        <constraint firstItem="TOj-Ya-cVy" firstAttribute="leading" secondItem="TeR-CF-QmA" secondAttribute="leading" id="MBT-P2-W8x"/>
+                                                                        <constraint firstItem="1H1-De-nGP" firstAttribute="leading" secondItem="aHS-NK-yms" secondAttribute="trailing" id="MC6-GG-Uqe"/>
+                                                                        <constraint firstAttribute="height" constant="35" id="XNW-7g-1tR"/>
+                                                                        <constraint firstItem="fGP-M3-9r1" firstAttribute="top" secondItem="TeR-CF-QmA" secondAttribute="top" id="ZDH-ub-T06"/>
+                                                                        <constraint firstItem="P1s-li-DXp" firstAttribute="top" secondItem="TeR-CF-QmA" secondAttribute="top" id="cqQ-3c-ohc"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="TOj-Ya-cVy" secondAttribute="bottom" id="eWd-ee-QV4"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="P1s-li-DXp" secondAttribute="bottom" id="gIF-So-goi"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="aHS-NK-yms" secondAttribute="bottom" id="hd3-fr-0Sw"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="1H1-De-nGP" secondAttribute="trailing" id="n5O-PY-OR8"/>
+                                                                        <constraint firstItem="TOj-Ya-cVy" firstAttribute="top" secondItem="TeR-CF-QmA" secondAttribute="top" id="qs3-7D-Coz"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="P1s-li-DXp" secondAttribute="trailing" id="qvz-iA-wYn"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="fGP-M3-9r1" secondAttribute="bottom" id="rVz-yt-EtW"/>
+                                                                        <constraint firstItem="1H1-De-nGP" firstAttribute="top" secondItem="TeR-CF-QmA" secondAttribute="top" id="tLb-JC-AU4"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eww-Uo-WXY" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="144" width="398" height="1"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="ptF-5I-eLx"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3G-0c-VVT" userLabel="WIn4">
+                                                                    <rect key="frame" x="0.0" y="145" width="398" height="35"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqC-bm-8ZJ" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="qE5-gb-K54"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4등" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3i-fB-oOg">
+                                                                            <rect key="frame" x="1" y="0.0" width="60" height="35"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="60" id="F7c-QU-hEC"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKs-sb-JLL" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="61" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="Ufy-I4-lO5"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5HJ-oQ-19i">
+                                                                            <rect key="frame" x="62" y="0.0" width="336" height="35"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,369,326" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPU-tg-q4S">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z92-zk-MAP" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                                    <rect key="frame" x="151" y="0.0" width="1" height="35"/>
+                                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="1" id="j34-KK-2QK"/>
+                                                                                    </constraints>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </view>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24,212,396,640" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLq-0H-uEo" customClass="HJLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                                    <rect key="frame" x="151" y="0.0" width="185" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.83137254901960778" green="0.20000000000000001" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                                            <real key="value" value="10"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="CPU-tg-q4S" firstAttribute="top" secondItem="5HJ-oQ-19i" secondAttribute="top" id="5MQ-uJ-Qye"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="fLq-0H-uEo" secondAttribute="trailing" id="Fqf-xr-38S"/>
+                                                                                <constraint firstItem="CPU-tg-q4S" firstAttribute="leading" secondItem="5HJ-oQ-19i" secondAttribute="leading" id="Fvb-vb-7bS"/>
+                                                                                <constraint firstItem="z92-zk-MAP" firstAttribute="top" secondItem="5HJ-oQ-19i" secondAttribute="top" id="G5F-sA-ZOH"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="fLq-0H-uEo" secondAttribute="bottom" id="Hl5-oe-PWN"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="CPU-tg-q4S" secondAttribute="bottom" id="Xan-6u-Kut"/>
+                                                                                <constraint firstItem="z92-zk-MAP" firstAttribute="leading" secondItem="CPU-tg-q4S" secondAttribute="trailing" id="a50-6s-8wP"/>
+                                                                                <constraint firstItem="CPU-tg-q4S" firstAttribute="width" secondItem="5HJ-oQ-19i" secondAttribute="width" multiplier="0.45" id="ddv-wd-2lQ"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="z92-zk-MAP" secondAttribute="bottom" id="eDx-WM-lh2"/>
+                                                                                <constraint firstItem="fLq-0H-uEo" firstAttribute="top" secondItem="5HJ-oQ-19i" secondAttribute="top" id="jmf-MI-Ryh"/>
+                                                                                <constraint firstItem="fLq-0H-uEo" firstAttribute="width" secondItem="5HJ-oQ-19i" secondAttribute="width" multiplier="0.55" id="kcT-aN-e8h"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OvV-WH-kP1" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="397" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="jV7-ep-Rwb"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="OvV-WH-kP1" secondAttribute="bottom" id="02G-UA-ZZm"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="5HJ-oQ-19i" secondAttribute="bottom" id="0uL-jB-vQ3"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="OvV-WH-kP1" secondAttribute="trailing" id="8Sa-5b-vTV"/>
+                                                                        <constraint firstItem="eqC-bm-8ZJ" firstAttribute="leading" secondItem="X3G-0c-VVT" secondAttribute="leading" id="8Ys-rX-bfz"/>
+                                                                        <constraint firstItem="zKs-sb-JLL" firstAttribute="top" secondItem="X3G-0c-VVT" secondAttribute="top" id="9N3-eB-kzi"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="zKs-sb-JLL" secondAttribute="bottom" id="GQX-f3-330"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="5HJ-oQ-19i" secondAttribute="trailing" id="KF3-4s-EdK"/>
+                                                                        <constraint firstItem="eqC-bm-8ZJ" firstAttribute="top" secondItem="X3G-0c-VVT" secondAttribute="top" id="Qbv-mS-oIq"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="F3i-fB-oOg" secondAttribute="bottom" id="S6e-Ra-eI0"/>
+                                                                        <constraint firstItem="OvV-WH-kP1" firstAttribute="top" secondItem="X3G-0c-VVT" secondAttribute="top" id="Xi1-ou-VhK"/>
+                                                                        <constraint firstItem="zKs-sb-JLL" firstAttribute="leading" secondItem="F3i-fB-oOg" secondAttribute="trailing" id="gb3-mU-x8o"/>
+                                                                        <constraint firstItem="5HJ-oQ-19i" firstAttribute="leading" secondItem="zKs-sb-JLL" secondAttribute="trailing" id="gmL-3c-8gg"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="eqC-bm-8ZJ" secondAttribute="bottom" id="pBJ-3V-Fkh"/>
+                                                                        <constraint firstItem="F3i-fB-oOg" firstAttribute="top" secondItem="X3G-0c-VVT" secondAttribute="top" id="rmx-4U-37L"/>
+                                                                        <constraint firstItem="5HJ-oQ-19i" firstAttribute="top" secondItem="X3G-0c-VVT" secondAttribute="top" id="sSe-3E-RiC"/>
+                                                                        <constraint firstAttribute="height" constant="35" id="w7e-ck-VMx"/>
+                                                                        <constraint firstItem="F3i-fB-oOg" firstAttribute="leading" secondItem="eqC-bm-8ZJ" secondAttribute="trailing" id="xxD-aD-H4v"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gu-dJ-A19" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="180" width="398" height="1"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="fpZ-kn-bMO"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlh-GW-CRa" userLabel="Win5">
+                                                                    <rect key="frame" x="0.0" y="181" width="398" height="35"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ne-iI-pJS" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="m9v-4D-68Z"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5등" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QU-M2-vcl">
+                                                                            <rect key="frame" x="1" y="0.0" width="60" height="35"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="60" id="t5K-NZ-sDo"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZ0-HD-oyU" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="61" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="9JR-DW-gSq"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jA-SO-WI4">
+                                                                            <rect key="frame" x="62" y="0.0" width="336" height="35"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,369,326" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpN-GM-kZA">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqK-T8-LuL" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                                    <rect key="frame" x="151" y="0.0" width="1" height="35"/>
+                                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="1" id="KJS-9m-NZV"/>
+                                                                                    </constraints>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </view>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24,212,396,640" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42K-mk-1MY" customClass="HJLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                                    <rect key="frame" x="151" y="0.0" width="185" height="35"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" red="0.83137254901960778" green="0.20000000000000001" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                                            <real key="value" value="10"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="bottom" secondItem="cqK-T8-LuL" secondAttribute="bottom" id="CbK-qd-Cxm"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="42K-mk-1MY" secondAttribute="bottom" id="Wqx-fm-0uR"/>
+                                                                                <constraint firstItem="xpN-GM-kZA" firstAttribute="top" secondItem="6jA-SO-WI4" secondAttribute="top" id="brs-DM-SD2"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="42K-mk-1MY" secondAttribute="trailing" id="dVv-cd-Qg5"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="xpN-GM-kZA" secondAttribute="bottom" id="i8E-29-Mai"/>
+                                                                                <constraint firstItem="42K-mk-1MY" firstAttribute="top" secondItem="6jA-SO-WI4" secondAttribute="top" id="rGr-P0-Pgo"/>
+                                                                                <constraint firstItem="xpN-GM-kZA" firstAttribute="width" secondItem="6jA-SO-WI4" secondAttribute="width" multiplier="0.45" id="tJy-vh-Vj2"/>
+                                                                                <constraint firstItem="cqK-T8-LuL" firstAttribute="leading" secondItem="xpN-GM-kZA" secondAttribute="trailing" id="uvT-1n-ZSp"/>
+                                                                                <constraint firstItem="cqK-T8-LuL" firstAttribute="top" secondItem="6jA-SO-WI4" secondAttribute="top" id="wRi-Hw-dOk"/>
+                                                                                <constraint firstItem="42K-mk-1MY" firstAttribute="width" secondItem="6jA-SO-WI4" secondAttribute="width" multiplier="0.55" id="xmK-n1-e9n"/>
+                                                                                <constraint firstItem="xpN-GM-kZA" firstAttribute="leading" secondItem="6jA-SO-WI4" secondAttribute="leading" id="zJy-vw-M83"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rj2-3T-30l" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                            <rect key="frame" x="397" y="0.0" width="1" height="35"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="cWz-Hc-iQz"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                    <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="6jA-SO-WI4" secondAttribute="trailing" id="4l6-Sq-mO7"/>
+                                                                        <constraint firstItem="3QU-M2-vcl" firstAttribute="top" secondItem="qlh-GW-CRa" secondAttribute="top" id="68w-fc-ek8"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="JZ0-HD-oyU" secondAttribute="bottom" id="81z-2X-1rM"/>
+                                                                        <constraint firstAttribute="height" constant="35" id="FlI-SG-S5u"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="3QU-M2-vcl" secondAttribute="bottom" id="Jhj-0S-Z20"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="5Ne-iI-pJS" secondAttribute="bottom" id="LJI-KJ-ch4"/>
+                                                                        <constraint firstItem="5Ne-iI-pJS" firstAttribute="leading" secondItem="qlh-GW-CRa" secondAttribute="leading" id="Mvl-AC-D4T"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="6jA-SO-WI4" secondAttribute="bottom" id="UFL-Yr-nJE"/>
+                                                                        <constraint firstItem="JZ0-HD-oyU" firstAttribute="leading" secondItem="3QU-M2-vcl" secondAttribute="trailing" id="YaS-pu-8Wg"/>
+                                                                        <constraint firstItem="3QU-M2-vcl" firstAttribute="leading" secondItem="5Ne-iI-pJS" secondAttribute="trailing" id="YzV-BW-g0j"/>
+                                                                        <constraint firstItem="5Ne-iI-pJS" firstAttribute="top" secondItem="qlh-GW-CRa" secondAttribute="top" id="acC-Bx-wRc"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="rj2-3T-30l" secondAttribute="trailing" id="aeb-Bv-Get"/>
+                                                                        <constraint firstItem="rj2-3T-30l" firstAttribute="top" secondItem="qlh-GW-CRa" secondAttribute="top" id="fZh-Ht-Sl6"/>
+                                                                        <constraint firstItem="JZ0-HD-oyU" firstAttribute="top" secondItem="qlh-GW-CRa" secondAttribute="top" id="oXd-uo-csQ"/>
+                                                                        <constraint firstItem="6jA-SO-WI4" firstAttribute="leading" secondItem="JZ0-HD-oyU" secondAttribute="trailing" id="oxb-1T-h0D"/>
+                                                                        <constraint firstItem="6jA-SO-WI4" firstAttribute="top" secondItem="qlh-GW-CRa" secondAttribute="top" id="tSb-lI-Ahw"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="rj2-3T-30l" secondAttribute="bottom" id="wPP-ze-VAa"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxe-W2-Xk1" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="216" width="398" height="1"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="QYc-dK-0qO"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="T9C-Dy-wgM" firstAttribute="top" secondItem="Wff-G7-FhO" secondAttribute="top" id="hkg-LG-fg1"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQ0-Kn-G49">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <connections>
+                                                        <action selector="onLayoutInfoFold:" destination="jmP-x2-Ibo" eventType="touchUpInside" id="4uU-3c-mQd"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="5J9-yv-ysX" secondAttribute="trailing" id="3LY-yY-zG8"/>
+                                                <constraint firstItem="Wff-G7-FhO" firstAttribute="leading" secondItem="Mgx-R6-zss" secondAttribute="leading" constant="8" id="3Xa-KN-34c"/>
+                                                <constraint firstItem="5J9-yv-ysX" firstAttribute="leading" secondItem="Mgx-R6-zss" secondAttribute="leading" id="CqP-ed-SY0"/>
+                                                <constraint firstItem="Wff-G7-FhO" firstAttribute="top" secondItem="5J9-yv-ysX" secondAttribute="bottom" constant="12" id="DEI-Vy-I8b"/>
+                                                <constraint firstItem="vQ0-Kn-G49" firstAttribute="top" secondItem="Mgx-R6-zss" secondAttribute="top" id="Eyt-ME-bEy"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wff-G7-FhO" secondAttribute="bottom" constant="16" id="K1n-lz-EQI"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wff-G7-FhO" secondAttribute="trailing" constant="8" id="Qju-fO-pjz"/>
+                                                <constraint firstAttribute="trailing" secondItem="vQ0-Kn-G49" secondAttribute="trailing" id="WSd-Um-ynb"/>
+                                                <constraint firstItem="vQ0-Kn-G49" firstAttribute="leading" secondItem="Mgx-R6-zss" secondAttribute="leading" id="ebC-n8-H0z"/>
+                                                <constraint firstItem="vQ0-Kn-G49" firstAttribute="height" secondItem="5J9-yv-ysX" secondAttribute="height" id="pqf-Gh-Zn1"/>
+                                                <constraint firstItem="5J9-yv-ysX" firstAttribute="top" secondItem="Mgx-R6-zss" secondAttribute="top" id="wVx-9D-9Lg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgArrow" destination="rtz-Ci-BdU" id="7PU-uE-SIx"/>
+                                            <outlet property="layoutInfo" destination="DHS-sw-RcJ" id="a1z-bZ-4yE"/>
+                                            <outlet property="layoutRound" destination="5J9-yv-ysX" id="ELn-3O-2Wy"/>
+                                            <outlet property="lb1PlaceAmt" destination="jr5-ZS-Nth" id="iz0-Qz-i2m"/>
+                                            <outlet property="lb1PlaceCnt" destination="wJK-oo-met" id="K7z-Qy-icC"/>
+                                            <outlet property="lb2PlaceAmt" destination="jAc-kS-2St" id="4gc-cN-0Q8"/>
+                                            <outlet property="lb2PlaceCnt" destination="Jot-J5-utj" id="sFi-Ke-fUV"/>
+                                            <outlet property="lb3PlaceAmt" destination="gqf-X2-eI0" id="Wr7-rE-xGc"/>
+                                            <outlet property="lb3PlaceCnt" destination="CNi-zz-Pin" id="nLH-xk-a0g"/>
+                                            <outlet property="lb4PlaceAmt" destination="fLq-0H-uEo" id="OXX-X5-B1d"/>
+                                            <outlet property="lb4PlaceCnt" destination="CPU-tg-q4S" id="Yfh-Am-G5N"/>
+                                            <outlet property="lb5PlaceAmt" destination="42K-mk-1MY" id="Mds-Dc-8bp"/>
+                                            <outlet property="lb5PlaceCnt" destination="xpN-GM-kZA" id="mQ1-rV-WOm"/>
+                                            <outlet property="lbBonus" destination="KLc-OI-Oxg" id="Emm-RG-MSL"/>
+                                            <outlet property="lbDate" destination="ftu-dj-ZnH" id="toN-5T-NNE"/>
+                                            <outlet property="lbNo" destination="RuL-Ve-qhv" id="AvT-cM-gfi"/>
+                                            <outlet property="lbWin1" destination="Rdn-3N-KPl" id="FQm-7X-BST"/>
+                                            <outlet property="lbWin2" destination="gxB-Hg-E7h" id="oaF-V2-xAq"/>
+                                            <outlet property="lbWin3" destination="YcM-5z-ciW" id="Kwz-03-Pjc"/>
+                                            <outlet property="lbWin4" destination="1IP-Vr-RLg" id="erw-CY-4BR"/>
+                                            <outlet property="lbWin5" destination="Wb6-tw-J7e" id="PXK-i9-ibl"/>
+                                            <outlet property="lbWin6" destination="4i4-cT-bup" id="NBb-vC-3Ho"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kKo-Bf-CTc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="53b-R6-MD2"/>
+                            <constraint firstItem="CO3-dl-uvp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="MOg-Ji-9n2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CO3-dl-uvp" secondAttribute="bottom" id="N9S-9Q-QAb"/>
+                            <constraint firstItem="CO3-dl-uvp" firstAttribute="top" secondItem="kKo-Bf-CTc" secondAttribute="bottom" id="TBu-w2-ADZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kKo-Bf-CTc" secondAttribute="trailing" id="hcT-XB-2Ib"/>
+                            <constraint firstItem="kKo-Bf-CTc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vEq-1T-aAH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CO3-dl-uvp" secondAttribute="trailing" id="xN3-wG-Dvm"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tblWinLotto" destination="CO3-dl-uvp" id="MaQ-O1-lQp"/>
+                        <outlet property="titleBarView" destination="kKo-Bf-CTc" id="p0t-yN-S9o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="59.598214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_arrow_d" width="36" height="36"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

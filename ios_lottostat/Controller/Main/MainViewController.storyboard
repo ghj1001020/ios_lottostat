@@ -35,6 +35,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc8-yI-sI7">
                                 <rect key="frame" x="181" y="294" width="52" height="30"/>
                                 <state key="normal" title="당첨번호"/>
+                                <connections>
+                                    <action selector="moveToWinLotto:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Uw5-tt-55z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1p-vk-DWV">
                                 <rect key="frame" x="166" y="344" width="82" height="30"/>

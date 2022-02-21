@@ -13,7 +13,7 @@ class SQLite {
     // DB 버전 관리
     public static let DB_VERSION = 1
     // SQLite 파일 버전 관리
-    public static let SQLite_VERSION = 1
+    public static let SQLite_VERSION = 3
     
     public static let DB_FILE_NAME = "lotto.db" // DB 파일명
     public static let DB_RESOURCE_FILE_NAME = "lotto"   // 리소스 DB 파일명

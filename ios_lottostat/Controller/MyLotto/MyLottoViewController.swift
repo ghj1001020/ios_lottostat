@@ -87,7 +87,7 @@ extension MyLottoViewController : UITableViewDelegate, UITableViewDataSource, My
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "myLottoDateCell") as? ItemMyLottoDate else {
                 return UITableViewCell()
             }
-            cell.lbDate.text = DateUtil.convertDateFormat(data.regDate, "yyyyMMddHHmmss", "yyyy-MM-dd HH:mm:ss")
+            cell.lbDate.text = data.regDate.convertDateFormat("yyyyMMddHHmmss", "yyyy-MM-dd HH:mm:ss")
             return cell
         }
         // 로또번호 셀

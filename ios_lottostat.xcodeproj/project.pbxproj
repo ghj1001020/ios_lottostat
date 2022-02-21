@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62145EB5AD7168B12004CDBA /* Pods_ios_lottostat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B895798E597A85AB71147EF /* Pods_ios_lottostat.framework */; };
+		C20BF0F127C3C6FA00AF4C31 /* lotto.db in Resources */ = {isa = PBXBuildFile; fileRef = C20BF0F027C3656600AF4C31 /* lotto.db */; };
 		C20F0DB62701F2FD009D18FB /* RecommendViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20F0DB52701F2FD009D18FB /* RecommendViewController.storyboard */; };
 		C20F0DB82701F311009D18FB /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20F0DB72701F311009D18FB /* RecommendViewController.swift */; };
 		C20F0DBB270340AF009D18FB /* LTAppBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20F0DBA270340AF009D18FB /* LTAppBar.xib */; };
@@ -44,6 +45,9 @@
 		C2AA467827827DCA00F213EB /* ItemMyLottoNumber.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AA467727827DCA00F213EB /* ItemMyLottoNumber.xib */; };
 		C2AA467A27827DD500F213EB /* ItemMyLottoNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA467927827DD500F213EB /* ItemMyLottoNumber.swift */; };
 		C2AA467C27864DBF00F213EB /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA467B27864DBF00F213EB /* AlertUtil.swift */; };
+		C2ADE18727B83EBF00B382F4 /* WinLottoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2ADE18627B83EBF00B382F4 /* WinLottoViewController.storyboard */; };
+		C2ADE18927B83ECD00B382F4 /* WinLottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADE18827B83ECD00B382F4 /* WinLottoViewController.swift */; };
+		C2ADE18B27B8AA4300B382F4 /* WinLottoNumberTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADE18A27B8AA4300B382F4 /* WinLottoNumberTableCell.swift */; };
 		C2AE21DB26F580D700002D61 /* CommonDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AE21DA26F580D700002D61 /* CommonDialog.xib */; };
 		C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21DC26F615F500002D61 /* CommonDialog.swift */; };
 		C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E226F764ED00002D61 /* LTCardView.swift */; };
@@ -52,7 +56,6 @@
 		C2AE21EA26F8C5E000002D61 /* DefineDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21E926F8C5E000002D61 /* DefineDefaults.swift */; };
 		C2AE21ED26F8D1F600002D61 /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21EC26F8D1F600002D61 /* SQLite.swift */; };
 		C2AE21F026F97D2300002D61 /* DefineQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21EF26F97D2300002D61 /* DefineQuery.swift */; };
-		C2AE21F226F996D300002D61 /* lotto.db in Resources */ = {isa = PBXBuildFile; fileRef = C2AE21EE26F8D9AD00002D61 /* lotto.db */; };
 		C2AE21F426FAB42600002D61 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21F326FAB42600002D61 /* FileUtil.swift */; };
 		C2AE21F626FAEE7800002D61 /* SQLiteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21F526FAEE7800002D61 /* SQLiteService.swift */; };
 		C2AE21FA26FAF1FA00002D61 /* LottoWinNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE21F926FAF1FA00002D61 /* LottoWinNumber.swift */; };
@@ -71,6 +74,7 @@
 		1B895798E597A85AB71147EF /* Pods_ios_lottostat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_lottostat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		599B98456BF2D4AC8872DAFF /* Pods-ios_lottostat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_lottostat.release.xcconfig"; path = "Target Support Files/Pods-ios_lottostat/Pods-ios_lottostat.release.xcconfig"; sourceTree = "<group>"; };
 		6D7BD88C7F7669BA32C853CE /* Pods-ios_lottostat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_lottostat.debug.xcconfig"; path = "Target Support Files/Pods-ios_lottostat/Pods-ios_lottostat.debug.xcconfig"; sourceTree = "<group>"; };
+		C20BF0F027C3656600AF4C31 /* lotto.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = lotto.db; sourceTree = "<group>"; };
 		C20F0DB52701F2FD009D18FB /* RecommendViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecommendViewController.storyboard; sourceTree = "<group>"; };
 		C20F0DB72701F311009D18FB /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		C20F0DBA270340AF009D18FB /* LTAppBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LTAppBar.xib; sourceTree = "<group>"; };
@@ -111,6 +115,9 @@
 		C2AA467727827DCA00F213EB /* ItemMyLottoNumber.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemMyLottoNumber.xib; sourceTree = "<group>"; };
 		C2AA467927827DD500F213EB /* ItemMyLottoNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMyLottoNumber.swift; sourceTree = "<group>"; };
 		C2AA467B27864DBF00F213EB /* AlertUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
+		C2ADE18627B83EBF00B382F4 /* WinLottoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WinLottoViewController.storyboard; sourceTree = "<group>"; };
+		C2ADE18827B83ECD00B382F4 /* WinLottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinLottoViewController.swift; sourceTree = "<group>"; };
+		C2ADE18A27B8AA4300B382F4 /* WinLottoNumberTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinLottoNumberTableCell.swift; sourceTree = "<group>"; };
 		C2AE21DA26F580D700002D61 /* CommonDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonDialog.xib; sourceTree = "<group>"; };
 		C2AE21DC26F615F500002D61 /* CommonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDialog.swift; sourceTree = "<group>"; };
 		C2AE21E226F764ED00002D61 /* LTCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCardView.swift; sourceTree = "<group>"; };
@@ -118,7 +125,6 @@
 		C2AE21E626F8BD7A00002D61 /* DefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsUtil.swift; sourceTree = "<group>"; };
 		C2AE21E926F8C5E000002D61 /* DefineDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineDefaults.swift; sourceTree = "<group>"; };
 		C2AE21EC26F8D1F600002D61 /* SQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLite.swift; sourceTree = "<group>"; };
-		C2AE21EE26F8D9AD00002D61 /* lotto.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = lotto.db; sourceTree = "<group>"; };
 		C2AE21EF26F97D2300002D61 /* DefineQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineQuery.swift; sourceTree = "<group>"; };
 		C2AE21F326FAB42600002D61 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		C2AE21F526FAEE7800002D61 /* SQLiteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteService.swift; sourceTree = "<group>"; };
@@ -220,6 +226,7 @@
 		C23EC0C326EA231800828BAB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2ADE18527B83EAA00B382F4 /* WinLotto */,
 				C2AA46682778A19000F213EB /* MyLotto */,
 				C20F0DB42701F2AB009D18FB /* Recommend */,
 				C2AE21FB26FB6AAB00002D61 /* Main */,
@@ -289,6 +296,16 @@
 			path = MyLotto;
 			sourceTree = "<group>";
 		};
+		C2ADE18527B83EAA00B382F4 /* WinLotto */ = {
+			isa = PBXGroup;
+			children = (
+				C2ADE18627B83EBF00B382F4 /* WinLottoViewController.storyboard */,
+				C2ADE18827B83ECD00B382F4 /* WinLottoViewController.swift */,
+				C2ADE18A27B8AA4300B382F4 /* WinLottoNumberTableCell.swift */,
+			);
+			path = WinLotto;
+			sourceTree = "<group>";
+		};
 		C2AE21D926F57D4A00002D61 /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,7 +328,7 @@
 		C2AE21EB26F8D1E400002D61 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				C2AE21EE26F8D9AD00002D61 /* lotto.db */,
+				C20BF0F027C3656600AF4C31 /* lotto.db */,
 				C2AE21EC26F8D1F600002D61 /* SQLite.swift */,
 				C2AE21F526FAEE7800002D61 /* SQLiteService.swift */,
 			);
@@ -403,8 +420,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20BF0F127C3C6FA00AF4C31 /* lotto.db in Resources */,
+				C2ADE18727B83EBF00B382F4 /* WinLottoViewController.storyboard in Resources */,
 				C2AA467827827DCA00F213EB /* ItemMyLottoNumber.xib in Resources */,
-				C2AE21F226F996D300002D61 /* lotto.db in Resources */,
 				C23EC0C626EBAE6100828BAB /* IntroViewController.storyboard in Resources */,
 				C2AA46702780BFD800F213EB /* ItemMyLottoSection.xib in Resources */,
 				C20F0DB62701F2FD009D18FB /* RecommendViewController.storyboard in Resources */,
@@ -470,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2AE21E726F8BD7A00002D61 /* DefaultsUtil.swift in Sources */,
+				C2ADE18B27B8AA4300B382F4 /* WinLottoNumberTableCell.swift in Sources */,
 				C2AE21ED26F8D1F600002D61 /* SQLite.swift in Sources */,
 				C2AA46722780C2F600F213EB /* ItemMyLottoSection.swift in Sources */,
 				C2FDCE902740CD4500C60E13 /* BottomSheetController.swift in Sources */,
@@ -491,6 +510,7 @@
 				C2AA4661276EEC9F00F213EB /* RecommendLottoNumberTableCell.swift in Sources */,
 				C2AA46552757B05300F213EB /* HJTextField.swift in Sources */,
 				C2AA4665276F7DA700F213EB /* ColorUtil.swift in Sources */,
+				C2ADE18927B83ECD00B382F4 /* WinLottoViewController.swift in Sources */,
 				C2AE21FA26FAF1FA00002D61 /* LottoWinNumber.swift in Sources */,
 				C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */,
 				C2AE21E526F8169B00002D61 /* AppUtil.swift in Sources */,

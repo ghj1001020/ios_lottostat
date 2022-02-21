@@ -21,6 +21,20 @@ class FileUtil {
         }
     }
     
+    // 앱내에 리소스 파일 있는지 확인
+    public static func checkBundleFileExist(_ fileName: String, _ ext: String) -> Bool {
+        do {
+            let path = Bundle.main.path(forResource: fileName, ofType: ext)
+            if path == nil || path!.isEmpty {
+                return false
+            }
+            return FileManager.default.fileExists(atPath: path!)
+        }
+        catch {
+            return false
+        }
+    }
+    
     // 파일복사
     public static func copyFile(fromUrl: URL?, toUrl: URL?) -> Bool {
         guard let fromUrl = fromUrl, let toUrl = toUrl else {

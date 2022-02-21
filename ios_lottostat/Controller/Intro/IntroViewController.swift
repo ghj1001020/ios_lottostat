@@ -75,15 +75,15 @@ class IntroViewController: UIViewController {
     // SQLite에서 데이터 읽기
     func getLottoNumber() {
         let copyVersion : Int = DefaultsUtil.shared.getInt(DefineDefaults.VERSION_COPY_SQLITE)
-        var isCopy = copyVersion != SQLite.SQLite_VERSION
+        var isCopy = copyVersion == SQLite.SQLite_VERSION
         if( !isCopy ) {
             lbMessage.text = "데이터 파일을 가져옵니다"
             
             // SQLite 파일 있는지 확인
-            let isExist = FileUtil.checkFileExist(filePath : SQLite.DB_FILE_NAME )
+            let isExist = FileUtil.checkBundleFileExist(SQLite.DB_RESOURCE_FILE_NAME, SQLite.DB_RESOURCE_FILE_EXT)
             
             // SQLite 파일 복사
-            if( !isExist ) {
+            if( isExist ) {
                 do {
                     let bundleUrl = Bundle.main.url(forResource: SQLite.DB_RESOURCE_FILE_NAME, withExtension: SQLite.DB_RESOURCE_FILE_EXT)
                     let toUrl = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(SQLite.DB_FILE_NAME)

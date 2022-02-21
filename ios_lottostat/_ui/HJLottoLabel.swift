@@ -12,6 +12,9 @@ class HJLottoLabel: HJLabel {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = self.layer.frame.size.height/2
+        
         let num = StringUtil.convertToInt(text)
         if num > 0 {
             switch num {

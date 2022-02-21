@@ -49,4 +49,21 @@ class MainViewController: BaseController {
         }
     }
     
+    // 당첨번호
+    @IBAction func moveToWinLotto(_ sender: UIButton) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "WinLottoViewController", bundle: nil)
+        var controller : WinLottoViewController? = nil
+        if #available(iOS 13.0, *) {
+            controller = storyboard.instantiateViewController(identifier: "winLotto") as? WinLottoViewController
+        }
+        else {
+            controller = storyboard.instantiateViewController(withIdentifier: "winLotto") as? WinLottoViewController
+        }
+        
+        if let controller = controller {
+            controller.modalPresentationStyle = .fullScreen
+            delegate?.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+    
 }

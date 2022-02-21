@@ -41,8 +41,9 @@ class DefineQuery {
 
     
     // 로또당첨번호 목록 조회
-    public static let SELECT_LOTTO_WIN_NUMBER = "SELECT NO, WIN1, WIN2, WIN3, WIN4, WIN5, WIN6, BONUS " +
-                                                "FROM   LOTTO_WIN_NUMBER"
+    public static let SELECT_LOTTO_WIN_NUMBER = "SELECT   NO, LOTTERY_DATE, WIN1, WIN2, WIN3, WIN4, WIN5, WIN6, BONUS, PLACE1CNT, PLACE1AMT, PLACE2CNT, PLACE2AMT, PLACE3CNT, PLACE3AMT, PLACE4CNT, PLACE4AMT, PLACE5CNT, PLACE5AMT " +
+                                                "FROM     LOTTO_WIN_NUMBER " +
+                                                "ORDER BY NO DESC"
     
     // 마지막 회차 로또당첨번호 조회
     public static let SELECT_LAST_ROUND_WIN_NUMBER = "SELECT   WIN1, WIN2, WIN3, WIN4, WIN5, WIN6, BONUS " +
