@@ -49,4 +49,15 @@ class LottoWinNumber {
         self.place5Cnt = place5Cnt
         self.place5Amt = place5Amt
     }
+    
+    // 번호리스트
+    func getNumberList(isBonus: Bool=true) -> [Int] {
+        var list = [win1, win2, win3, win4, win5, win6]
+        if( isBonus ) {
+            list.append(bonus)
+        }
+        list.sort()
+        return list
+    }
+    
 }

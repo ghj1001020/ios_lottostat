@@ -29,10 +29,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="winLottoCell" id="jmP-x2-Ibo" customClass="WinLottoNumberTableCell" customModule="ios_lottostat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="351"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jmP-x2-Ibo" id="Mgx-R6-zss">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="351"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J9-yv-ysX">
@@ -70,7 +70,7 @@
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Wff-G7-FhO">
-                                                    <rect key="frame" x="8" y="60" width="398" height="275"/>
+                                                    <rect key="frame" x="8" y="60" width="398" height="42"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="T9C-Dy-wgM">
                                                             <rect key="frame" x="0.0" y="0.0" width="398" height="42"/>
@@ -150,8 +150,8 @@
                                                                 <constraint firstAttribute="height" constant="42" id="IXO-5e-HVN"/>
                                                             </constraints>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DHS-sw-RcJ">
-                                                            <rect key="frame" x="0.0" y="58" width="398" height="217"/>
+                                                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DHS-sw-RcJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="217"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcb-fF-l2B" userLabel="Divider1" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="398" height="1"/>
@@ -949,17 +949,29 @@
                                                         <action selector="onLayoutInfoFold:" destination="jmP-x2-Ibo" eventType="touchUpInside" id="4uU-3c-mQd"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuw-KL-JCF">
+                                                    <rect key="frame" x="0.0" y="48" width="414" height="70"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <connections>
+                                                        <action selector="onLottoNumberClick:" destination="jmP-x2-Ibo" eventType="touchUpInside" id="1xK-HK-Jb6"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="5J9-yv-ysX" secondAttribute="trailing" id="3LY-yY-zG8"/>
                                                 <constraint firstItem="Wff-G7-FhO" firstAttribute="leading" secondItem="Mgx-R6-zss" secondAttribute="leading" constant="8" id="3Xa-KN-34c"/>
+                                                <constraint firstAttribute="trailing" secondItem="kuw-KL-JCF" secondAttribute="trailing" id="5YU-gZ-gfb"/>
                                                 <constraint firstItem="5J9-yv-ysX" firstAttribute="leading" secondItem="Mgx-R6-zss" secondAttribute="leading" id="CqP-ed-SY0"/>
                                                 <constraint firstItem="Wff-G7-FhO" firstAttribute="top" secondItem="5J9-yv-ysX" secondAttribute="bottom" constant="12" id="DEI-Vy-I8b"/>
                                                 <constraint firstItem="vQ0-Kn-G49" firstAttribute="top" secondItem="Mgx-R6-zss" secondAttribute="top" id="Eyt-ME-bEy"/>
                                                 <constraint firstAttribute="bottom" secondItem="Wff-G7-FhO" secondAttribute="bottom" constant="16" id="K1n-lz-EQI"/>
                                                 <constraint firstAttribute="trailing" secondItem="Wff-G7-FhO" secondAttribute="trailing" constant="8" id="Qju-fO-pjz"/>
                                                 <constraint firstAttribute="trailing" secondItem="vQ0-Kn-G49" secondAttribute="trailing" id="WSd-Um-ynb"/>
+                                                <constraint firstItem="kuw-KL-JCF" firstAttribute="leading" secondItem="Mgx-R6-zss" secondAttribute="leading" id="WrF-dX-Zco"/>
+                                                <constraint firstAttribute="bottom" secondItem="kuw-KL-JCF" secondAttribute="bottom" id="eFL-Re-GBl"/>
                                                 <constraint firstItem="vQ0-Kn-G49" firstAttribute="leading" secondItem="Mgx-R6-zss" secondAttribute="leading" id="ebC-n8-H0z"/>
+                                                <constraint firstItem="kuw-KL-JCF" firstAttribute="top" secondItem="vQ0-Kn-G49" secondAttribute="bottom" id="gMh-ZI-r7B"/>
                                                 <constraint firstItem="vQ0-Kn-G49" firstAttribute="height" secondItem="5J9-yv-ysX" secondAttribute="height" id="pqf-Gh-Zn1"/>
                                                 <constraint firstItem="5J9-yv-ysX" firstAttribute="top" secondItem="Mgx-R6-zss" secondAttribute="top" id="wVx-9D-9Lg"/>
                                             </constraints>

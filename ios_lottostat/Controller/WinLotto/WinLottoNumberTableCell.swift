@@ -11,7 +11,7 @@ import UIKit
 
 protocol WinLottoProtocol {
     func onInfoFoldingClick(isShow: Bool)
-    func onLottoNumberClick()
+    func onLottoNumberClick(index: Int)
 }
 
 class WinLottoNumberTableCell : UITableViewCell {
@@ -41,7 +41,7 @@ class WinLottoNumberTableCell : UITableViewCell {
     @IBOutlet var lb5PlaceCnt: UILabel!
     @IBOutlet var lb5PlaceAmt: HJLabel!
     
-    
+    var row = 0
     var delegate : WinLottoProtocol? = nil
     
     
@@ -51,4 +51,7 @@ class WinLottoNumberTableCell : UITableViewCell {
         delegate?.onInfoFoldingClick(isShow: !layoutInfo.isHidden)
     }
     
+    @IBAction func onLottoNumberClick(_ sender: UIButton) {
+        delegate?.onLottoNumberClick(index: row)
+    }
 }

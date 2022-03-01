@@ -14,7 +14,7 @@ class WinLottoViewController : BaseController {
     var mWinLottoList : [LottoWinNumber] = {
         SQLiteService.selectLottoWinNumber()
     }()
-    
+        
     
     override func viewDidLoad() {
         setAppBar(.BACK)
@@ -22,20 +22,41 @@ class WinLottoViewController : BaseController {
         
         tblWinLotto.delegate = self
         tblWinLotto.dataSource = self
-        tblWinLotto.estimatedRowHeight = 118
-        tblWinLotto.rowHeight = UITableView.automaticDimension
+        tblWinLotto.showsVerticalScrollIndicator = false
+        let newX = self.view.bounds.size.width-10
+        tblWinLotto.frame = CGRect(x: newX, y: 0, width: 10, height: self.view.bounds.size.height)
     }
 }
 
 extension WinLottoViewController : UITableViewDelegate, UITableViewDataSource, WinLottoProtocol {
     
+    func onLottoNumberClick(index: Int) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "WinLottoAnalysisDialog", bundle: nil)
+        var controller : WinLottoAnalysisDialog? = nil
+        if #available(iOS 13.0, *) {
+            controller = storyboard.instantiateViewController(identifier: "analysisDialog") as? WinLottoAnalysisDialog
+        }
+        else {
+            controller = storyboard.instantiateViewController(withIdentifier: "analysisDialog") as? WinLottoAnalysisDialog
+        }
+
+        if let controller = controller {
+            controller.currentNumber = mWinLottoList[index]
+            if( index+1 < mWinLottoList.count ) {
+                controller.prevNumber = mWinLottoList[index+1]
+            }
+            
+            let analysisDialog = BottomSheetController(contentController: controller)
+            analysisDialog.isCancelable = false
+            analysisDialog.modalPresentationStyle = .overFullScreen
+            self.present(analysisDialog, animated: false, completion: nil)
+        }
+    }
+        
     func onInfoFoldingClick(isShow: Bool) {
         tblWinLotto.reloadData()
     }
     
-    func onLottoNumberClick() {
-        
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mWinLottoList.count
@@ -66,6 +87,7 @@ extension WinLottoViewController : UITableViewDelegate, UITableViewDataSource, W
         cell.lb5PlaceCnt.text = "\(data.place5Cnt)"
         cell.lb5PlaceAmt.text = "\(data.place5Amt)"
         cell.delegate = self
+        cell.row = indexPath.row
 
         return cell
     }
