@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var navigationController : UINavigationController?
+    var LottoWinNumberList : [LottoWinNumber] = SQLiteService.selectLottoWinNumber()
     
 
     // 앱을 실행할 준비가 되었음

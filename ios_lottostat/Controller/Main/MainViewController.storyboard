@@ -31,6 +31,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HE6-uP-ZOL">
                                 <rect key="frame" x="174.5" y="244" width="65" height="30"/>
                                 <state key="normal" title="시뮬레이션"/>
+                                <connections>
+                                    <action selector="moveToSimulation:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mtQ-FG-uSk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc8-yI-sI7">
                                 <rect key="frame" x="181" y="294" width="52" height="30"/>

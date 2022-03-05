@@ -15,6 +15,10 @@ class HJLabel: UILabel {
     @IBInspectable var leftPadding : CGFloat = 0
     @IBInspectable var rightPadding : CGFloat = 0
     var edgeInsets : UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    
+    // placeholder
+    @IBInspectable var hint : String = ""
+    @IBInspectable var hintColor : UIColor = UIColor.gray
 
     // 불릿
     private let bullet = "• "
@@ -23,14 +27,20 @@ class HJLabel: UILabel {
     // 텍스트
     override var text: String? {
         didSet(value) {
-            setText(newVal: value)
+            if let value = value {
+                applyHint(value: value)
+                textChanged(newVal: value)
+            }
         }
     }
 
-    var content : String = ""
+    var isHint = false
+    var temp : String = ""
+    var tempColor : UIColor = UIColor()
     
-    // 글자 세팅
-    func setText(newVal: String?) {}
+    
+    // 글자 변경
+    open func textChanged(newVal: String) {}
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,14 +55,15 @@ class HJLabel: UILabel {
     override func layoutSubviews() {
         super.layoutSubviews()
         edgeInsets = UIEdgeInsets(top: topPadding, left: leftPadding, bottom: bottomPadding, right: rightPadding)
-        
+
         if( isBullet ) {
             addBullet()
         }
     }
     
     func initView() {
-        content = self.text ?? ""
+        temp = self.text ?? ""
+        tempColor = self.textColor
     }
     
     override func drawText(in rect: CGRect) {
@@ -74,7 +85,27 @@ class HJLabel: UILabel {
         paragraphStyle.headIndent = (bullet as NSString).size(withAttributes: attributes).width
         attributes[.paragraphStyle] = paragraphStyle
         
-        let string = bullet + content
+        let string = bullet + (self.text ?? "")
         self.attributedText = NSAttributedString(string: string, attributes: attributes)
+    }
+    
+    // 힌트 적용
+    func applyHint(value: String) {
+        // 힌트가 있을경우
+        if( !hint.isEmpty ) {
+            if( value.isEmpty) {
+                isHint = true
+                tempColor = self.textColor
+                self.text = hint
+                self.textColor = hintColor
+            }
+            else {
+                if(isHint) {
+                    isHint = false
+                    return
+                }
+                self.textColor = tempColor
+            }
+        }
     }
 }

@@ -65,5 +65,22 @@ class MainViewController: BaseController {
             delegate?.navigationController?.pushViewController(controller, animated: true)
         }
     }
-    
+
+    // 시뮬레이션
+    @IBAction func moveToSimulation(_ sender: UIButton) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "SimulationViewController", bundle: nil)
+        var controller : SimulationViewController? = nil
+        if #available(iOS 13.0, *) {
+            controller = storyboard.instantiateViewController(identifier: "simulation") as? SimulationViewController
+        }
+        else {
+            controller = storyboard.instantiateViewController(withIdentifier: "simulation") as?
+            SimulationViewController
+        }
+        
+        if let controller = controller {
+            controller.modalPresentationStyle = .fullScreen
+            delegate?.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
 }
