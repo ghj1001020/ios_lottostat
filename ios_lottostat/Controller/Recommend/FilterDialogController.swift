@@ -5,6 +5,7 @@
 //  Created by 권혁준 on 2021/11/04.
 //
 
+import Foundation
 import UIKit
 
 class FilterDialogController: BaseBottomSheetContent {
@@ -48,15 +49,15 @@ class FilterDialogController: BaseBottomSheetContent {
     override func viewDidLoad() {
         
         // 버튼 인덱스
-        chkExcludePrevWinNumber.tag = 0
-        chkIncludeLastRoundWinNumber.tag = 1
-        chkExcludeConsecutiveNumber.tag = 2
-        btnCountCancel.tag = 100
-        btnCountOk.tag = 101
-        btnCountMinus.tag = 102
-        btnCountPlus.tag = 103
+//        chkExcludePrevWinNumber.tag = 0
+//        chkIncludeLastRoundWinNumber.tag = 1
+//        chkExcludeConsecutiveNumber.tag = 2
+//        btnCountCancel.tag = 100
+//        btnCountOk.tag = 101
+//        btnCountMinus.tag = 102
+//        btnCountPlus.tag = 103
         
-        initLayout()
+//        initLayout()
     }
     
     func initLayout() {

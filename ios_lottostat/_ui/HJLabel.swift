@@ -22,20 +22,22 @@ class HJLabel: UILabel {
 
     // 불릿
     private let bullet = "• "
+    private var content = ""
     @IBInspectable var isBullet : Bool = false
+
     
     // 텍스트
     override var text: String? {
         didSet(value) {
             if let value = value {
                 applyHint(value: value)
+                content = value
                 textChanged(newVal: value)
             }
         }
     }
 
     var isHint = false
-    var temp : String = ""
     var tempColor : UIColor = UIColor()
     
     
@@ -62,7 +64,7 @@ class HJLabel: UILabel {
     }
     
     func initView() {
-        temp = self.text ?? ""
+        content = self.text ?? ""
         tempColor = self.textColor
     }
     
@@ -85,7 +87,7 @@ class HJLabel: UILabel {
         paragraphStyle.headIndent = (bullet as NSString).size(withAttributes: attributes).width
         attributes[.paragraphStyle] = paragraphStyle
         
-        let string = bullet + (self.text ?? "")
+        let string = bullet + content
         self.attributedText = NSAttributedString(string: string, attributes: attributes)
     }
     

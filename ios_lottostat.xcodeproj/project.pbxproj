@@ -30,6 +30,10 @@
 		C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0CD26EFF42000828BAB /* DateUtil.swift */; };
 		C23EC0DA26F14AA400828BAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C23EC0D926F14AA400828BAB /* GoogleService-Info.plist */; };
 		C23EC0DC26F366B400828BAB /* LogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0DB26F366B400828BAB /* LogUtil.swift */; };
+		C289401827D3B9CB00259CD0 /* HJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289401727D3B9CB00259CD0 /* HJView.swift */; };
+		C289401A27D486E700259CD0 /* HJCheckImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289401927D486E700259CD0 /* HJCheckImageView.swift */; };
+		C289401C27D4A6DD00259CD0 /* FilterDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289401B27D4A6DD00259CD0 /* FilterDialog.swift */; };
+		C289401E27D4C14C00259CD0 /* FilterDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C289401D27D4C14C00259CD0 /* FilterDialog.storyboard */; };
 		C2AA464F2744600000F213EB /* HJCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA464E2744600000F213EB /* HJCheckBox.swift */; };
 		C2AA46512745196700F213EB /* HJScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA46502745196700F213EB /* HJScrollView.swift */; };
 		C2AA46552757B05300F213EB /* HJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA46542757B05300F213EB /* HJTextField.swift */; };
@@ -104,6 +108,10 @@
 		C23EC0CD26EFF42000828BAB /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		C23EC0D926F14AA400828BAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C23EC0DB26F366B400828BAB /* LogUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
+		C289401727D3B9CB00259CD0 /* HJView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJView.swift; sourceTree = "<group>"; };
+		C289401927D486E700259CD0 /* HJCheckImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJCheckImageView.swift; sourceTree = "<group>"; };
+		C289401B27D4A6DD00259CD0 /* FilterDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDialog.swift; sourceTree = "<group>"; };
+		C289401D27D4C14C00259CD0 /* FilterDialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterDialog.storyboard; sourceTree = "<group>"; };
 		C2AA464E2744600000F213EB /* HJCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJCheckBox.swift; sourceTree = "<group>"; };
 		C2AA46502745196700F213EB /* HJScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJScrollView.swift; sourceTree = "<group>"; };
 		C2AA46542757B05300F213EB /* HJTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJTextField.swift; sourceTree = "<group>"; };
@@ -190,6 +198,8 @@
 				C2AA4660276EEC9F00F213EB /* RecommendLottoNumberTableCell.swift */,
 				C2FDCE912740D0DA00C60E13 /* FilterDialogController.storyboard */,
 				C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */,
+				C289401D27D4C14C00259CD0 /* FilterDialog.storyboard */,
+				C289401B27D4A6DD00259CD0 /* FilterDialog.swift */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -285,6 +295,8 @@
 				C2AA465C2764A8C100F213EB /* HJFilterTextField.swift */,
 				C2AA4662276F656000F213EB /* HJLottoLabel.swift */,
 				C20BF0FD27CE58E600AF4C31 /* HJPlusIcon.swift */,
+				C289401727D3B9CB00259CD0 /* HJView.swift */,
+				C289401927D486E700259CD0 /* HJCheckImageView.swift */,
 			);
 			path = _ui;
 			sourceTree = "<group>";
@@ -450,6 +462,7 @@
 				C2ADE18727B83EBF00B382F4 /* WinLottoViewController.storyboard in Resources */,
 				C2AA467827827DCA00F213EB /* ItemMyLottoNumber.xib in Resources */,
 				C23EC0C626EBAE6100828BAB /* IntroViewController.storyboard in Resources */,
+				C289401E27D4C14C00259CD0 /* FilterDialog.storyboard in Resources */,
 				C20BF0F327C6705900AF4C31 /* WinLottoAnalysisDialog.storyboard in Resources */,
 				C2AA46702780BFD800F213EB /* ItemMyLottoSection.xib in Resources */,
 				C20F0DB62701F2FD009D18FB /* RecommendViewController.storyboard in Resources */,
@@ -518,6 +531,7 @@
 				C20BF0FE27CE58E600AF4C31 /* HJPlusIcon.swift in Sources */,
 				C2AE21E726F8BD7A00002D61 /* DefaultsUtil.swift in Sources */,
 				C2ADE18B27B8AA4300B382F4 /* WinLottoNumberTableCell.swift in Sources */,
+				C289401A27D486E700259CD0 /* HJCheckImageView.swift in Sources */,
 				C2AE21ED26F8D1F600002D61 /* SQLite.swift in Sources */,
 				C2AA46722780C2F600F213EB /* ItemMyLottoSection.swift in Sources */,
 				C2FDCE902740CD4500C60E13 /* BottomSheetController.swift in Sources */,
@@ -525,6 +539,7 @@
 				C2AA467C27864DBF00F213EB /* AlertUtil.swift in Sources */,
 				C23EC0B426E8D22800828BAB /* ViewController.swift in Sources */,
 				C2AA466C2778A2C500F213EB /* MyLottoViewController.swift in Sources */,
+				C289401C27D4A6DD00259CD0 /* FilterDialog.swift in Sources */,
 				C2AA465D2764A8C100F213EB /* HJFilterTextField.swift in Sources */,
 				C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */,
 				C20F0DBD270340CA009D18FB /* LTAppBar.swift in Sources */,
@@ -549,6 +564,7 @@
 				C2AA465F2765F3F100F213EB /* DefineCode.swift in Sources */,
 				C2AA4663276F656000F213EB /* HJLottoLabel.swift in Sources */,
 				C2AA46512745196700F213EB /* HJScrollView.swift in Sources */,
+				C289401827D3B9CB00259CD0 /* HJView.swift in Sources */,
 				C2EFE7FE2734007300C6FB7E /* FilterDialogController.swift in Sources */,
 				C23EC0C826EBAF4B00828BAB /* IntroViewController.swift in Sources */,
 				C2AE21F626FAEE7800002D61 /* SQLiteService.swift in Sources */,

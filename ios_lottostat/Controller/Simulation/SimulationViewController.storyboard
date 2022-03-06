@@ -27,7 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieS-SL-13N" userLabel="layoutHead">
                                 <rect key="frame" x="0.0" y="94" width="414" height="128"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKd-cE-pi9" userLabel="layoutRound">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKd-cE-pi9" userLabel="layoutRound" customClass="HJView" customModule="ios_lottostat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1회 당첨번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re8-hE-3Pw">
@@ -36,12 +36,17 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow_d" translatesAutoresizingMaskIntoConstraints="NO" id="cwp-pt-lgW">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow_d" translatesAutoresizingMaskIntoConstraints="NO" id="cwp-pt-lgW" customClass="HJCheckImageView" customModule="ios_lottostat" customModuleProvider="target">
                                                 <rect key="frame" x="374" y="10" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="PpT-rl-Sqq"/>
                                                     <constraint firstAttribute="width" constant="24" id="dX5-us-KtX"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="imgCheck" value="ic_arrow_u"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_arrow_d"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,7 +166,7 @@
                                     <constraint firstAttribute="trailing" secondItem="bKd-cE-pi9" secondAttribute="trailing" id="iH5-DA-INm"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECp-Yc-oH7" userLabel="layoutResult">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECp-Yc-oH7" userLabel="layoutResult">
                                 <rect key="frame" x="0.0" y="222" width="414" height="246"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVS-x9-RFD">
@@ -1056,6 +1061,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onFilterClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WTs-Kl-wRi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAW-Xa-yJC">
                                         <rect key="frame" x="152" y="0.0" width="246" height="50"/>
@@ -1108,6 +1116,9 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="chkFold" destination="cwp-pt-lgW" id="XVR-KT-8nE"/>
+                        <outlet property="layoutResult" destination="ECp-Yc-oH7" id="9fp-lw-hn7"/>
+                        <outlet property="layoutRound" destination="bKd-cE-pi9" id="fKg-CS-2cz"/>
                         <outlet property="lb1PlaceAmt" destination="i6L-6a-D0z" id="ZKG-ig-Nhb"/>
                         <outlet property="lb2PlaceAmt" destination="hgU-Ie-MII" id="56Y-zI-OQh"/>
                         <outlet property="lb3PlaceAmt" destination="Eyo-ha-cBk" id="g87-xb-RKF"/>
@@ -1132,6 +1143,7 @@
     </scenes>
     <resources>
         <image name="ic_arrow_d" width="36" height="36"/>
+        <image name="ic_arrow_u" width="36" height="36"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
