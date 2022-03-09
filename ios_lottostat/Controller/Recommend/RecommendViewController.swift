@@ -39,10 +39,10 @@ class RecommendViewController: BaseController {
         let storyboard : UIStoryboard = UIStoryboard(name: "FilterDialogController", bundle: nil)
         var controller : FilterDialogController? = nil
         if #available(iOS 13.0, *) {
-            controller = storyboard.instantiateViewController(identifier: "filterDialog") as? FilterDialogController
+            controller = storyboard.instantiateViewController(identifier: "filterDialogController") as? FilterDialogController
         }
         else {
-            controller = storyboard.instantiateViewController(withIdentifier: "filterDialog") as? FilterDialogController
+            controller = storyboard.instantiateViewController(withIdentifier: "filterDialogController") as? FilterDialogController
         }
 
         if let controller = controller {

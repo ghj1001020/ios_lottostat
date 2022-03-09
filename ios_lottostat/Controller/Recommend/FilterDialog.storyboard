@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Filter Dialog-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="filterDialog" id="Y6W-OH-hqX" customClass="FilterDialog" customModule="ios_lottostat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,12 +28,105 @@
                                     <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTL-TC-66d">
+                                <rect key="frame" x="0.0" y="94" width="414" height="743"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFp-pk-Avu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlG-tv-9FI" userLabel="layoutFilterList">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="100"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSo-4c-QqI" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="dD5-Mn-601"/>
+                                                        </constraints>
+                                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="이전 회차 번호 중 %s개 일치">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgCheck" value="ic_check_on"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_check_off"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km1-m3-6cr" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="382" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="C7h-nY-MAn"/>
+                                                        </constraints>
+                                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="%s개 연속된 수 포함">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgCheck" value="ic_check_on"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_check_off"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="NO"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="5Gm-3p-4hq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="GSo-4c-QqI" secondAttribute="trailing" id="GTu-JF-OIb"/>
+                                                    <constraint firstItem="GSo-4c-QqI" firstAttribute="leading" secondItem="YlG-tv-9FI" secondAttribute="leading" id="GUI-ax-CCb"/>
+                                                    <constraint firstItem="GSo-4c-QqI" firstAttribute="top" secondItem="YlG-tv-9FI" secondAttribute="top" id="KwR-IQ-TCb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="km1-m3-6cr" secondAttribute="trailing" id="Mvs-I7-Idg"/>
+                                                    <constraint firstItem="km1-m3-6cr" firstAttribute="leading" secondItem="YlG-tv-9FI" secondAttribute="leading" id="kli-KP-ciW"/>
+                                                    <constraint firstItem="km1-m3-6cr" firstAttribute="top" secondItem="GSo-4c-QqI" secondAttribute="bottom" id="vJt-jh-pzX"/>
+                                                </constraints>
+                                            </view>
+                                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sP-g4-FEl" userLabel="layoutInputCount">
+                                                <rect key="frame" x="16" y="-14" width="382" height="128"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUO-1H-VUP">
+                                                        <rect key="frame" x="170" y="53" width="42" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="YlG-tv-9FI" secondAttribute="trailing" constant="16" id="4mL-e2-Lu7"/>
+                                            <constraint firstAttribute="height" constant="100" id="Bm5-6z-5nj"/>
+                                            <constraint firstItem="9sP-g4-FEl" firstAttribute="top" secondItem="lFp-pk-Avu" secondAttribute="top" id="Ny9-U1-acd"/>
+                                            <constraint firstItem="YlG-tv-9FI" firstAttribute="top" secondItem="lFp-pk-Avu" secondAttribute="top" id="OEt-C8-wIb"/>
+                                            <constraint firstItem="9sP-g4-FEl" firstAttribute="leading" secondItem="lFp-pk-Avu" secondAttribute="leading" constant="16" id="aFO-aY-3pA"/>
+                                            <constraint firstAttribute="trailing" secondItem="9sP-g4-FEl" secondAttribute="trailing" constant="16" id="lkh-xO-hoF"/>
+                                            <constraint firstItem="YlG-tv-9FI" firstAttribute="leading" secondItem="lFp-pk-Avu" secondAttribute="leading" constant="16" id="x5c-1L-vlt"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7bW-k8-btg" firstAttribute="bottom" secondItem="lFp-pk-Avu" secondAttribute="bottom" id="IyG-RW-i1u"/>
+                                    <constraint firstItem="lFp-pk-Avu" firstAttribute="leading" secondItem="7bW-k8-btg" secondAttribute="leading" id="KEl-zS-8Ve"/>
+                                    <constraint firstItem="lFp-pk-Avu" firstAttribute="width" secondItem="rGn-nj-U4j" secondAttribute="width" id="NZp-lx-pvx"/>
+                                    <constraint firstItem="lFp-pk-Avu" firstAttribute="top" secondItem="7bW-k8-btg" secondAttribute="top" id="SZo-Vs-FdP"/>
+                                    <constraint firstItem="7bW-k8-btg" firstAttribute="trailing" secondItem="lFp-pk-Avu" secondAttribute="trailing" id="Yn6-Ro-bjt"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="7bW-k8-btg"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="rGn-nj-U4j"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="O4J-xT-CUj" secondAttribute="trailing" constant="16" id="3ax-A7-fJ5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fTL-TC-66d" secondAttribute="trailing" id="3ka-4H-ggG"/>
                             <constraint firstItem="O4J-xT-CUj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="K0R-OE-ar0"/>
+                            <constraint firstItem="fTL-TC-66d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TN4-V8-aVJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="fTL-TC-66d" secondAttribute="bottom" constant="25" id="h2a-g3-3yX"/>
+                            <constraint firstItem="fTL-TC-66d" firstAttribute="top" secondItem="O4J-xT-CUj" secondAttribute="bottom" constant="10" id="nHD-Y0-cxP"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -43,6 +136,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_check_off" width="28" height="28"/>
+        <image name="ic_check_on" width="28" height="28"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

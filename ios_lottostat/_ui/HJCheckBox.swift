@@ -25,6 +25,7 @@ class HJCheckBox: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         initView()
     }
     
@@ -58,6 +59,7 @@ class HJCheckBox: UIButton {
         else {
             self.setImage(imgUncheck, for: .normal)
         }
+        self.imageView?.contentMode = .scaleAspectFit
     }
 
 }

@@ -58,7 +58,7 @@ class SimulationViewController: BaseController {
 
     // 필터 다이얼로그
     @IBAction func onFilterClick(_ sender: UIButton) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "FilterDialogController", bundle: nil)
+        let storyboard : UIStoryboard = UIStoryboard(name: "FilterDialog", bundle: nil)
         var controller : FilterDialog? = nil
         if #available(iOS 13.0, *) {
             controller = storyboard.instantiateViewController(identifier: "filterDialog") as? FilterDialog
