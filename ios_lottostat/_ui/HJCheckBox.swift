@@ -36,6 +36,7 @@ class HJCheckBox: UIButton {
     
     func initView() {
         self.addTarget(self, action: #selector(onClick), for: .touchUpInside)
+        self.titleLabel?.lineBreakMode = NSLineBreakMode.byCharWrapping
     }
     
     @objc func onClick() {

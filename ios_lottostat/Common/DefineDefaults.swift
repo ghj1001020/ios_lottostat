@@ -37,3 +37,22 @@ struct FILTER_KEY {
     static let DFT_CNT_EXCLUDE_CONSECUTIVE_NUMBER : Int = 2
     
 }
+
+
+
+
+struct LAST_ROUND_WIN_NUMBER {
+    static let SELECT = "is_match_last_round_win_number"
+    static let CNT = "cnt_match_last_round_win_number"
+    static let BONUS = "is_match_last_round_win_number_with_bonus"
+    static let DFT_SELECT = true
+    static let DFT_CNT = 1
+    static let DFT_BONUS = true
+}
+
+struct CONSECUTIVE_NUMBER {
+    static let SELECT = "is_consecutive_number"
+    static let CNT = "pref_cnt_consecutive_number"
+    static let DFT_SELECT = true
+    static let DFT_CNT = 1
+}

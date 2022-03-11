@@ -31,7 +31,6 @@ class HJLabel: UILabel {
         didSet(value) {
             if let value = value {
                 applyHint(value: value)
-                content = value
                 textChanged(newVal: value)
             }
         }

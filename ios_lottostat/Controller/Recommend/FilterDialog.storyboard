@@ -27,17 +27,20 @@
                                 <state key="normal" title="닫기">
                                     <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onBackButtonClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fzp-Kr-D3t"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTL-TC-66d">
                                 <rect key="frame" x="0.0" y="94" width="414" height="743"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFp-pk-Avu">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlG-tv-9FI" userLabel="layoutFilterList">
                                                 <rect key="frame" x="16" y="0.0" width="382" height="100"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSo-4c-QqI" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
+                                                    <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSo-4c-QqI" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="dD5-Mn-601"/>
@@ -52,8 +55,11 @@
                                                             <userDefinedRuntimeAttribute type="image" keyPath="imgCheck" value="ic_check_on"/>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_check_off"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onFilterChanged:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kR5-vk-w4b"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km1-m3-6cr" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
+                                                    <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km1-m3-6cr" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="50" width="382" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="C7h-nY-MAn"/>
@@ -68,9 +74,12 @@
                                                             <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_check_off"/>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="NO"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onFilterChanged:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="obu-6m-hTP"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="5Gm-3p-4hq"/>
                                                     <constraint firstAttribute="trailing" secondItem="GSo-4c-QqI" secondAttribute="trailing" id="GTu-JF-OIb"/>
@@ -81,24 +90,158 @@
                                                     <constraint firstItem="km1-m3-6cr" firstAttribute="top" secondItem="GSo-4c-QqI" secondAttribute="bottom" id="vJt-jh-pzX"/>
                                                 </constraints>
                                             </view>
-                                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sP-g4-FEl" userLabel="layoutInputCount">
-                                                <rect key="frame" x="16" y="-14" width="382" height="128"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sP-g4-FEl" userLabel="layoutInputCount">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="220"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUO-1H-VUP">
-                                                        <rect key="frame" x="170" y="53" width="42" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="횟수를 입력하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUO-1H-VUP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CyR-XB-FNw" customClass="HJFilterTextField" customModule="ios_lottostat" customModuleProvider="target">
+                                                        <rect key="frame" x="151" y="31.5" width="80" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="ZhR-zT-fYV"/>
+                                                            <constraint firstAttribute="width" constant="80" id="kMT-3f-me0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="borderBottom" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.4823529411764706" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <button opaque="NO" tag="2000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ler-HZ-Sxg" userLabel="minus">
+                                                        <rect key="frame" x="103" y="35.5" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="FCn-bF-h1G"/>
+                                                            <constraint firstAttribute="height" constant="32" id="nRT-fP-Vis"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="ic_minus"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="ic_minus"/>
+                                                        <connections>
+                                                            <action selector="onInputCountClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ItX-yJ-gue"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0W-1D-FdC" userLabel="plus">
+                                                        <rect key="frame" x="247" y="35.5" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="8a2-QK-3lO"/>
+                                                            <constraint firstAttribute="height" constant="32" id="LNh-Ed-gKd"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="ic_plus"/>
+                                                        <connections>
+                                                            <action selector="onInputCountClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MfL-Cf-rOx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y81-IG-rx7" customClass="HJCheckBox" customModule="ios_lottostat" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="83.5" width="378" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                                                        <state key="normal" title="보너스 포함 여부">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgCheck" value="ic_check_bonus_on"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imgUncheck" value="ic_check_bonus_off"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="확률상 불가능하면 더 많거나 적은 갯수의 연속수가 나올 수 있다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucL-6u-Z0p" customClass="HJLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="127.5" width="382" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isBullet" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8ja-cm-4Jo">
+                                                        <rect key="frame" x="0.0" y="170" width="382" height="50"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="2002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vS-Da-W1K">
+                                                                <rect key="frame" x="0.0" y="0.0" width="105" height="50"/>
+                                                                <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="취소">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="onInputCountClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pFH-AZ-sHv"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awC-db-EO6">
+                                                                <rect key="frame" x="115" y="0.0" width="267" height="50"/>
+                                                                <color key="backgroundColor" red="1" green="0.5607843137254902" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="확인">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="onInputCountClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ah3-gd-0xq"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="awC-db-EO6" firstAttribute="width" secondItem="9vS-Da-W1K" secondAttribute="width" multiplier="2.54545" id="GcW-uT-f6u"/>
+                                                            <constraint firstAttribute="height" constant="50" id="J8G-eJ-4VM"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="y81-IG-rx7" firstAttribute="leading" secondItem="9sP-g4-FEl" secondAttribute="leading" id="5jr-gD-2T6"/>
+                                                    <constraint firstItem="ucL-6u-Z0p" firstAttribute="leading" secondItem="9sP-g4-FEl" secondAttribute="leading" id="AGM-oX-Sff"/>
+                                                    <constraint firstAttribute="height" constant="220" id="Bvf-s2-xhk"/>
+                                                    <constraint firstItem="SUO-1H-VUP" firstAttribute="leading" secondItem="9sP-g4-FEl" secondAttribute="leading" id="LHw-Bo-FZK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8ja-cm-4Jo" secondAttribute="bottom" id="MfQ-UY-eKV"/>
+                                                    <constraint firstItem="CyR-XB-FNw" firstAttribute="top" secondItem="SUO-1H-VUP" secondAttribute="bottom" constant="12" id="OUg-LH-ute"/>
+                                                    <constraint firstItem="ucL-6u-Z0p" firstAttribute="top" secondItem="CyR-XB-FNw" secondAttribute="bottom" constant="56" id="QTv-Hq-Miw"/>
+                                                    <constraint firstItem="CyR-XB-FNw" firstAttribute="leading" secondItem="ler-HZ-Sxg" secondAttribute="trailing" constant="16" id="TEz-rD-WkG"/>
+                                                    <constraint firstItem="8ja-cm-4Jo" firstAttribute="leading" secondItem="9sP-g4-FEl" secondAttribute="leading" id="V2J-WS-XH0"/>
+                                                    <constraint firstItem="CyR-XB-FNw" firstAttribute="bottom" secondItem="A0W-1D-FdC" secondAttribute="bottom" constant="4" id="VRo-2Q-0pB"/>
+                                                    <constraint firstItem="CyR-XB-FNw" firstAttribute="centerX" secondItem="9sP-g4-FEl" secondAttribute="centerX" id="azu-V5-tdj"/>
+                                                    <constraint firstItem="CyR-XB-FNw" firstAttribute="bottom" secondItem="ler-HZ-Sxg" secondAttribute="bottom" constant="4" id="f1y-Ry-jcK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="y81-IG-rx7" secondAttribute="trailing" constant="4" id="liV-2h-v1i"/>
+                                                    <constraint firstItem="A0W-1D-FdC" firstAttribute="leading" secondItem="CyR-XB-FNw" secondAttribute="trailing" constant="16" id="rax-xW-eGs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ucL-6u-Z0p" secondAttribute="trailing" id="sZU-jC-Ea1"/>
+                                                    <constraint firstItem="SUO-1H-VUP" firstAttribute="top" secondItem="9sP-g4-FEl" secondAttribute="top" id="vO4-Dl-GPe"/>
+                                                    <constraint firstItem="y81-IG-rx7" firstAttribute="top" secondItem="CyR-XB-FNw" secondAttribute="bottom" constant="12" id="wdi-Tc-xPU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8ja-cm-4Jo" secondAttribute="trailing" id="wqE-ij-MoG"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="YlG-tv-9FI" secondAttribute="trailing" constant="16" id="4mL-e2-Lu7"/>
-                                            <constraint firstAttribute="height" constant="100" id="Bm5-6z-5nj"/>
+                                            <constraint firstAttribute="height" constant="220" id="Bm5-6z-5nj"/>
                                             <constraint firstItem="9sP-g4-FEl" firstAttribute="top" secondItem="lFp-pk-Avu" secondAttribute="top" id="Ny9-U1-acd"/>
                                             <constraint firstItem="YlG-tv-9FI" firstAttribute="top" secondItem="lFp-pk-Avu" secondAttribute="top" id="OEt-C8-wIb"/>
                                             <constraint firstItem="9sP-g4-FEl" firstAttribute="leading" secondItem="lFp-pk-Avu" secondAttribute="leading" constant="16" id="aFO-aY-3pA"/>
@@ -129,6 +272,17 @@
                             <constraint firstItem="fTL-TC-66d" firstAttribute="top" secondItem="O4J-xT-CUj" secondAttribute="bottom" constant="10" id="nHD-Y0-cxP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chkConsecutiveNumber" destination="km1-m3-6cr" id="vhZ-zB-Deu"/>
+                        <outlet property="chkInputCountBonus" destination="y81-IG-rx7" id="jpI-Ej-alH"/>
+                        <outlet property="chkLastRoundWinNumber" destination="GSo-4c-QqI" id="2G2-cd-3dP"/>
+                        <outlet property="crInputCountDescTop" destination="QTv-Hq-Miw" id="hNv-9j-z7W"/>
+                        <outlet property="etInputCount" destination="CyR-XB-FNw" id="3x1-QF-MkA"/>
+                        <outlet property="layoutFilterList" destination="YlG-tv-9FI" id="Dhc-GF-bc8"/>
+                        <outlet property="layoutInputCount" destination="9sP-g4-FEl" id="XcS-Af-CmV"/>
+                        <outlet property="lbInputCountDesc" destination="ucL-6u-Z0p" id="Zu3-RM-2w0"/>
+                        <outlet property="lbInputCountTitle" destination="SUO-1H-VUP" id="y9a-NK-jfL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,8 +290,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_check_bonus_off" width="22" height="22"/>
+        <image name="ic_check_bonus_on" width="22" height="22"/>
         <image name="ic_check_off" width="28" height="28"/>
         <image name="ic_check_on" width="28" height="28"/>
+        <image name="ic_minus" width="48" height="48"/>
+        <image name="ic_plus" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
