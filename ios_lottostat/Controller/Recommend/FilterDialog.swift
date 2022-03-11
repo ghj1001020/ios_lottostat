@@ -154,6 +154,19 @@ class FilterDialog : BaseBottomSheetContent {
             
         // 입력 > 확인
         case 2003:
+            let cnt = etInputCount.mCurrentNumber
+            let bonus = chkInputCountBonus.isChecked
+            if( mFilterType == .LAST_ROUND_WIN_NUMBER) {
+                DefaultsUtil.shared.put(LAST_ROUND_WIN_NUMBER.SELECT, true)
+                DefaultsUtil.shared.put(LAST_ROUND_WIN_NUMBER.CNT, cnt)
+                DefaultsUtil.shared.put(LAST_ROUND_WIN_NUMBER.BONUS, bonus)
+                updateLastRoundWinNumber()
+            }
+            else if(mFilterType == .CONSECUTIVE_NUMBER) {
+                DefaultsUtil.shared.put(CONSECUTIVE_NUMBER.SELECT, true)
+                DefaultsUtil.shared.put(CONSECUTIVE_NUMBER.CNT, cnt)
+                updateConsecutiveNumber()
+            }
             dismissDialog()
             break
             
