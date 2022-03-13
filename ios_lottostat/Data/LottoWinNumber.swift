@@ -60,4 +60,33 @@ class LottoWinNumber {
         return list
     }
     
+    // 결과계산
+    func getWinningResult(numbers: [Int]) -> WIN_RATE {
+        if numbers.count != 6 {
+            return .NONE
+        }
+        
+        let winList = [win1, win2, win3, win4, win5, win6]
+        var matchCnt = 0
+        for num in numbers {
+            if(winList.contains(num)) {
+                matchCnt += 1
+            }
+        }
+        
+        switch matchCnt {
+        case 6:
+            return .WIN1PLACE
+        case 5 where numbers.contains(bonus):
+            return .WIN2PLACE
+        case 5:
+            return .WIN3PLACE
+        case 4:
+            return .WIN4PLACE
+        case 3:
+            return .WIN5PLACE
+        default:
+            return .NONE
+        }
+    }
 }

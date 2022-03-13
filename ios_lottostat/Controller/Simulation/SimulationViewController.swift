@@ -10,6 +10,7 @@ import UIKit
 class SimulationViewController: BaseController {
     
     let winData : LottoWinNumber? = (UIApplication.shared.delegate as! AppDelegate).LottoWinNumberList.first
+    var simulationList = [SimulationNumberData]()
     
     @IBOutlet var layoutRound: HJView!
     @IBOutlet var chkFold: HJCheckImageView!
@@ -75,6 +76,38 @@ class SimulationViewController: BaseController {
         }
     }
     
+    // 시뮬레이션
+    @IBAction func onSimulationClick(_ sender: UIButton) {
+        if(winData == nil) {
+            return
+        }
+        let startTime = Date().toMilliSeconds()
+        
+        simulationList.removeAll()
+        var list = LottoScript.generateLottoNumberList(round: winData!.no, count: 100)
+        list.append([1,3,9,14,18,28])
+        list.append([1,34,9,14,18,28])
+        list.append([1,3,9,14,44,28])
+        list.append([1,3,9,14,44,45])
+        list.append([2,3,11,14,38,28])
+        addSimulationItems(list)
+        
+        let runTime = Date().toMilliSeconds() - startTime
+        LogUtil.p("runTime \(runTime) ms")
+    }
+    
+    // 시뮬레이션 데이터 추가
+    func addSimulationItems(_ list: [[Int]]) {
+        for item in list {
+            if item.count < 6 {
+                continue
+            }
+            
+            let numList = [item[0], item[1], item[2], item[3], item[4], item[5]]
+            let winResult = winData?.getWinningResult(numbers: numList)
+            simulationList.append(SimulationNumberData(item[0], <#T##num2: Int##Int#>, <#T##num3: Int##Int#>, <#T##num4: Int##Int#>, <#T##num5: Int##Int#>, <#T##num6: Int##Int#>, <#T##result: WIN_RATE##WIN_RATE#>)
+        }
+    }
 }
 
 extension SimulationViewController : HJViewEvent {
@@ -83,4 +116,20 @@ extension SimulationViewController : HJViewEvent {
         layoutResult.isHidden = !layoutResult.isHidden
         chkFold.isChecked = !layoutResult.isHidden
     }
+}
+
+extension SimulationViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "simulationCell", for: indexPath) as? SimulationTableCell else {
+            return UITableViewCell()
+        }
+        
+        return cell
+    }
+    
+    
 }

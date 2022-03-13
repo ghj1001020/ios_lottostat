@@ -111,6 +111,7 @@ class FilterDialog : BaseBottomSheetContent {
                 DefaultsUtil.shared.put(LAST_ROUND_WIN_NUMBER.SELECT, false)
                 DefaultsUtil.shared.put(LAST_ROUND_WIN_NUMBER.CNT, LAST_ROUND_WIN_NUMBER.DFT_CNT)
                 DefaultsUtil.shared.put(LAST_ROUND_WIN_NUMBER.BONUS, LAST_ROUND_WIN_NUMBER.DFT_BONUS)
+                chkLastRoundWinNumber.setTitle("이전 회차 번호 중 n개 일치", for: .normal)
             }
             break
             
@@ -125,6 +126,7 @@ class FilterDialog : BaseBottomSheetContent {
             else {
                 DefaultsUtil.shared.put(CONSECUTIVE_NUMBER.SELECT, false)
                 DefaultsUtil.shared.put(CONSECUTIVE_NUMBER.CNT, CONSECUTIVE_NUMBER.DFT_CNT)
+                chkConsecutiveNumber.setTitle("n개 연속된 수 포함", for: .normal)
             }
             break
 

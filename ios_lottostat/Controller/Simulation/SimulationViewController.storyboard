@@ -166,6 +166,145 @@
                                     <constraint firstAttribute="trailing" secondItem="bKd-cE-pi9" secondAttribute="trailing" id="iH5-DA-INm"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvp-IY-szc">
+                                <rect key="frame" x="0.0" y="222" width="414" height="529"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8wY-Up-hpn">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="529"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="simulationCell" id="Bit-2E-rUd" customClass="SimulationTableCell" customModule="ios_lottostat" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44.5" width="414" height="58"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bit-2E-rUd" id="XPF-rc-roM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="SMo-yi-GQp">
+                                                            <rect key="frame" x="8" y="8" width="366" height="42"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1v-4g-BkB" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="42" id="9SN-PA-ahS"/>
+                                                                        <constraint firstAttribute="width" constant="42" id="L1p-9a-PvN"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag2-r6-tWO" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="65" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="42" id="50K-Be-YcV"/>
+                                                                        <constraint firstAttribute="width" constant="42" id="tXZ-D2-mU6"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lX-pF-2tf" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="129.5" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="42" id="C6k-gO-KMN"/>
+                                                                        <constraint firstAttribute="height" constant="42" id="Vbc-4C-gYs"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLo-Y3-Tj8" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="194.5" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="42" id="GY2-vO-a28"/>
+                                                                        <constraint firstAttribute="height" constant="42" id="haT-TG-0Q7"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7A-Hb-ffq" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="259" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="42" id="BOC-3q-SEB"/>
+                                                                        <constraint firstAttribute="height" constant="42" id="gUH-Xb-zlv"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeK-ku-WjJ" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
+                                                                    <rect key="frame" x="324" y="0.0" width="42" height="42"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="42" id="6xG-mB-C21"/>
+                                                                        <constraint firstAttribute="height" constant="42" id="kL8-c4-RF4"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1등" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhg-ct-hgt">
+                                                            <rect key="frame" x="382" y="19.5" width="24" height="19.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="24" id="eLQ-ZL-rbq"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="textColor" red="0.83137254901960778" green="0.20000000000000001" blue="0.0039215686274509803" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPu-la-ah4" customClass="HJDivider" customModule="ios_lottostat" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="57" width="398" height="1"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="nEB-DT-2nJ"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                    <color key="value" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Hhg-ct-hgt" secondAttribute="trailing" constant="8" id="5Sn-NY-8vk"/>
+                                                        <constraint firstItem="Hhg-ct-hgt" firstAttribute="leading" secondItem="SMo-yi-GQp" secondAttribute="trailing" constant="8" id="Cnc-zJ-QmU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BPu-la-ah4" secondAttribute="trailing" constant="8" id="UJZ-Ma-S6L"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BPu-la-ah4" secondAttribute="bottom" id="XWM-hR-I4A"/>
+                                                        <constraint firstItem="BPu-la-ah4" firstAttribute="leading" secondItem="XPF-rc-roM" secondAttribute="leading" constant="8" id="mt8-nw-rm7"/>
+                                                        <constraint firstItem="Hhg-ct-hgt" firstAttribute="centerY" secondItem="XPF-rc-roM" secondAttribute="centerY" id="oZm-BM-1fS"/>
+                                                        <constraint firstItem="SMo-yi-GQp" firstAttribute="top" secondItem="XPF-rc-roM" secondAttribute="top" constant="8" id="p7U-nT-JBc"/>
+                                                        <constraint firstItem="SMo-yi-GQp" firstAttribute="leading" secondItem="XPF-rc-roM" secondAttribute="leading" constant="8" id="qRy-Vx-kBM"/>
+                                                        <constraint firstAttribute="bottom" secondItem="SMo-yi-GQp" secondAttribute="bottom" constant="8" id="sdK-ad-kbg"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="divider" destination="BPu-la-ah4" id="C1J-lE-Bia"/>
+                                                    <outlet property="lbResult" destination="Hhg-ct-hgt" id="UqN-uG-egm"/>
+                                                    <outlet property="num1" destination="o1v-4g-BkB" id="dR8-XM-rVa"/>
+                                                    <outlet property="num2" destination="Ag2-r6-tWO" id="n8m-BM-Den"/>
+                                                    <outlet property="num3" destination="6lX-pF-2tf" id="6AQ-2K-xyz"/>
+                                                    <outlet property="num4" destination="XLo-Y3-Tj8" id="ogx-sm-GBI"/>
+                                                    <outlet property="num5" destination="Q7A-Hb-ffq" id="DO9-kc-0d1"/>
+                                                    <outlet property="num6" destination="NeK-ku-WjJ" id="KH8-5z-rZz"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Y6W-OH-hqX" id="eJd-Co-JuA"/>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="ReS-ni-rYh"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="8wY-Up-hpn" firstAttribute="leading" secondItem="jvp-IY-szc" secondAttribute="leading" id="BqH-V7-aO3"/>
+                                    <constraint firstAttribute="trailing" secondItem="8wY-Up-hpn" secondAttribute="trailing" id="Rw3-pI-XSB"/>
+                                    <constraint firstAttribute="bottom" secondItem="8wY-Up-hpn" secondAttribute="bottom" id="bNm-cM-Xmf"/>
+                                    <constraint firstItem="8wY-Up-hpn" firstAttribute="top" secondItem="jvp-IY-szc" secondAttribute="top" id="ent-gt-Z58"/>
+                                </constraints>
+                            </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECp-Yc-oH7" userLabel="layoutResult">
                                 <rect key="frame" x="0.0" y="222" width="414" height="246"/>
                                 <subviews>
@@ -1081,6 +1220,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onSimulationClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Cce-jJ-9Pv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1103,13 +1245,17 @@
                             <constraint firstItem="iDV-If-UF7" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="1W3-32-6fk"/>
                             <constraint firstItem="iDV-If-UF7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6At-6A-qFx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tps-M1-iaK" secondAttribute="bottom" id="MUZ-q4-45K"/>
+                            <constraint firstItem="tps-M1-iaK" firstAttribute="top" secondItem="jvp-IY-szc" secondAttribute="bottom" id="TQW-gb-ehS"/>
+                            <constraint firstItem="jvp-IY-szc" firstAttribute="top" secondItem="ieS-SL-13N" secondAttribute="bottom" id="WwB-B3-8gE"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tps-M1-iaK" secondAttribute="trailing" id="XcC-gd-Hx1"/>
                             <constraint firstItem="ieS-SL-13N" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ZSb-4h-tZ2"/>
                             <constraint firstItem="ECp-Yc-oH7" firstAttribute="top" secondItem="ieS-SL-13N" secondAttribute="bottom" id="aTi-JR-Q5Q"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ieS-SL-13N" secondAttribute="trailing" id="bad-O8-cNH"/>
                             <constraint firstItem="ECp-Yc-oH7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fhH-Y4-IPd"/>
+                            <constraint firstItem="jvp-IY-szc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ksf-Py-QpW"/>
                             <constraint firstItem="iDV-If-UF7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="pwk-xb-4Ui"/>
                             <constraint firstItem="ieS-SL-13N" firstAttribute="top" secondItem="iDV-If-UF7" secondAttribute="bottom" id="t7d-hq-UC5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jvp-IY-szc" secondAttribute="trailing" id="vEl-uL-D82"/>
                             <constraint firstItem="tps-M1-iaK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wHk-hD-g75"/>
                         </constraints>
                     </view>

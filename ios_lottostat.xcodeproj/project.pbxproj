@@ -34,6 +34,8 @@
 		C289401A27D486E700259CD0 /* HJCheckImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289401927D486E700259CD0 /* HJCheckImageView.swift */; };
 		C289401C27D4A6DD00259CD0 /* FilterDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289401B27D4A6DD00259CD0 /* FilterDialog.swift */; };
 		C289401E27D4C14C00259CD0 /* FilterDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C289401D27D4C14C00259CD0 /* FilterDialog.storyboard */; };
+		C289402027DDB61A00259CD0 /* SimulationNumberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289401F27DDB61A00259CD0 /* SimulationNumberData.swift */; };
+		C289402227DE1E5A00259CD0 /* SimulationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289402127DE1E5A00259CD0 /* SimulationTableCell.swift */; };
 		C2AA464F2744600000F213EB /* HJCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA464E2744600000F213EB /* HJCheckBox.swift */; };
 		C2AA46512745196700F213EB /* HJScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA46502745196700F213EB /* HJScrollView.swift */; };
 		C2AA46552757B05300F213EB /* HJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA46542757B05300F213EB /* HJTextField.swift */; };
@@ -112,6 +114,8 @@
 		C289401927D486E700259CD0 /* HJCheckImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJCheckImageView.swift; sourceTree = "<group>"; };
 		C289401B27D4A6DD00259CD0 /* FilterDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDialog.swift; sourceTree = "<group>"; };
 		C289401D27D4C14C00259CD0 /* FilterDialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterDialog.storyboard; sourceTree = "<group>"; };
+		C289401F27DDB61A00259CD0 /* SimulationNumberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationNumberData.swift; sourceTree = "<group>"; };
+		C289402127DE1E5A00259CD0 /* SimulationTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationTableCell.swift; sourceTree = "<group>"; };
 		C2AA464E2744600000F213EB /* HJCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJCheckBox.swift; sourceTree = "<group>"; };
 		C2AA46502745196700F213EB /* HJScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJScrollView.swift; sourceTree = "<group>"; };
 		C2AA46542757B05300F213EB /* HJTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJTextField.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 			children = (
 				C20BF0F927CE3ED900AF4C31 /* SimulationViewController.storyboard */,
 				C20BF0FB27CE3EED00AF4C31 /* SimulationViewController.swift */,
+				C289402127DE1E5A00259CD0 /* SimulationTableCell.swift */,
 			);
 			path = Simulation;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 			children = (
 				C2AE21F926FAF1FA00002D61 /* LottoWinNumber.swift */,
 				C2AA466D277E665200F213EB /* MyLottoNumber.swift */,
+				C289401F27DDB61A00259CD0 /* SimulationNumberData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -563,6 +569,7 @@
 				C2ADE18927B83ECD00B382F4 /* WinLottoViewController.swift in Sources */,
 				C2AE21FA26FAF1FA00002D61 /* LottoWinNumber.swift in Sources */,
 				C2BE59D826F37081000BB226 /* AppConfig.swift in Sources */,
+				C289402227DE1E5A00259CD0 /* SimulationTableCell.swift in Sources */,
 				C2AE21E526F8169B00002D61 /* AppUtil.swift in Sources */,
 				C2AA467A27827DD500F213EB /* ItemMyLottoNumber.swift in Sources */,
 				C2AA465F2765F3F100F213EB /* DefineCode.swift in Sources */,
@@ -581,6 +588,7 @@
 				C2AA465B275E45B600F213EB /* BaseBottomSheetContent.swift in Sources */,
 				C2AE21E326F764ED00002D61 /* LTCardView.swift in Sources */,
 				C20F0DBF270BA8F4009D18FB /* BaseController.swift in Sources */,
+				C289402027DDB61A00259CD0 /* SimulationNumberData.swift in Sources */,
 				C20BF0FC27CE3EED00AF4C31 /* SimulationViewController.swift in Sources */,
 				C2EFE7FA27310B6800C6FB7E /* LTGradientButton.swift in Sources */,
 				C23EC0CB26EC61C500828BAB /* LTHorizontalLoadingView.swift in Sources */,
