@@ -10,7 +10,17 @@ import UIKit
 class SimulationViewController: BaseController {
     
     let winData : LottoWinNumber? = (UIApplication.shared.delegate as! AppDelegate).LottoWinNumberList.first
-    var simulationList = [SimulationNumberData]()
+    var simulationList = [SimulationNumberData]() {
+        didSet {
+            showNoContent()
+        }
+    }
+    
+    var cntWin1 = 0
+    var cntWin2 = 0
+    var cntWin3 = 0
+    var cntWin4 = 0
+    var cntWin5 = 0
     
     @IBOutlet var layoutRound: HJView!
     @IBOutlet var chkFold: HJCheckImageView!
@@ -29,6 +39,14 @@ class SimulationViewController: BaseController {
     @IBOutlet var lb3PlaceAmt: UILabel!
     @IBOutlet var lb4PlaceAmt: UILabel!
     @IBOutlet var lb5PlaceAmt: UILabel!
+    @IBOutlet var lb1PlaceCnt: HJLabel!
+    @IBOutlet var lb2PlaceCnt: HJLabel!
+    @IBOutlet var lb3PlaceCnt: HJLabel!
+    @IBOutlet var lb4PlaceCnt: HJLabel!
+    @IBOutlet var lb5PlaceCnt: HJLabel!
+    
+    @IBOutlet var tblSimulation: UITableView!
+    @IBOutlet var noContent: UIView!
     
     
     override func viewDidLoad() {
@@ -76,6 +94,7 @@ class SimulationViewController: BaseController {
         }
     }
     
+    
     // 시뮬레이션
     @IBAction func onSimulationClick(_ sender: UIButton) {
         if(winData == nil) {
@@ -83,17 +102,41 @@ class SimulationViewController: BaseController {
         }
         let startTime = Date().toMilliSeconds()
         
-        simulationList.removeAll()
-        var list = LottoScript.generateLottoNumberList(round: winData!.no, count: 100)
-        list.append([1,3,9,14,18,28])
-        list.append([1,34,9,14,18,28])
-        list.append([1,3,9,14,44,28])
-        list.append([1,3,9,14,44,45])
-        list.append([2,3,11,14,38,28])
+        clearSimulationItems()
+        
+        let list = LottoScript.generateLottoNumberList(round: winData!.no, count: 100)
         addSimulationItems(list)
+        
+        lb1PlaceCnt.text = "\(cntWin1)개"
+        lb2PlaceCnt.text = "\(cntWin2)개"
+        lb3PlaceCnt.text = "\(cntWin3)개"
+        lb4PlaceCnt.text = "\(cntWin4)개"
+        lb5PlaceCnt.text = "\(cntWin5)개"
+        
+        var total = lb1PlaceAmt.text.toDouble() * Double(cntWin1)
+        total += lb2PlaceAmt.text.toDouble() * Double(cntWin2)
+        total += lb3PlaceAmt.text.toDouble() * Double(cntWin3)
+        total += lb4PlaceAmt.text.toDouble() * Double(cntWin4)
+        total += lb5PlaceAmt.text.toDouble() * Double(cntWin5)
+        lbTotal.text = total.addComma()
+        
+        tblSimulation.reloadData()
+        
+        layoutResult.isHidden = false
+        chkFold.isChecked = true
         
         let runTime = Date().toMilliSeconds() - startTime
         LogUtil.p("runTime \(runTime) ms")
+    }
+    
+    // 시뮬레이션 데이터 삭제
+    func clearSimulationItems() {
+        simulationList.removeAll()
+        cntWin1 = 0
+        cntWin2 = 0
+        cntWin3 = 0
+        cntWin4 = 0
+        cntWin5 = 0
     }
     
     // 시뮬레이션 데이터 추가
@@ -104,8 +147,38 @@ class SimulationViewController: BaseController {
             }
             
             let numList = [item[0], item[1], item[2], item[3], item[4], item[5]]
-            let winResult = winData?.getWinningResult(numbers: numList)
-            simulationList.append(SimulationNumberData(item[0], <#T##num2: Int##Int#>, <#T##num3: Int##Int#>, <#T##num4: Int##Int#>, <#T##num5: Int##Int#>, <#T##num6: Int##Int#>, <#T##result: WIN_RATE##WIN_RATE#>)
+            let winResult = winData?.getWinningResult(numbers: numList) ?? .NONE
+            switch winResult {
+            case .WIN1PLACE:
+                cntWin1 += 1
+                break
+            case .WIN2PLACE:
+                cntWin2 += 1
+                break
+            case .WIN3PLACE:
+                cntWin3 += 1
+                break
+            case .WIN4PLACE:
+                cntWin4 += 1
+                break
+            case .WIN5PLACE:
+                cntWin5 += 1
+                break
+            default:
+                break
+            }
+            simulationList.append(SimulationNumberData(numList[0], numList[1], numList[2], numList[3], numList[4], numList[5], winResult))
+        }
+    }
+    
+    func showNoContent() {
+        if(simulationList.count > 0) {
+            tblSimulation.isHidden = false
+            noContent.isHidden = true
+        }
+        else {
+            tblSimulation.isHidden = true
+            noContent.isHidden = false
         }
     }
 }
@@ -120,16 +193,41 @@ extension SimulationViewController : HJViewEvent {
 
 extension SimulationViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return simulationList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "simulationCell", for: indexPath) as? SimulationTableCell else {
             return UITableViewCell()
         }
-        
+        let data = simulationList[indexPath.row]
+        cell.num1.text = "\(data.num1)"
+        cell.num2.text = "\(data.num2)"
+        cell.num3.text = "\(data.num3)"
+        cell.num4.text = "\(data.num4)"
+        cell.num5.text = "\(data.num5)"
+        cell.num6.text = "\(data.num6)"
+        switch data.result {
+        case .WIN1PLACE:
+            cell.lbResult.text = "1등"
+            break
+        case .WIN2PLACE:
+            cell.lbResult.text = "2등"
+            break
+        case .WIN3PLACE:
+            cell.lbResult.text = "3등"
+            break
+        case .WIN4PLACE:
+            cell.lbResult.text = "4등"
+            break
+        case .WIN5PLACE:
+            cell.lbResult.text = "5등"
+            break
+        default:
+            cell.lbResult.text = ""
+            break
+        }
+        cell.divider.isHidden = indexPath.row == simulationList.count-1 ? true : false
         return cell
     }
-    
-    
 }

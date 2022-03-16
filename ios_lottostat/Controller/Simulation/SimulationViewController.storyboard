@@ -169,7 +169,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvp-IY-szc">
                                 <rect key="frame" x="0.0" y="222" width="414" height="529"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8wY-Up-hpn">
+                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8wY-Up-hpn">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="529"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
@@ -181,7 +181,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="SMo-yi-GQp">
-                                                            <rect key="frame" x="8" y="8" width="366" height="42"/>
+                                                            <rect key="frame" x="8" y="8" width="354" height="42"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1v-4g-BkB" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
@@ -194,7 +194,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag2-r6-tWO" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
-                                                                    <rect key="frame" x="65" y="0.0" width="42" height="42"/>
+                                                                    <rect key="frame" x="62.5" y="0.0" width="42" height="42"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="42" id="50K-Be-YcV"/>
                                                                         <constraint firstAttribute="width" constant="42" id="tXZ-D2-mU6"/>
@@ -204,7 +204,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lX-pF-2tf" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
-                                                                    <rect key="frame" x="129.5" y="0.0" width="42" height="42"/>
+                                                                    <rect key="frame" x="125" y="0.0" width="42" height="42"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="42" id="C6k-gO-KMN"/>
                                                                         <constraint firstAttribute="height" constant="42" id="Vbc-4C-gYs"/>
@@ -214,7 +214,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLo-Y3-Tj8" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
-                                                                    <rect key="frame" x="194.5" y="0.0" width="42" height="42"/>
+                                                                    <rect key="frame" x="187" y="0.0" width="42" height="42"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="42" id="GY2-vO-a28"/>
                                                                         <constraint firstAttribute="height" constant="42" id="haT-TG-0Q7"/>
@@ -224,7 +224,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7A-Hb-ffq" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
-                                                                    <rect key="frame" x="259" y="0.0" width="42" height="42"/>
+                                                                    <rect key="frame" x="249.5" y="0.0" width="42" height="42"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="42" id="BOC-3q-SEB"/>
                                                                         <constraint firstAttribute="height" constant="42" id="gUH-Xb-zlv"/>
@@ -234,7 +234,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeK-ku-WjJ" customClass="HJLottoLabel" customModule="ios_lottostat" customModuleProvider="target">
-                                                                    <rect key="frame" x="324" y="0.0" width="42" height="42"/>
+                                                                    <rect key="frame" x="312" y="0.0" width="42" height="42"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="42" id="6xG-mB-C21"/>
                                                                         <constraint firstAttribute="height" constant="42" id="kL8-c4-RF4"/>
@@ -246,9 +246,9 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1등" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhg-ct-hgt">
-                                                            <rect key="frame" x="382" y="19.5" width="24" height="19.5"/>
+                                                            <rect key="frame" x="370" y="19.5" width="36" height="19.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="24" id="eLQ-ZL-rbq"/>
+                                                                <constraint firstAttribute="width" constant="36" id="eLQ-ZL-rbq"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="textColor" red="0.83137254901960778" green="0.20000000000000001" blue="0.0039215686274509803" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
@@ -296,12 +296,39 @@
                                             <outlet property="delegate" destination="Y6W-OH-hqX" id="ReS-ni-rYh"/>
                                         </connections>
                                     </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daW-gw-bQ0" userLabel="no_content">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="529"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_no_content" translatesAutoresizingMaskIntoConstraints="NO" id="4PX-r2-RAF">
+                                                <rect key="frame" x="40" y="60" width="40" height="40"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYL-XM-WxL">
+                                                <rect key="frame" x="40" y="110" width="120" height="53"/>
+                                                <string key="text">번호를
+추천받으세요.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="4PX-r2-RAF" firstAttribute="leading" secondItem="daW-gw-bQ0" secondAttribute="leading" constant="40" id="QL0-CN-XC0"/>
+                                            <constraint firstItem="cYL-XM-WxL" firstAttribute="top" secondItem="4PX-r2-RAF" secondAttribute="bottom" constant="10" id="XI3-zd-j0c"/>
+                                            <constraint firstItem="4PX-r2-RAF" firstAttribute="top" secondItem="daW-gw-bQ0" secondAttribute="top" constant="60" id="atA-Gu-LAe"/>
+                                            <constraint firstItem="cYL-XM-WxL" firstAttribute="leading" secondItem="4PX-r2-RAF" secondAttribute="leading" id="fej-Xc-y7M"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="8wY-Up-hpn" firstAttribute="leading" secondItem="jvp-IY-szc" secondAttribute="leading" id="BqH-V7-aO3"/>
+                                    <constraint firstItem="daW-gw-bQ0" firstAttribute="leading" secondItem="jvp-IY-szc" secondAttribute="leading" id="IBe-Vr-vPY"/>
+                                    <constraint firstAttribute="bottom" secondItem="daW-gw-bQ0" secondAttribute="bottom" id="KDt-Bi-Unu"/>
                                     <constraint firstAttribute="trailing" secondItem="8wY-Up-hpn" secondAttribute="trailing" id="Rw3-pI-XSB"/>
+                                    <constraint firstItem="daW-gw-bQ0" firstAttribute="top" secondItem="jvp-IY-szc" secondAttribute="top" id="V6u-8d-xcm"/>
                                     <constraint firstAttribute="bottom" secondItem="8wY-Up-hpn" secondAttribute="bottom" id="bNm-cM-Xmf"/>
+                                    <constraint firstAttribute="trailing" secondItem="daW-gw-bQ0" secondAttribute="trailing" id="bt6-hx-42K"/>
                                     <constraint firstItem="8wY-Up-hpn" firstAttribute="top" secondItem="jvp-IY-szc" secondAttribute="top" id="ent-gt-Z58"/>
                                 </constraints>
                             </view>
@@ -1266,12 +1293,18 @@
                         <outlet property="layoutResult" destination="ECp-Yc-oH7" id="9fp-lw-hn7"/>
                         <outlet property="layoutRound" destination="bKd-cE-pi9" id="fKg-CS-2cz"/>
                         <outlet property="lb1PlaceAmt" destination="i6L-6a-D0z" id="ZKG-ig-Nhb"/>
+                        <outlet property="lb1PlaceCnt" destination="ybA-4X-zo9" id="pLf-iX-Kms"/>
                         <outlet property="lb2PlaceAmt" destination="hgU-Ie-MII" id="56Y-zI-OQh"/>
+                        <outlet property="lb2PlaceCnt" destination="urB-Xs-wV1" id="wdH-d5-2MP"/>
                         <outlet property="lb3PlaceAmt" destination="Eyo-ha-cBk" id="g87-xb-RKF"/>
+                        <outlet property="lb3PlaceCnt" destination="Qmk-6f-uoZ" id="LQf-Mb-1jQ"/>
                         <outlet property="lb4PlaceAmt" destination="a8z-FC-hFH" id="2bP-jU-Czc"/>
+                        <outlet property="lb4PlaceCnt" destination="yKp-Kc-DxB" id="pvp-jw-D48"/>
                         <outlet property="lb5PlaceAmt" destination="74G-AZ-C5Z" id="1ep-i2-av6"/>
+                        <outlet property="lb5PlaceCnt" destination="DCV-xT-rlD" id="EPe-oR-n3i"/>
                         <outlet property="lbTotal" destination="7Mo-G0-mE0" id="eoy-zk-22z"/>
                         <outlet property="lbWinNo" destination="Re8-hE-3Pw" id="zgX-gN-cdK"/>
+                        <outlet property="noContent" destination="daW-gw-bQ0" id="gYR-0G-kxO"/>
                         <outlet property="num1" destination="fcP-Ht-iTe" id="4Hp-hI-9rz"/>
                         <outlet property="num2" destination="rh4-lH-K1m" id="4bd-DV-Szu"/>
                         <outlet property="num3" destination="k59-96-DXS" id="ZSs-cI-J2h"/>
@@ -1279,6 +1312,7 @@
                         <outlet property="num5" destination="1fI-5F-1ec" id="UV0-J2-Zt4"/>
                         <outlet property="num6" destination="uMe-Uu-M0d" id="EXY-cT-fpy"/>
                         <outlet property="numBonus" destination="Tt6-LP-r1h" id="7UE-iS-akl"/>
+                        <outlet property="tblSimulation" destination="8wY-Up-hpn" id="j9u-Dd-gos"/>
                         <outlet property="titleBarView" destination="iDV-If-UF7" id="OXj-wC-cNP"/>
                     </connections>
                 </viewController>
@@ -1290,6 +1324,7 @@
     <resources>
         <image name="ic_arrow_d" width="36" height="36"/>
         <image name="ic_arrow_u" width="36" height="36"/>
+        <image name="ic_no_content" width="40" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

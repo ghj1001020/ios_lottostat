@@ -37,6 +37,83 @@ extension Optional where Wrapped == String {
         
         return value
     }
+    
+    // string -> int
+    public mutating func toInt() -> Int {
+        do {
+            try self.toNumber()
+            
+            let number = Int(self!)
+            if number != nil {
+                return number!
+            }
+            else {
+                throw HJError("parsing fail")
+            }
+        }
+        catch let error as HJError {
+            LogUtil.p(error.msg)
+            return 0
+        }
+        catch {
+            LogUtil.p(error.localizedDescription)
+            return 0
+        }
+    }
+    
+    // string -> double
+    public mutating func toDouble() -> Double {
+        do {
+            try self.toNumber()
+
+            let number = Double(self!)
+            if number != nil {
+                return number!
+            }
+            else {
+                throw HJError("parsing fail")
+            }
+        }
+        catch let error as HJError {
+            LogUtil.p(error.msg)
+            return 0
+        }
+        catch {
+            LogUtil.p(error.localizedDescription)
+            return 0
+        }
+    }
+    
+    // string -> 숫자형태 string
+    private mutating func toNumber() throws {
+        if( self==nil || self!.isEmpty ) {
+            throw HJError("string is nil or empty")
+        }
+        
+        var sign = ""
+        // 음수
+        if( self!.starts(with: "-") ) {
+            sign = "-"
+        }
+        
+        // 정수
+        let arrPoint = self!.split(separator: ".")
+        let _integer = arrPoint[0].replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression, range: nil)
+        // 소수
+        var _decimal = ""
+        if( arrPoint.count > 1 ) {
+            _decimal = arrPoint[1].replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression, range: nil)
+        }
+        
+        var _this = sign + _integer
+        if !_decimal.isEmpty {
+            _this += ".\(_decimal)"
+        }
+        
+        self = _this
+    }
+    
+
 }
 
 extension String {
