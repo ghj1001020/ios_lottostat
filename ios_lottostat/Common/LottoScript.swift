@@ -22,6 +22,7 @@ class LottoScript {
         let cntConsecutiveNumber = DefaultsUtil.shared.getInt(CONSECUTIVE_NUMBER.CNT, CONSECUTIVE_NUMBER.DFT_CNT)
         
         var index = 0
+        
         // count 개수만큼 당첨번호 생성
         while(index < count) {
             // 추천로또번호 생성
@@ -30,7 +31,7 @@ class LottoScript {
             var GROUP = DefineCode.LOTTERY.map({
                 $0
             })
-
+            
             // 이전 회차 번호 중 n개 일치
             if(isLastRoundWinNumber && round > 1) {
                 var lastRound = SQLiteService.selectRoundWinNumber(round: round-1, isBonus: isLastRoundWinNumberWithBonus)
@@ -54,22 +55,34 @@ class LottoScript {
                 }
             }
             
+            var isConsecutiveExecuted = false
             while( LOTTO.count < 6 ) {
                 // n개 연속된수
                 if( isConsecutiveNumber && cntConsecutiveNumber == (6-LOTTO.count) ) {
-                    LOTTO.generateConsecutiveNumber(consecutive: cntConsecutiveNumber+1)
+                    if( !isConsecutiveExecuted ) {
+                        LOTTO.generateConsecutiveNumber(group: GROUP, consecutive: cntConsecutiveNumber+1)
+                        isConsecutiveExecuted = true
+                    }
                 }
                 
                 // 번호추천 결과담고 모그룹에서 삭제
                 if( LOTTO.count < 6 ) {
                     let numIndex = Int( arc4random_uniform(UInt32(GROUP.count)) )
-                    let number = GROUP[numIndex]
+                    let number = GROUP[numIndex]    // 추가할 번호
                     
                     LOTTO.append(number)
                     LOTTO.sort()
                     GROUP.remove(at: numIndex)
+                    
+                    // n개 연속된수 체크
+                    if( isConsecutiveNumber && (cntConsecutiveNumber+1) < LOTTO.getConsecutiveCount() && GROUP.count > 6-LOTTO.count ) {
+                        if let _index = LOTTO.firstIndex(of: number) {
+                            LOTTO.remove(at: _index)
+                        }
+                    }
                 }
             }
+            // end 추천로또번호 생성 while
             
             // 번호 추천 목록에 담기
             resultList.append(LOTTO)
@@ -99,8 +112,8 @@ extension Array where Element==Int {
     mutating func getConsecutiveCount() -> Int {
         self.sort()
         
-        var count = 0
-        var tempCount = 0
+        var count = 1
+        var tempCount = 1
         var temp = -1
         for item in self {
             // 두수 사이 간격이 1이면 이전번호와 연속된 수
@@ -114,53 +127,94 @@ extension Array where Element==Int {
                 if( tempCount > count ) {
                     count = tempCount
                 }
-                tempCount = 0
+                tempCount = 1
             }
             temp = item
         }
         return count
     }
     
-    // 연속수 구하기
-    func getConsecutiveNumber(base: Int, direction: Int) -> Int {
+    // 해당방향 연속수 구하기 -1:해당방향의 연속수 없음
+    private func getConsecutiveNumber(base: Int, group: [Int], direction: Int) -> Int {
         var number = base
         // 왼쪽
         if direction == 0 {
             repeat {
                 number -= 1
             }
-            while(self.contains(number))
+            while(self.contains(number));
+            number = group.contains(number) ? number : -1
         }
         // 오른쪽
         else {
             repeat {
                 number += 1
             }
-            while(self.contains(number))
+            while(self.contains(number));
+            number = group.contains(number) ? number : -1
         }
         return number
     }
     
+    // 연속수 구하기 기본수 유효성 체크
+    private func checkConsecutiveBaseNumber(_ base: Int, _ lotto: [Int], _ group: [Int], _ consecutive: Int) -> Bool {
+        if( consecutive == 2 ) {
+            return !lotto.contains(base-2) && group.contains(base-1) && !lotto.contains(base+1)
+            || !lotto.contains(base-1) && group.contains(base+1) && !lotto.contains(base+2)
+        }
+        else if( consecutive == 3 ) {
+            return !lotto.contains(base-3) && group.contains(base-2) && group.contains(base-1) && !lotto.contains(base+1)
+            || !lotto.contains(base-2) && group.contains(base-1) && group.contains(base+1) && !lotto.contains(base+2)
+            || !lotto.contains(base-1) && group.contains(base+1) && group.contains(base+2) && !lotto.contains(base+3)
+        }
+        else if( consecutive == 4 ) {
+            return !lotto.contains(base-4) && group.contains(base-3) && group.contains(base-2) && group.contains(base-1) && !lotto.contains(base+1)
+            || !lotto.contains(base-3) && group.contains(base-2) && group.contains(base-1) && group.contains(base+1) && !lotto.contains(base+2)
+            || !lotto.contains(base-2) && group.contains(base-1) && group.contains(base+1) && group.contains(base+2) && !lotto.contains(base+3)
+            || !lotto.contains(base-1) && group.contains(base+1) && group.contains(base+2) && group.contains(base+3) && !lotto.contains(base+4)
+        }
+        return false
+    }
+    
     // 연속수 구하기
-    mutating func generateConsecutiveNumber(consecutive: Int) {
-        if self.count >= 6 || consecutive == 0 || consecutive <= self.getConsecutiveCount() {
+    mutating func generateConsecutiveNumber(group: [Int], consecutive: Int) {
+        let cnt = self.getConsecutiveCount()
+        if self.count >= 6 || consecutive == 0 || consecutive <= cnt {
             return
         }
         
         self.sort()
         
         // 기준수
-        let numIndex = Int( arc4random_uniform(UInt32(self.count)) )
-        let number = self[numIndex]
-        var lNumber = 0, rNumber = 0
+        var number = -1;
+        var _baseArr = self.map {
+            $0
+        }
+        while(_baseArr.count > 0) {
+            let numIndex = Int( arc4random_uniform(UInt32(_baseArr.count)) )
+            number = _baseArr[numIndex]
+            let isFind = checkConsecutiveBaseNumber(number, self, group, consecutive)
+            if(isFind) {
+                break
+            }
+            number = -1
+            _baseArr.remove(at: numIndex)
+        }
+        if number <= 0 {
+            return  // 기준수 없으면 종료
+        }
         
+        var lNumber = 0, rNumber = 0
         while( self.getConsecutiveCount() < consecutive && self.count < 6 ) {
-            lNumber = getConsecutiveNumber(base: number, direction: 0)
-            rNumber = getConsecutiveNumber(base: number, direction: 1)
+            lNumber = getConsecutiveNumber(base: number, group: group, direction: 0)
+            rNumber = getConsecutiveNumber(base: number, group: group, direction: 1)
             
             let direction = Int( arc4random_uniform(UInt32(2)) )
+            if( lNumber == -1 && rNumber == -1 ) {
+                break
+            }
             // 왼쪽선택
-            if(direction == 0 && lNumber > 0) {
+            if(direction == 0 && lNumber != -1) {
                 self.append(lNumber)    // 왼쪽추가
                 if(consecutive < self.getConsecutiveCount()) {
                     // 연속개수가 초과하면 지우고 오른쪽선택
@@ -170,11 +224,11 @@ extension Array where Element==Int {
                     self.append(rNumber)
                 }
             }
-            else if(direction == 0 && lNumber <= 0 ) {
+            else if(direction == 0 && rNumber != -1) {
                 self.append(rNumber)    // 무조건 오른쪽추가
             }
             // 오른쪽선택
-            else if(direction == 1 && rNumber < 46) {
+            else if(direction == 1 && rNumber != -1) {
                 self.append(rNumber)
                 if(consecutive < self.getConsecutiveCount()) {
                     // 연속개수가 초과하면 지우고 왼쪽선택
@@ -184,7 +238,7 @@ extension Array where Element==Int {
                     self.append(lNumber)
                 }
             }
-            else if(direction == 1 && rNumber >= 46) {
+            else if(direction == 1 && lNumber != -1) {
                 self.append(lNumber)    // 무조건 왼쪽추가
             }
         }
