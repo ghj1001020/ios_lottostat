@@ -178,8 +178,7 @@ extension Array where Element==Int {
     
     // 연속수 구하기
     mutating func generateConsecutiveNumber(group: [Int], consecutive: Int) {
-        let cnt = self.getConsecutiveCount()
-        if self.count >= 6 || consecutive == 0 || consecutive <= cnt {
+        if self.count >= 6 || consecutive == 0 || consecutive <= self.getConsecutiveCount() {
             return
         }
         
