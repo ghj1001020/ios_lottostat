@@ -27,6 +27,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjr-VP-Bhf">
                                 <rect key="frame" x="166" y="194" width="82" height="30"/>
                                 <state key="normal" title="로또번호 분석"/>
+                                <connections>
+                                    <action selector="moveToAnalysis:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xdU-DP-DZm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HE6-uP-ZOL">
                                 <rect key="frame" x="174.5" y="244" width="65" height="30"/>
