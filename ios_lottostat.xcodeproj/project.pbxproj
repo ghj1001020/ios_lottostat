@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B65E9C82A808B26006F997F /* BaseLottoNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65E9C72A808B26006F997F /* BaseLottoNumber.swift */; };
+		2BE2134A2A7CDF67002C5C51 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE213492A7CDF67002C5C51 /* AnalysisViewController.swift */; };
+		2BE2134C2A7CDFA0002C5C51 /* AnalysisViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2134B2A7CDFA0002C5C51 /* AnalysisViewController.storyboard */; };
 		62145EB5AD7168B12004CDBA /* Pods_ios_lottostat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B895798E597A85AB71147EF /* Pods_ios_lottostat.framework */; };
 		C20BF0F127C3C6FA00AF4C31 /* lotto.db in Resources */ = {isa = PBXBuildFile; fileRef = C20BF0F027C3656600AF4C31 /* lotto.db */; };
 		C20BF0F327C6705900AF4C31 /* WinLottoAnalysisDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20BF0F227C6705900AF4C31 /* WinLottoAnalysisDialog.storyboard */; };
@@ -86,6 +89,9 @@
 
 /* Begin PBXFileReference section */
 		1B895798E597A85AB71147EF /* Pods_ios_lottostat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_lottostat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B65E9C72A808B26006F997F /* BaseLottoNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLottoNumber.swift; sourceTree = "<group>"; };
+		2BE213492A7CDF67002C5C51 /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
+		2BE2134B2A7CDFA0002C5C51 /* AnalysisViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnalysisViewController.storyboard; sourceTree = "<group>"; };
 		599B98456BF2D4AC8872DAFF /* Pods-ios_lottostat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_lottostat.release.xcconfig"; path = "Target Support Files/Pods-ios_lottostat/Pods-ios_lottostat.release.xcconfig"; sourceTree = "<group>"; };
 		6D7BD88C7F7669BA32C853CE /* Pods-ios_lottostat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_lottostat.debug.xcconfig"; path = "Target Support Files/Pods-ios_lottostat/Pods-ios_lottostat.debug.xcconfig"; sourceTree = "<group>"; };
 		C20BF0F027C3656600AF4C31 /* lotto.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = lotto.db; sourceTree = "<group>"; };
@@ -180,6 +186,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BE213482A7CDC91002C5C51 /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				2BE2134B2A7CDFA0002C5C51 /* AnalysisViewController.storyboard */,
+				2BE213492A7CDF67002C5C51 /* AnalysisViewController.swift */,
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
 		94B7737167C2B6D41F562663 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +282,7 @@
 		C23EC0C326EA231800828BAB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2BE213482A7CDC91002C5C51 /* Analysis */,
 				C20BF0F827CE3EC700AF4C31 /* Simulation */,
 				C2ADE18527B83EAA00B382F4 /* WinLotto */,
 				C2AA46682778A19000F213EB /* MyLotto */,
@@ -398,6 +414,7 @@
 				C2AE21F926FAF1FA00002D61 /* LottoWinNumber.swift */,
 				C2AA466D277E665200F213EB /* MyLottoNumber.swift */,
 				C289401F27DDB61A00259CD0 /* SimulationNumberData.swift */,
+				2B65E9C72A808B26006F997F /* BaseLottoNumber.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -494,6 +511,7 @@
 				C2FDCE922740D0DA00C60E13 /* FilterDialogController.storyboard in Resources */,
 				C23EC0DA26F14AA400828BAB /* GoogleService-Info.plist in Resources */,
 				C23EC0BC26E8D22A00828BAB /* LaunchScreen.storyboard in Resources */,
+				2BE2134C2A7CDFA0002C5C51 /* AnalysisViewController.storyboard in Resources */,
 				C23EC0B926E8D22A00828BAB /* Assets.xcassets in Resources */,
 				C20F0DBB270340AF009D18FB /* LTAppBar.xib in Resources */,
 				C2AA467427827D8C00F213EB /* ItemMyLottoDate.xib in Resources */,
@@ -554,6 +572,7 @@
 			files = (
 				C20BF0FE27CE58E600AF4C31 /* HJPlusIcon.swift in Sources */,
 				C2AE21E726F8BD7A00002D61 /* DefaultsUtil.swift in Sources */,
+				2BE2134A2A7CDF67002C5C51 /* AnalysisViewController.swift in Sources */,
 				C2ADE18B27B8AA4300B382F4 /* WinLottoNumberTableCell.swift in Sources */,
 				C289401A27D486E700259CD0 /* HJCheckImageView.swift in Sources */,
 				C2AE21ED26F8D1F600002D61 /* SQLite.swift in Sources */,
@@ -589,6 +608,7 @@
 				C2AA467A27827DD500F213EB /* ItemMyLottoNumber.swift in Sources */,
 				C2AA465F2765F3F100F213EB /* DefineCode.swift in Sources */,
 				C2AA4663276F656000F213EB /* HJLottoLabel.swift in Sources */,
+				2B65E9C82A808B26006F997F /* BaseLottoNumber.swift in Sources */,
 				C2AA46512745196700F213EB /* HJScrollView.swift in Sources */,
 				C289401827D3B9CB00259CD0 /* HJView.swift in Sources */,
 				C2EFE7FE2734007300C6FB7E /* FilterDialogController.swift in Sources */,
@@ -676,7 +696,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -731,7 +751,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
