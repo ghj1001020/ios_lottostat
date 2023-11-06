@@ -45,7 +45,7 @@ class SQLiteService {
     }
     
     // 마지막 로또번호 조회
-    public static func selectLastRoundWinNumber(isBonus: Bool) -> [Int] {
+    public static func selectLastRoundWinNumber() -> [Int] {
         var result : [Int] = []
         
         SQLite.shared.open()
@@ -57,10 +57,8 @@ class SQLiteService {
                 result.append( Int(sqlite3_column_int(stmt, 3)) )
                 result.append( Int(sqlite3_column_int(stmt, 4)) )
                 result.append( Int(sqlite3_column_int(stmt, 5)) )
-                
-                if( isBonus ) {
-                    result.append( Int(sqlite3_column_int(stmt, 6)) )
-                }
+                result.append( Int(sqlite3_column_int(stmt, 6)) )
+                result.append( Int(sqlite3_column_int(stmt, 7)) )
             }
         }
         SQLite.shared.close()

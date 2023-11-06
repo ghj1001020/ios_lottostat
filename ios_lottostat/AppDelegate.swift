@@ -30,34 +30,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // 루트뷰 설정
     public func setRootViewController(_ type: ROOT) {
-        var controller : UIViewController? = nil
-        
-        if( type == ROOT.INTRO ) {
-            let storyboard : UIStoryboard = UIStoryboard(name: "IntroViewController", bundle: nil)
-            if #available(iOS 13.0, *) {
-                controller = storyboard.instantiateViewController(identifier: "intro")
-            }
-            else {
-                controller = storyboard.instantiateViewController(withIdentifier: "intro") as? IntroViewController
-            }
+        var controller : UIViewController
+        // 인트로
+        if(type == ROOT.INTRO ) {
+            controller = AppUtil.GetUIViewController("IntroViewController", "intro")
         }
-        else if( type == ROOT.MAIN ) {
-            let storyboard : UIStoryboard = UIStoryboard(name: "MainViewController", bundle: nil)
-            if #available(iOS 13.0, *) {
-                controller = storyboard.instantiateViewController(identifier: "main")
-            }
-            else {
-                controller = storyboard.instantiateViewController(withIdentifier: "main") as? MainViewController
-            }
+        // 메인
+        else{
+            controller = AppUtil.GetUIViewController("MainViewController", "main")
         }
-        
-        if let controller = controller {
-            controller.modalPresentationStyle = .fullScreen
-            self.navigationController = UINavigationController(rootViewController: controller)
-            self.navigationController?.setNavigationBarHidden(true, animated: false)
-            self.window?.rootViewController = self.navigationController
-            self.window?.makeKeyAndVisible()
-        }
+                
+        // 루트뷰 설정
+        self.navigationController = UINavigationController(rootViewController: controller)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.window?.rootViewController = self.navigationController
+        self.window?.makeKeyAndVisible()
     }
 }
 

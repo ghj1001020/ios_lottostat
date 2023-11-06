@@ -17,7 +17,7 @@ class WinLottoViewController : BaseController {
         
     
     override func viewDidLoad() {
-        setAppBar(.BACK)
+        setAppBar(.BACK_MORE)
         setAppBarTitle("당첨추천")
         
         tblWinLotto.delegate = self

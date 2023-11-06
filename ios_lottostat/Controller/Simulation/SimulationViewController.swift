@@ -52,7 +52,7 @@ class SimulationViewController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setAppBar(.BACK)
+        setAppBar(.BACK_MORE)
         setAppBarTitle("시뮬레이션")
 
         lbTotal.text = ""

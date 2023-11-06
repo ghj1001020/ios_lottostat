@@ -103,7 +103,7 @@ class RecommendViewController: BaseController {
             
             // 직전회차 당첨번호 중 n개이상 포함
             if( isIncludeLastRoundWinNumber ) {
-                var lastRound = SQLiteService.selectLastRoundWinNumber(isBonus: isIncludeLastRoundWinNumberWithBonus)
+                var lastRound = SQLiteService.selectLastRoundWinNumber()
                 // 0 <= idx < cntIncludeLastRoundWinNumber
                 for _ in 0..<cntIncludeLastRoundWinNumber {
                     // 인덱스 구해서 추천번호 뽑기

@@ -9,96 +9,36 @@ import UIKit
 import KWDrawerController
 
 class MainViewController: BaseController {
-
+    
+    var lastRound = SQLiteService.selectLastRoundWinNumber()
+    
+    @IBOutlet var layoutNum: UIView!
+    @IBOutlet var lbTitle: UILabel!
+    @IBOutlet var num1: HJLottoLabel!
+    @IBOutlet var num2: HJLottoLabel!
+    @IBOutlet var num3: HJLottoLabel!
+    @IBOutlet var num4: HJLottoLabel!
+    @IBOutlet var num5: HJLottoLabel!
+    @IBOutlet var num6: HJLottoLabel!
+    @IBOutlet var numBonus: HJLottoLabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initLayout()
     }
     
-    // 로또번호 추천화면으로 이동
-    @IBAction func moveToRecommend(_ sender: UIButton) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "RecommendViewController", bundle: nil)
-        var controller : DrawerController? = nil
-        if #available(iOS 13.0, *) {
-            controller = storyboard.instantiateViewController(identifier: "drawer") as? DrawerController
-        }
-        else {
-            controller = storyboard.instantiateViewController(withIdentifier: "drawer") as? DrawerController
-        }
-        
-        if let controller = controller {
-            controller.modalPresentationStyle = .fullScreen
-            delegate?.navigationController?.pushViewController(controller, animated: true)
-        }
+    func initLayout() {
+        layoutNum.backgroundColor = ColorUtil.main()
+        lbTitle.textColor = ColorUtil.text()
+        lbTitle.font = UIFont.boldSystemFont(ofSize: 28)
+        lbTitle.text = "\(lastRound[0])회"
+        num1.text = "\(lastRound[1])"
+        num2.text = "\(lastRound[2])"
+        num3.text = "\(lastRound[3])"
+        num4.text = "\(lastRound[4])"
+        num5.text = "\(lastRound[5])"
+        num6.text = "\(lastRound[6])"
+        numBonus.text = "\(lastRound[7])"
     }
-    
-    // 나의 로또번호화면으로 이동
-    @IBAction func moveToMyLotto(_ sender: UIButton) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "MyLottoViewController", bundle: nil)
-        var controller : MyLottoViewController? = nil
-        if #available(iOS 13.0, *) {
-            controller = storyboard.instantiateViewController(identifier: "myLotto") as? MyLottoViewController
-        }
-        else {
-            controller = storyboard.instantiateViewController(withIdentifier: "myLotto") as? MyLottoViewController
-        }
-        
-        if let controller = controller {
-            controller.modalPresentationStyle = .fullScreen
-            delegate?.navigationController?.pushViewController(controller, animated: true)
-        }
-    }
-    
-    // 당첨번호
-    @IBAction func moveToWinLotto(_ sender: UIButton) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "WinLottoViewController", bundle: nil)
-        var controller : WinLottoViewController? = nil
-        if #available(iOS 13.0, *) {
-            controller = storyboard.instantiateViewController(identifier: "winLotto") as? WinLottoViewController
-        }
-        else {
-            controller = storyboard.instantiateViewController(withIdentifier: "winLotto") as? WinLottoViewController
-        }
-        
-        if let controller = controller {
-            controller.modalPresentationStyle = .fullScreen
-            delegate?.navigationController?.pushViewController(controller, animated: true)
-        }
-    }
-
-    // 시뮬레이션
-    @IBAction func moveToSimulation(_ sender: UIButton) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "SimulationViewController", bundle: nil)
-        var controller : SimulationViewController? = nil
-        if #available(iOS 13.0, *) {
-            controller = storyboard.instantiateViewController(identifier: "simulation") as? SimulationViewController
-        }
-        else {
-            controller = storyboard.instantiateViewController(withIdentifier: "simulation") as?
-            SimulationViewController
-        }
-        
-        if let controller = controller {
-            controller.modalPresentationStyle = .fullScreen
-            delegate?.navigationController?.pushViewController(controller, animated: true)
-        }
-    }
-    
-    @IBAction func moveToAnalysis(_ sender: UIButton) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "AnalysisController", bundle: nil)
-        var controller : SimulationViewController? = nil
-        if #available(iOS 13.0, *) {
-            controller = storyboard.instantiateViewController(identifier: "simulation") as? SimulationViewController
-        }
-        else {
-            controller = storyboard.instantiateViewController(withIdentifier: "simulation") as?
-            SimulationViewController
-        }
-        
-        if let controller = controller {
-            controller.modalPresentationStyle = .fullScreen
-            delegate?.navigationController?.pushViewController(controller, animated: true)
-        }
-    }
-    
 }

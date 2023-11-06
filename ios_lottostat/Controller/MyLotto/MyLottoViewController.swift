@@ -25,7 +25,7 @@ class MyLottoViewController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setAppBar(.BACK)
+        setAppBar(.BACK_MORE)
         setAppBarTitle("My로또번호")
         
         // My로또 테이블뷰
