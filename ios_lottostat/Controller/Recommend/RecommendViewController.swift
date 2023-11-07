@@ -36,13 +36,14 @@ class RecommendViewController: BaseController {
     
     // 필터버튼 클릭
     @IBAction func onFilter(_ sender: UIButton) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "FilterDialogController", bundle: nil)
-        var controller : FilterDialogController? = nil
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: "FilterDialog", bundle: nil)
+        var controller : FilterDialog? = nil
         if #available(iOS 13.0, *) {
-            controller = storyboard.instantiateViewController(identifier: "filterDialogController") as? FilterDialogController
+            controller = storyboard.instantiateViewController(identifier: "filterDialog") as? FilterDialog
         }
         else {
-            controller = storyboard.instantiateViewController(withIdentifier: "filterDialogController") as? FilterDialogController
+            controller = storyboard.instantiateViewController(withIdentifier: "filterDialog") as? FilterDialog
         }
 
         if let controller = controller {

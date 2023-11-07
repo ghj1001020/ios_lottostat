@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,7 +38,7 @@
 		C258B14927F119630069B084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C258B14827F119630069B084 /* Assets.xcassets */; };
 		C258B14B27F119630069B084 /* appwidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C258B14727F119610069B084 /* appwidget.intentdefinition */; };
 		C258B14C27F119630069B084 /* appwidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C258B14727F119610069B084 /* appwidget.intentdefinition */; };
-		C258B14F27F119630069B084 /* appwidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C258B13F27F119610069B084 /* appwidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C258B14F27F119630069B084 /* appwidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C258B13F27F119610069B084 /* appwidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C289401827D3B9CB00259CD0 /* HJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289401727D3B9CB00259CD0 /* HJView.swift */; };
 		C289401A27D486E700259CD0 /* HJCheckImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289401927D486E700259CD0 /* HJCheckImageView.swift */; };
 		C289401C27D4A6DD00259CD0 /* FilterDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289401B27D4A6DD00259CD0 /* FilterDialog.swift */; };
@@ -100,15 +100,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C258B15027F119630069B084 /* Embed App Extensions */ = {
+		C258B15027F119630069B084 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				C258B14F27F119630069B084 /* appwidgetExtension.appex in Embed App Extensions */,
+				C258B14F27F119630069B084 /* appwidgetExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -487,7 +487,7 @@
 				C23EC0A926E8D22800828BAB /* Frameworks */,
 				C23EC0AA26E8D22800828BAB /* Resources */,
 				BA4046F7C119D50E3A87E78B /* [CP] Embed Pods Frameworks */,
-				C258B15027F119630069B084 /* Embed App Extensions */,
+				C258B15027F119630069B084 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -522,12 +522,13 @@
 		C23EC0A426E8D22800828BAB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				KnownAssetTags = (
 					1000,
 					1001,
 				);
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					C23EC0AB26E8D22800828BAB = {
 						CreatedOnToolsVersion = 12.5;
@@ -779,7 +780,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -834,7 +835,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -856,7 +857,7 @@
 				CURRENT_PROJECT_VERSION = 2.0.0;
 				DEVELOPMENT_TEAM = WGWMP4P875;
 				INFOPLIST_FILE = ios_lottostat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -884,7 +885,7 @@
 				CURRENT_PROJECT_VERSION = 2.0.0;
 				DEVELOPMENT_TEAM = WGWMP4P875;
 				INFOPLIST_FILE = ios_lottostat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -20,13 +20,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-i0-wEJ" customClass="LTMenuButton" customModule="ios_lottostat" customModuleProvider="target">
                                 <rect key="frame" x="8" y="256.5" width="398" height="56"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="f3g-nX-osB"/>
                                 </constraints>
-                                <inset key="titleEdgeInsets" minX="-56" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="5" minY="10" maxX="127" maxY="10"/>
                                 <state key="normal" title="로또번호 추천"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="ic_recommend"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="gmz-rX-3eq" kind="show" id="Uk0-Ur-778"/>
                                 </connections>
@@ -37,6 +37,9 @@
                                     <constraint firstAttribute="height" constant="56" id="vY4-mZ-bdl"/>
                                 </constraints>
                                 <state key="normal" title="시뮬레이션"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="ic_simulation"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="HpI-c7-BqN" kind="show" id="Oe2-tA-MC7"/>
                                 </connections>
@@ -47,6 +50,9 @@
                                     <constraint firstAttribute="height" constant="56" id="tYV-m6-NhK"/>
                                 </constraints>
                                 <state key="normal" title="당첨번호"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="ic_win"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="es1-RP-smz" kind="show" id="WKC-Bb-M7Z"/>
                                 </connections>
@@ -57,6 +63,9 @@
                                     <constraint firstAttribute="height" constant="56" id="2TJ-hL-jqx"/>
                                 </constraints>
                                 <state key="normal" title="나의 로또번호"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="ic_lotto"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="hAJ-bR-OyI" kind="show" id="ZIY-28-ahA"/>
                                 </connections>
@@ -3017,15 +3026,16 @@
     <resources>
         <image name="ic_arrow_d" width="36" height="36"/>
         <image name="ic_arrow_u" width="36" height="36"/>
+        <image name="ic_lotto" width="64" height="64"/>
         <image name="ic_no_content" width="40" height="40"/>
+        <image name="ic_recommend" width="64" height="64"/>
+        <image name="ic_simulation" width="64" height="64"/>
+        <image name="ic_win" width="64" height="64"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

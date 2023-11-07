@@ -10,6 +10,8 @@ import UIKit
 
 class LTMenuButton : UIButton {
     
+    @IBInspectable var icon: UIImage = UIImage()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initView()
@@ -21,17 +23,23 @@ class LTMenuButton : UIButton {
     }
     
     func initView() {
+        contentHorizontalAlignment = .left
+        // 텍스트
         setTitleColor(ColorUtil.text(), for: .normal)
         titleLabel?.font = UIFont.systemFont(ofSize: 16)
     }
     
     override func layoutSubviews() {
-        setImage(UIImage(named: "ic_recommend"), for: .normal)
+        super.layoutSubviews()
+        // 왼쪽 아이콘
+        setImage(icon, for: .normal)
+        titleEdgeInsets = UIEdgeInsets(top: 0 , left: 20, bottom: 0, right: 0);
+        imageEdgeInsets = UIEdgeInsets(top: 15, left: 10, bottom: 15, right: self.frame.size.width - 36);
+        imageView?.tintColor = UIColor.black
 
-        titleEdgeInsets = UIEdgeInsets(top: 0 , left: -56, bottom: 0, right: 0);
-        imageEdgeInsets = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 36);
-        
-        setTitleColor(ColorUtil.text(), for: .normal)
-        titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        // 밑줄
+        let line = UIView(frame: CGRectMake(0, self.frame.size.height-1, self.frame.size.width, 1))
+        line.backgroundColor = UIColor.black
+        addSubview(line)
     }
 }
