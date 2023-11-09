@@ -38,7 +38,7 @@ class AppUtil {
         return true
     }
     
-    // 스토리보드 뷰컨트롤러 이동
+    // 스토리보드 뷰컨트롤러
     public static func GetUIViewController(_ storyboard: String, _ identifier: String, _ bundle: Bundle?=nil) -> UIViewController {
         let storyboard : UIStoryboard = UIStoryboard(name: storyboard, bundle: bundle)
         var controller : UIViewController
@@ -51,5 +51,14 @@ class AppUtil {
         controller.modalPresentationStyle = .fullScreen
 
         return controller
+    }
+    
+    // 바텀시트 뷰컨트롤러
+    public static func GetBottomSheetViewController(_ controller: BaseBottomSheetContent) -> BottomSheetController {
+        let bottomSheet = BottomSheetController(contentController: controller)
+        bottomSheet.isCancelable = false
+        bottomSheet.modalPresentationStyle = .overFullScreen
+
+        return bottomSheet
     }
 }

@@ -42,11 +42,11 @@ class WinLottoAnalysisDialog : BaseBottomSheetContent {
         DispatchQueue.global(qos: .userInitiated).async {
             let curList1 = self.currentNumber.getNumberList(isBonus: false)
             let prevList1 = self.prevNumber!.getNumberList(isBonus: false)
-            let count1 = curList1.getMatchCount(other: prevList1)
+            let count1 = curList1.GetMatchCount(other: prevList1)
             
             let curList2 = self.currentNumber.getNumberList(isBonus: false)
             let prevList2 = self.prevNumber!.getNumberList()
-            let count2 = curList2.getMatchCount(other: prevList2)
+            let count2 = curList2.GetMatchCount(other: prevList2)
             
             DispatchQueue.main.async {
                 self.lbLastRoundMatchCount1.text = "\(count1)"
@@ -59,10 +59,10 @@ class WinLottoAnalysisDialog : BaseBottomSheetContent {
     func checkConsecutiveCount() {
         DispatchQueue.global(qos: .userInitiated).async {
             var curList1 = self.currentNumber.getNumberList(isBonus: false)
-            let count1 = curList1.getConsecutiveCount()
+            let count1 = curList1.GetConsecutiveCount()
             
             var curList2 = self.currentNumber.getNumberList()
-            let count2 = curList2.getConsecutiveCount()
+            let count2 = curList2.GetConsecutiveCount()
             
             DispatchQueue.main.async {
                 self.lbConsecutiveCount1.text = "\(count1)"

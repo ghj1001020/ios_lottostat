@@ -20,6 +20,7 @@ class HJCheckBox: UIButton {
             return _isChecked
         }
     }
+    
     @IBInspectable private var imgCheck : UIImage = UIImage()
     @IBInspectable private var imgUncheck : UIImage = UIImage()
     
@@ -53,7 +54,6 @@ class HJCheckBox: UIButton {
 //        self.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
 //        self.titleLabel?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
 //        self.imageView?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
-                
         if( _isChecked ) {
             self.setImage(imgCheck, for: .normal)
         }

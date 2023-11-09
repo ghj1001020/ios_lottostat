@@ -196,7 +196,7 @@ class SQLiteService {
     }
     
     // 특정 회차 로또당첨번호 조회
-    public static func selectRoundWinNumber(round: Int, isBonus: Bool) -> [Int] {
+    public static func selectRoundWinNumber(round: Int) -> [Int] {
         var list : [Int] = []
 
         SQLite.shared.open()
@@ -208,10 +208,7 @@ class SQLiteService {
                 list.append( Int(sqlite3_column_int(stmt, 3)) )
                 list.append( Int(sqlite3_column_int(stmt, 4)) )
                 list.append( Int(sqlite3_column_int(stmt, 5)) )
-                
-                if(isBonus) {
-                    list.append( Int(sqlite3_column_int(stmt, 6)) )
-                }
+                list.append( Int(sqlite3_column_int(stmt, 6)) )
             }
         }
         SQLite.shared.close()

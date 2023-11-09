@@ -19,7 +19,12 @@ class AlertUtil {
         var positiveDelegate : (()->Void)? = nil
         var negativeDelegate : (()->Void)? = nil
 
-        
+        init(_ controller: UIViewController, _ message: String?="") {
+            self.controller = controller
+            self.title = ""
+            self.message = message ?? ""
+        }
+
         init(_ controller: UIViewController, _ title: String?="", _ message: String?="") {
             self.controller = controller
             self.title = title ?? ""

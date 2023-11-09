@@ -104,7 +104,7 @@ class SimulationViewController: BaseController {
         
         clearSimulationItems()
         
-        let list = LottoScript.generateLottoNumberList(round: winData!.no, count: 100)
+        let list = LottoScript.GenerateLottoNumberList(round: winData!.no, count: 100)
         addSimulationItems(list)
         
         lb1PlaceCnt.text = "\(cntWin1)개"

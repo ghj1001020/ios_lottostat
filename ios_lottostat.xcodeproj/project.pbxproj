@@ -84,9 +84,7 @@
 		C2BE59DA26F3723B000BB226 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE59D926F3723B000BB226 /* StringUtil.swift */; };
 		C2EFE7FA27310B6800C6FB7E /* LTGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7F927310B6800C6FB7E /* LTGradientButton.swift */; };
 		C2EFE7FC2733355300C6FB7E /* HJDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7FB2733355300C6FB7E /* HJDivider.swift */; };
-		C2EFE7FE2734007300C6FB7E /* FilterDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */; };
 		C2FDCE902740CD4500C60E13 /* BottomSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FDCE8F2740CD4500C60E13 /* BottomSheetController.swift */; };
-		C2FDCE922740D0DA00C60E13 /* FilterDialogController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FDCE912740D0DA00C60E13 /* FilterDialogController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,9 +195,7 @@
 		C2BE59D926F3723B000BB226 /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 		C2EFE7F927310B6800C6FB7E /* LTGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTGradientButton.swift; sourceTree = "<group>"; };
 		C2EFE7FB2733355300C6FB7E /* HJDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJDivider.swift; sourceTree = "<group>"; };
-		C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDialogController.swift; sourceTree = "<group>"; };
 		C2FDCE8F2740CD4500C60E13 /* BottomSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetController.swift; sourceTree = "<group>"; };
-		C2FDCE912740D0DA00C60E13 /* FilterDialogController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterDialogController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,8 +242,6 @@
 			children = (
 				C20F0DB72701F311009D18FB /* RecommendViewController.swift */,
 				C2AA4660276EEC9F00F213EB /* RecommendLottoNumberTableCell.swift */,
-				C2FDCE912740D0DA00C60E13 /* FilterDialogController.storyboard */,
-				C2EFE7FD2734007300C6FB7E /* FilterDialogController.swift */,
 				C289401D27D4C14C00259CD0 /* FilterDialog.storyboard */,
 				C289401B27D4A6DD00259CD0 /* FilterDialog.swift */,
 			);
@@ -569,7 +563,6 @@
 				C20BF0F327C6705900AF4C31 /* WinLottoAnalysisDialog.storyboard in Resources */,
 				C2AA46702780BFD800F213EB /* ItemMyLottoSection.xib in Resources */,
 				C2AE21DB26F580D700002D61 /* CommonDialog.xib in Resources */,
-				C2FDCE922740D0DA00C60E13 /* FilterDialogController.storyboard in Resources */,
 				C23EC0DA26F14AA400828BAB /* GoogleService-Info.plist in Resources */,
 				C23EC0BC26E8D22A00828BAB /* LaunchScreen.storyboard in Resources */,
 				C23EC0B926E8D22A00828BAB /* Assets.xcassets in Resources */,
@@ -677,7 +670,6 @@
 				2B65E9C82A808B26006F997F /* BaseLottoNumber.swift in Sources */,
 				C2AA46512745196700F213EB /* HJScrollView.swift in Sources */,
 				C289401827D3B9CB00259CD0 /* HJView.swift in Sources */,
-				C2EFE7FE2734007300C6FB7E /* FilterDialogController.swift in Sources */,
 				C23EC0C826EBAF4B00828BAB /* IntroViewController.swift in Sources */,
 				C2AE21F626FAEE7800002D61 /* SQLiteService.swift in Sources */,
 				C2AE21DD26F615F500002D61 /* CommonDialog.swift in Sources */,
