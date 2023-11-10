@@ -1,5 +1,5 @@
 //
-//  WinLottoAnalysisDialog.swift
+//  AnalysisDialog.swift
 //  ios_lottostat
 //
 //  Created by 권혁준 on 2022/02/25.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class WinLottoAnalysisDialog : BaseBottomSheetContent {
+class AnalysisDialog : BaseBottomSheetContent {
     
     @IBOutlet var lbTitle: UILabel!
     @IBOutlet var lbLastRoundMatchCount1: UILabel!

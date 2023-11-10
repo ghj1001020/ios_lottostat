@@ -77,21 +77,9 @@ class SimulationViewController: BaseController {
 
     // 필터 다이얼로그
     @IBAction func onFilterClick(_ sender: UIButton) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "FilterDialog", bundle: nil)
-        var controller : FilterDialog? = nil
-        if #available(iOS 13.0, *) {
-            controller = storyboard.instantiateViewController(identifier: "filterDialog") as? FilterDialog
-        }
-        else {
-            controller = storyboard.instantiateViewController(withIdentifier: "filterDialog") as? FilterDialog
-        }
-
-        if let controller = controller {
-            let filterDialog = BottomSheetController(contentController: controller)
-            filterDialog.isCancelable = false
-            filterDialog.modalPresentationStyle = .overFullScreen
-            self.present(filterDialog, animated: false, completion: nil)
-        }
+        let controller = AppUtil.GetUIViewController("FilterDialog", "filterDialog")
+        let bottomSheet = AppUtil.GetBottomSheetViewController(controller as! BaseBottomSheetContent)
+        self.present(bottomSheet, animated: true)
     }
     
     

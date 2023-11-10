@@ -31,26 +31,13 @@ class WinLottoViewController : BaseController {
 extension WinLottoViewController : UITableViewDelegate, UITableViewDataSource, WinLottoProtocol {
     
     func onLottoNumberClick(index: Int) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "WinLottoAnalysisDialog", bundle: nil)
-        var controller : WinLottoAnalysisDialog? = nil
-        if #available(iOS 13.0, *) {
-            controller = storyboard.instantiateViewController(identifier: "analysisDialog") as? WinLottoAnalysisDialog
+        let controller = AppUtil.GetUIViewController("AnalysisDialog", "analysisDialog") as! AnalysisDialog
+        controller.currentNumber = mWinLottoList[index]
+        if( index+1 < mWinLottoList.count ) {
+            controller.prevNumber = mWinLottoList[index+1]
         }
-        else {
-            controller = storyboard.instantiateViewController(withIdentifier: "analysisDialog") as? WinLottoAnalysisDialog
-        }
-
-        if let controller = controller {
-            controller.currentNumber = mWinLottoList[index]
-            if( index+1 < mWinLottoList.count ) {
-                controller.prevNumber = mWinLottoList[index+1]
-            }
-            
-            let analysisDialog = BottomSheetController(contentController: controller)
-            analysisDialog.isCancelable = false
-            analysisDialog.modalPresentationStyle = .overFullScreen
-            self.present(analysisDialog, animated: false, completion: nil)
-        }
+        let bottomSheet = AppUtil.GetBottomSheetViewController(controller)
+        self.present(bottomSheet, animated: true)
     }
         
     func onInfoFoldingClick(isShow: Bool) {
