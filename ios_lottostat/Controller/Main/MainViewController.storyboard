@@ -1906,7 +1906,7 @@
         <!--Drawer Controller-->
         <scene sceneID="iyU-Sz-jvT">
             <objects>
-                <viewController id="es1-RP-smz" customClass="DrawerController" customModule="KWDrawerController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="winLotto" id="es1-RP-smz" customClass="DrawerController" customModule="KWDrawerController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IFm-yV-bGS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1930,7 +1930,7 @@
         <!--Win Lotto View Controller-->
         <scene sceneID="pMX-XC-zO0">
             <objects>
-                <viewController storyboardIdentifier="winLotto" id="tMg-cJ-iUG" customClass="WinLottoViewController" customModule="ios_lottostat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tMg-cJ-iUG" customClass="WinLottoViewController" customModule="ios_lottostat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dra-lj-Tj4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2948,7 +2948,7 @@
         <!--Drawer Controller-->
         <scene sceneID="9R1-Sm-tIt">
             <objects>
-                <viewController id="hAJ-bR-OyI" customClass="DrawerController" customModule="KWDrawerController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myLotto" id="hAJ-bR-OyI" customClass="DrawerController" customModule="KWDrawerController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zSw-I5-IdB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2972,7 +2972,7 @@
         <!--My Lotto View Controller-->
         <scene sceneID="A4d-15-MFr">
             <objects>
-                <viewController storyboardIdentifier="myLotto" id="ejs-i4-mzH" customClass="MyLottoViewController" customModule="ios_lottostat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ejs-i4-mzH" customClass="MyLottoViewController" customModule="ios_lottostat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K1M-cx-JEe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3021,7 +3021,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UMI-9a-T9Q"/>
+        <segue reference="RMO-cK-TWl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ic_arrow_d" width="36" height="36"/>

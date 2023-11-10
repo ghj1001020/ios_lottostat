@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Side Menu-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="sideMenu" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sideMenu" id="Y6W-OH-hqX" customClass="SideMenu" customModule="ios_lottostat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="icon" value="ic_recommend"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moveToRecommend:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kcG-aU-jgh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42g-Wh-Und" customClass="LTMenuButton" customModule="ios_lottostat" customModuleProvider="target">
                                 <rect key="frame" x="8" y="239" width="377" height="56"/>
@@ -38,6 +41,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="icon" value="ic_simulation"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moveToSimulation:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="M8W-mI-mUR"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wic-FO-J0A">
                                 <rect key="frame" x="146.66666666666666" y="83" width="100" height="100"/>
@@ -57,6 +63,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="icon" value="ic_win"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moveToWinLotto:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="l2o-KQ-iKb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIr-6g-KoH" customClass="LTMenuButton" customModule="ios_lottostat" customModuleProvider="target">
                                 <rect key="frame" x="8" y="351" width="377" height="56"/>
@@ -68,6 +77,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="icon" value="ic_lotto"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moveToMyLotto:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AOj-Mx-Yw9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

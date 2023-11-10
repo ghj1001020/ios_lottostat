@@ -21,6 +21,7 @@
 		C20F0DBF270BA8F4009D18FB /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20F0DBE270BA8F4009D18FB /* BaseController.swift */; };
 		C2212D782AF736BB002A8D8F /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2212D772AF736BB002A8D8F /* SideMenu.storyboard */; };
 		C2212D7A2AF7D871002A8D8F /* LTMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2212D792AF7D871002A8D8F /* LTMenuButton.swift */; };
+		C2212D7C2AFDD149002A8D8F /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2212D7B2AFDD149002A8D8F /* SideMenu.swift */; };
 		C23EC0B026E8D22800828BAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EC0AF26E8D22800828BAB /* AppDelegate.swift */; };
 		C23EC0B926E8D22A00828BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23EC0B826E8D22A00828BAB /* Assets.xcassets */; };
 		C23EC0BC26E8D22A00828BAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23EC0BA26E8D22A00828BAB /* LaunchScreen.storyboard */; };
@@ -128,6 +129,7 @@
 		C20F0DBE270BA8F4009D18FB /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		C2212D772AF736BB002A8D8F /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		C2212D792AF7D871002A8D8F /* LTMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTMenuButton.swift; sourceTree = "<group>"; };
+		C2212D7B2AFDD149002A8D8F /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		C23EC0AC26E8D22800828BAB /* ios_lottostat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_lottostat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C23EC0AF26E8D22800828BAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C23EC0B826E8D22A00828BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -455,6 +457,7 @@
 				C2AE21FC26FB6ABD00002D61 /* MainViewController.storyboard */,
 				C2AE21FE26FB6AD700002D61 /* MainViewController.swift */,
 				C2212D772AF736BB002A8D8F /* SideMenu.storyboard */,
+				C2212D7B2AFDD149002A8D8F /* SideMenu.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				C2AA467C27864DBF00F213EB /* AlertUtil.swift in Sources */,
 				C258B13A27E0ABBB0069B084 /* NumberUtil.swift in Sources */,
 				C2AA466C2778A2C500F213EB /* MyLottoViewController.swift in Sources */,
+				C2212D7C2AFDD149002A8D8F /* SideMenu.swift in Sources */,
 				C289401C27D4A6DD00259CD0 /* FilterDialog.swift in Sources */,
 				C2AA465D2764A8C100F213EB /* HJFilterTextField.swift in Sources */,
 				C23EC0CE26EFF42000828BAB /* DateUtil.swift in Sources */,
