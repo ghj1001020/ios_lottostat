@@ -31,23 +31,19 @@ class SQLite {
 //            self.dbUrl = Bundl    e.main.url(forResource: "lotto", withExtension: "db")?.appendingPathComponent("lotto")
             self.dbUrl = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("lotto.db")
             let exists = FileManager.default.fileExists(atPath: self.dbUrl!.path)
-            LogUtil.p("\(exists)")
             
             let path = Bundle.main.url(forResource: "lotto", withExtension: "db")
             
             try FileManager.default.copyItem(at: path!, to: dbUrl!)
-            LogUtil.p("\(self.dbUrl?.absoluteString) , \(path)")
 //            self.dbUrl = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(DB_FILE_NAME)
         }
         catch {
-            LogUtil.p(error.localizedDescription)
 //            self.dbUrl = nil
         }
     }
     
     func open() {
         guard sqlite3_open(dbUrl?.path, &dbPointer) == SQLITE_OK else {
-            LogUtil.p("SQLITE Open Failed")
             close()
             return
         }
@@ -60,7 +56,6 @@ class SQLite {
     
     func execSQL( sql: String, params: [Any]=[] ) -> Bool {
         if( dbUrl == nil || dbPointer == nil ){
-            LogUtil.p("dbUrl or dbPointer is nil")
             return false
         }
         
@@ -94,13 +89,11 @@ class SQLite {
                 result = false
                 let errMsg = String(cString: sqlite3_errmsg(stmt))
                 let errCode = Int(sqlite3_errcode(stmt))
-                LogUtil.p("SQLITE_DONE failed. \(errMsg) \(errCode)")
             }
         }
         else {
             result = false
             let errMsg = String(cString: sqlite3_errmsg(stmt))
-            LogUtil.p("sqlite3_prepare_v2 failed. \(errMsg)")
         }
         
         sqlite3_finalize(stmt)
@@ -110,7 +103,6 @@ class SQLite {
     
     func select(sql: String, params: [Any]=[], listener: (_ stmt: OpaquePointer?)->Void) {
         if( dbUrl == nil || dbPointer == nil ) {
-            LogUtil.p("dbUrl or dbPointer is nil")
             return
         }
 
@@ -140,7 +132,6 @@ class SQLite {
             sqlite3_finalize(stmt)
         }
         else {
-            LogUtil.p(String(cString: sqlite3_errmsg(dbPointer)))
         }
     }
 
